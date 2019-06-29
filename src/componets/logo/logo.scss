@@ -5,12 +5,11 @@
   width: 25%;
   .mask {
     background: #545454;
-    box-shadow: 5px 0 5px 5px #545454;
     height: 100%;
     width: 100%;
     position: absolute;
     transition: all 0.35s ease-in-out;
-    transform: translateX(-125%);
+    transform: translateX(-100%);
     &.enter {
       transform: translateX(0);
     }

@@ -11,10 +11,10 @@ var Homepage = Barba.BaseView.extend({
   onEnter: function() {
     console.log("onEnter: pagehome");
     init_video();
+    animeteEnter();
   },
   onEnterCompleted: function() {
     console.log("onEnterCompleted: pagehome");
-    animeteEnter();
   },
   onLeave: function() {
     console.log("onLeave: pagehome");
