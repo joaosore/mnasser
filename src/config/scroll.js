@@ -23,5 +23,5 @@ $("body").on("wheel", function(e) {
 function resetScroll() {
   setTimeout(function() {
     scroll = true;
-  }, 2000);
+  }, 1000);
 }

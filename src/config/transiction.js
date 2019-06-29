@@ -8,6 +8,7 @@ const Logo = require("../componets/logo/logo");
 const Header = require("../componets/header/header");
 const Footer = require("../componets/footer/footer");
 const Home = require("../pages/home/home");
+const Conceitos = require("../pages/conceitos/conceitos");
 
 var FadeTransition = Barba.BaseTransition.extend({
   start: function() {
@@ -49,5 +50,7 @@ Barba.Dispatcher.on("initStateChange", function(
 Barba.Pjax.getTransition = function() {
   return FadeTransition;
 };
+
+Barba.Pjax.cacheEnabled = false;
 
 Barba.Pjax.start();

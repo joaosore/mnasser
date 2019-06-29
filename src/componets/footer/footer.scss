@@ -8,6 +8,13 @@ footer {
     align-items: center;
     justify-content: space-between;
     width: calc(100% - 150px);
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 350ms ease-in-out;
+    &.exit {
+      transform: translateY(100%);
+      opacity: 0;
+    }
     h6 {
       font-family: "Brandon Grotesque";
       font-weight: 300;
