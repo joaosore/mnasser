@@ -7,7 +7,7 @@
           foreach($menu as $key => $value) 
           {
             echo '<li>';
-            echo '<a href="'.$value->url.'">'.$value->title.'</a>';
+            echo '<a href="'.$value->url.'" class="'.$value->title.'">'.$value->title.'</a>';
             echo '</li>';
           }
         ?>
@@ -16,13 +16,13 @@
     <div class="lg">
       <ul>
         <li>
-          <a href="">PT</a>
+          <a lang="pt-BR" hreflang="pt-BR" href="" class="pt" data-lg="pt">PT</a>
         </li>
         <li>
-          <a href="">EN</a>
+          <a lang="en-US" hreflang="en-US" href="" class="en" data-lg="en">EN</a>
         </li>
         <li>
-          <a href="">ES</a>
+          <a lang="es-ES" hreflang="es-ES" href="" class="es" data-lg="es">ES</a>
         </li>
       </ul>
     </div> 

@@ -3,10 +3,8 @@
 		<video 
 		id="inicial-video"
 		loop  
-		poster="//vjs.zencdn.net/v/oceans.png">
-		<source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></source>
-		<source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm"></source>
-		<source src="//vjs.zencdn.net/v/oceans.ogv" type="video/ogg"></source>
+		poster="<?php echo get_dados('capa_video') ?>">
+		<source src="<?php echo get_dados('video_inicial'); ?>" type="video/mp4"></source>
 		Your browser does not support the video tag.
 		</video>
 		<div class="mask"></div>

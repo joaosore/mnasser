@@ -75,6 +75,9 @@ header {
       }
       &.active {
         color: #c2a573;
+        &:before {
+          width: 100%;
+        }
       }
       &:before {
         content: " ";

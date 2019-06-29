@@ -6,7 +6,7 @@ const Loading = require("../componets/loading/loading");
 const Scroll = require("./scroll");
 const LazyLoad = require("lazysizes");
 const Logo = require("../componets/logo/logo");
-const Header = require("../componets/header/header");
+const { updateMenuLg, updateMenu } = require("../componets/header/header");
 const Footer = require("../componets/footer/footer");
 const Home = require("../pages/home/home");
 const Conceitos = require("../pages/conceitos/conceitos");
@@ -40,7 +40,10 @@ Barba.Dispatcher.on("transitionCompleted", function(
   currentStatus,
   oldStatus,
   container
-) {});
+) {
+  updateMenuLg();
+  updateMenu();
+});
 
 Barba.Dispatcher.on("initStateChange", function(
   currentStatus,
