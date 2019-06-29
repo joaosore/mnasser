@@ -34,16 +34,14 @@ function animeteEnter() {
     scale: "2",
     easing: "ease-in",
     duration: 1000,
-    delay: 250,
-    reset: true
+    delay: 250
   });
   ScrollReveal().reveal(".inicial .mask", {
     scale: "2",
     opacity: 0,
     easing: "ease-in",
     duration: 1000,
-    delay: 250,
-    reset: true
+    delay: 250
   });
   ScrollReveal().reveal(".logo", {
     distance: "100px",
@@ -51,8 +49,7 @@ function animeteEnter() {
     opacity: 0,
     easing: "ease-in",
     duration: 1000,
-    delay: 350,
-    reset: true
+    delay: 350
   });
   ScrollReveal().reveal("footer .page h6:nth-child(1)", {
     distance: "100px",
@@ -60,8 +57,7 @@ function animeteEnter() {
     opacity: 0,
     easing: "ease-in",
     duration: 1000,
-    delay: 1250,
-    reset: true
+    delay: 1250
   });
   ScrollReveal().reveal("footer .page h6:nth-child(2)", {
     distance: "100px",
@@ -69,8 +65,7 @@ function animeteEnter() {
     opacity: 0,
     easing: "ease-in",
     duration: 1000,
-    delay: 1250,
-    reset: true
+    delay: 1250
   });
 
   ScrollReveal().reveal("header .page .lg ul li", {
@@ -80,8 +75,7 @@ function animeteEnter() {
     easing: "ease-in-out",
     duration: 1000,
     delay: 1250,
-    interval: 100,
-    reset: true
+    interval: 100
   });
 }
 
@@ -89,6 +83,4 @@ function animeteLeave() {
   ScrollReveal().clean("header .page .lg ul li");
   ScrollReveal().clean("footer .page h6:nth-child(1)");
   ScrollReveal().clean("footer .page h6:nth-child(2)");
-  ScrollReveal().clean("#inicial-video");
-  ScrollReveal().clean(".inicial .mask");
 }
