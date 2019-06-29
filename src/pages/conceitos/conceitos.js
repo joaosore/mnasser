@@ -9,6 +9,7 @@ var Conceitospage = Barba.BaseView.extend({
   onEnter: function() {
     console.log("onEnter: pageconceitos");
     animeteEnter();
+    $("body").focus();
   },
   onEnterCompleted: function() {
     console.log("onEnterCompleted: pageconceitos");
