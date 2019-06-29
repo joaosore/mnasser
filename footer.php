@@ -12,6 +12,9 @@
 ?>
 
 </div>
+
+<?php echo get_componet_jd('footer'); ?>
+
 <?php wp_footer(); ?>
 
 <script defer type="text/javascript">

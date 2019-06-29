@@ -27,4 +27,6 @@
 
 <!-- End Google Tag Manager (noscript) -->
 
+	<?php echo get_componet_jd('logo'); ?>
+	<?php echo get_componet_jd('header'); ?>
 	<div id="barba-wrapper">

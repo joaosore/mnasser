@@ -1,0 +1,72 @@
+header {
+  .page {
+    position: absolute;
+    height: 75px;
+    width: calc(70% - 75px);
+    margin-left: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    .menu {
+      opacity: 0;
+      pointer-events: none;
+      flex: 1;
+      ul {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        margin: 0;
+        max-width: 70%;
+        li {
+          display: block;
+        }
+      }
+    }
+    .lg {
+      flex: 1;
+      max-width: 10%;
+      ul {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        margin: 0;
+        li {
+          display: block;
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+      font-weight: 300;
+      font-family: "Brandon Grotesque";
+      text-transform: uppercase;
+      font-size: 0.875em;
+      color: #000;
+      transition: all 350ms ease-in-out;
+      position: relative;
+      &:hover {
+        color: #c2a573;
+        &:before {
+          width: 100%;
+        }
+      }
+      &.active {
+        color: #c2a573;
+      }
+      &:before {
+        content: " ";
+        width: 0;
+        height: 1px;
+        background-color: #c2a573;
+        position: absolute;
+        bottom: 0;
+        transition: all 350ms ease-in-out;
+      }
+    }
+  }
+}
