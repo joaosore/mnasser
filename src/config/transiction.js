@@ -2,6 +2,7 @@ import Barba from "barba.js";
 
 import "./default.scss";
 
+const Loading = require("../componets/loading/loading");
 const Scroll = require("./scroll");
 const LazyLoad = require("lazysizes");
 const Logo = require("../componets/logo/logo");

@@ -23,6 +23,11 @@
       background-size: cover;
       object-fit: cover;
       object-position: center center;
+      transition: all 350ms ease-in-out;
+      transform: scale(1.5);
+      &.enter {
+        transform: scale(1);
+      }
     }
     .mask {
       position: absolute;
@@ -50,6 +55,11 @@
         rgba(125, 185, 232, 0) 100%
       ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+      transition: all 350ms ease-in-out;
+      transform: scale(1.5);
+      &.enter {
+        transform: scale(1);
+      }
     }
     .btn-play,
     .btn-stop {

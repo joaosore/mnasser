@@ -10,11 +10,11 @@ var Homepage = Barba.BaseView.extend({
   namespace: "pagehome",
   onEnter: function() {
     console.log("onEnter: pagehome");
+    animeteEnter();
     init_video();
   },
   onEnterCompleted: function() {
     console.log("onEnterCompleted: pagehome");
-    animeteEnter();
   },
   onLeave: function() {
     console.log("onLeave: pagehome");
@@ -30,19 +30,10 @@ function animeteEnter() {
   $("header .page .menu").removeClass("enter");
   $("footer .page").removeClass("exit");
   // Cars
-  ScrollReveal().reveal("#inicial-video", {
-    scale: "2",
-    easing: "ease-in",
-    duration: 1000,
-    delay: 250
-  });
-  ScrollReveal().reveal(".inicial .mask", {
-    scale: "2",
-    opacity: 0,
-    easing: "ease-in",
-    duration: 1000,
-    delay: 250
-  });
+
+  $("#inicial-video").addClass("enter");
+  $(".inicial .mask").addClass("enter");
+
   ScrollReveal().reveal(".logo", {
     distance: "100px",
     origin: "top",
