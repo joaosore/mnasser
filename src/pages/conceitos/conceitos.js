@@ -25,7 +25,6 @@ var Conceitospage = Barba.BaseView.extend({
 Conceitospage.init();
 
 function animeteEnter() {
-  $(".inicial").addClass("exit");
   $("footer .page").addClass("exit");
   $("header .page .menu").addClass("enter");
   $(".logo .box-logo").addClass("animate");
