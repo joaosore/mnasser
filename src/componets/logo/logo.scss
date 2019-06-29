@@ -22,12 +22,13 @@
     transition: all 0.35s ease-in-out;
     height: 125px;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     &.animate {
       position: relative;
       padding-left: 115px;
       padding-top: 0;
       height: 100%;
+      justify-content: center;
     }
   }
 }

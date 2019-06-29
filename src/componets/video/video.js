@@ -1,31 +1,61 @@
 import { openModal, closeModal } from "../../componets/modal/modal";
 
-var video;
+var elem;
+var fullscreen = false;
 
 export function init_video() {
-  video = document.getElementById("inicial-video");
+  elem = document.getElementById("inicial-video");
+
+  setTimeout(function() {
+    autoPlay();
+  }, 1000);
 
   $(document).on("click", ".btn-play", function() {
-    $(this)
-      .addClass("btn-stop")
-      .removeClass("btn-play");
-    stopVideo();
-    openModal();
+    openVideo();
   });
 
-  $(document).on("click", ".modal.active, .close", function() {
-    $(".btn-stop")
-      .addClass("btn-play")
-      .removeClass("btn-stop");
-    closeModal();
-    playVideo();
-  });
+  if (document.addEventListener) {
+    document.addEventListener("webkitfullscreenchange", exitHandler, false);
+    document.addEventListener("mozfullscreenchange", exitHandler, false);
+    document.addEventListener("fullscreenchange", exitHandler, false);
+    document.addEventListener("MSFullscreenChange", exitHandler, false);
+  }
 }
 
-function stopVideo() {
-  video.pause();
+function autoPlay() {
+  elem.autoplay = true;
+  elem.volume = 0;
+  elem.load();
 }
 
-function playVideo() {
-  video.play();
+function exitHandler() {
+  if (
+    document.webkitIsFullScreen ||
+    document.mozFullScreen ||
+    document.msFullscreenElement !== null
+  ) {
+    if (!fullscreen) {
+      fullscreen = true;
+    } else {
+      autoPlay();
+      fullscreen = false;
+    }
+  }
+}
+
+function openVideo() {
+  elem.play();
+  elem.volume = 1;
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) {
+    /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) {
+    /* Chrome, Safari and Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
 }

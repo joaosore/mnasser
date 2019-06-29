@@ -10,11 +10,11 @@ var Homepage = Barba.BaseView.extend({
   namespace: "pagehome",
   onEnter: function() {
     console.log("onEnter: pagehome");
-    animeteEnter();
-    init_video();
   },
   onEnterCompleted: function() {
     console.log("onEnterCompleted: pagehome");
+    animeteEnter();
+    init_video();
   },
   onLeave: function() {
     console.log("onLeave: pagehome");
@@ -29,6 +29,7 @@ Homepage.init();
 function animeteEnter() {
   $("header .page .menu").removeClass("enter");
   $("footer .page").removeClass("exit");
+  $("header .page .lg").fadeIn();
   // Cars
 
   $("#inicial-video").addClass("enter");
@@ -72,6 +73,9 @@ function animeteEnter() {
 
 function animeteLeave() {
   $(".inicial").addClass("exit");
+  $("footer .page").addClass("exit");
+  $("header .page .lg").fadeOut();
+  ScrollReveal().clean(".logo");
   ScrollReveal().clean("header .page .lg ul li");
   ScrollReveal().clean("footer .page h6:nth-child(1)");
   ScrollReveal().clean("footer .page h6:nth-child(2)");

@@ -2,9 +2,7 @@
 	<div class="yt-play">
 		<video 
 		id="inicial-video"
-		autoplay
-		loop 
-		muted 
+		loop  
 		poster="//vjs.zencdn.net/v/oceans.png">
 		<source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></source>
 		<source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm"></source>
