@@ -45,7 +45,7 @@ function exitHandler() {
 
 function openVideo() {
   elem.play();
-  elem.volume = 1;
+  elem.muted = true;
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
   } else if (elem.mozRequestFullScreen) {

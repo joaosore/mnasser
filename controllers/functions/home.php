@@ -51,3 +51,38 @@ function get_conceito()
   header('Content-Type: application/json');
   echo json_encode($data);
 }
+
+function get_api()
+{
+  $data = array(
+    'home' => array(
+      'capa' => get_dados('capa_video', 7),
+      'video' => get_dados('video_inicial', 7),
+      'moldura' => get_dados('rodape_moldura', 7)
+    ),
+    'conceitos' => array(
+      'titulo' => get_dados('titulo_conceitos', 7),
+      'conteudo' => get_dados('conteudo_conceitos', 7)
+    ),
+    'inspiracao' => array(
+      'titulo' => get_dados('titulo_inpiracao', 7),
+      'conteudo' => get_dados('conteudo_inpiracao', 7)
+    ),
+    'pessoas' => get_dados('integrante'),
+    'experiencia' => array(
+      'titulo' => get_dados('titulo_experiencia'),
+      'conteudo' => get_dados('conteudo_experiencia'),
+      'contencioso_judicial_titulo' => get_dados('contencioso_judicial_titulo'),
+      'contencioso_judicial' => get_dados('contencioso_judicial'),
+      'arbitragem_titulo' => get_dados('arbitragem_titulo'),
+      'arbitragem' => get_dados('arbitragem'),
+    ),
+    'imprensa' => get_dados('artigos'),
+    'contato' => array(
+      'dados' => get_dados('dados'),
+      'redes' => get_dados('redes_sociais')
+    )
+  );
+  header('Content-Type: application/json');
+  echo json_encode($data);
+}
