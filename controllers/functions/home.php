@@ -68,19 +68,19 @@ function get_api()
       'titulo' => get_dados('titulo_inpiracao', 7),
       'conteudo' => get_dados('conteudo_inpiracao', 7)
     ),
-    'pessoas' => get_dados('integrante'),
+    'pessoal' => get_dados('integrante', 7),
     'experiencia' => array(
-      'titulo' => get_dados('titulo_experiencia'),
-      'conteudo' => get_dados('conteudo_experiencia'),
-      'contencioso_judicial_titulo' => get_dados('contencioso_judicial_titulo'),
-      'contencioso_judicial' => get_dados('contencioso_judicial'),
-      'arbitragem_titulo' => get_dados('arbitragem_titulo'),
-      'arbitragem' => get_dados('arbitragem'),
+      'titulo' => get_dados('titulo_experiencia', 7),
+      'conteudo' => get_dados('conteudo_experiencia', 7),
+      'contencioso_judicial_titulo' => get_dados('contencioso_judicial_titulo', 7),
+      'contencioso_judicial' => get_dados('contencioso_judicial', 7),
+      'arbitragem_titulo' => get_dados('arbitragem_titulo', 7),
+      'arbitragem' => get_dados('arbitragem', 7),
     ),
-    'imprensa' => get_dados('artigos'),
+    'imprensa' => get_dados('artigos', 7),
     'contato' => array(
-      'dados' => get_dados('dados'),
-      'redes' => get_dados('redes_sociais')
+      'dados' => get_dados('dados', 7),
+      'redes' => get_dados('redes_sociais', 7)
     )
   );
   header('Content-Type: application/json');
