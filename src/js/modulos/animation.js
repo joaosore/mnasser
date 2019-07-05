@@ -1,43 +1,45 @@
-animate(".conceito h2", true);
-animate(".conceito p", true);
+export function activeAnimate() {
+  animate(".conceito h2", true);
+  animate(".conceito p", true);
 
-animate(".inspiracao h2", true);
-animate(".inspiracao p", true);
+  animate(".inspiracao h2", true);
+  animate(".inspiracao p", true);
 
-animate(".pessoas.item_0 .email", true, "right");
-animate(".pessoas.item_0 .btns-redes", true, "right");
-animate(".pessoas.item_0 .titulo", true, "right");
-animate(".pessoas.item_0 p", true, "right");
-//animate(".pessoas.item_0 .img-person", true);
+  animate(".pessoas.item_0 .email", true, "right");
+  animate(".pessoas.item_0 .btns-redes", true, "right");
+  animate(".pessoas.item_0 .titulo", true, "right");
+  animate(".pessoas.item_0 p", true, "right");
+  //animate(".pessoas.item_0 .img-person", true);
 
-animate(".pessoas.item_1 .email", true);
-animate(".pessoas.item_1 .btns-redes", true);
-animate(".pessoas.item_1 .titulo", true);
-animate(".pessoas.item_1 p", true);
-//animate(".pessoas.item_1 .img-person", true, "right");
+  animate(".pessoas.item_1 .email", true);
+  animate(".pessoas.item_1 .btns-redes", true);
+  animate(".pessoas.item_1 .titulo", true);
+  animate(".pessoas.item_1 p", true);
+  //animate(".pessoas.item_1 .img-person", true, "right");
 
-animate(".pessoas.item_2 .email", true, "right");
-animate(".pessoas.item_2 .btns-redes", true, "right");
-animate(".pessoas.item_2 .titulo", true, "right");
-animate(".pessoas.item_2 p", true, "right");
-//animate(".pessoas.item_2 .img-person", true);
+  animate(".pessoas.item_2 .email", true, "right");
+  animate(".pessoas.item_2 .btns-redes", true, "right");
+  animate(".pessoas.item_2 .titulo", true, "right");
+  animate(".pessoas.item_2 p", true, "right");
+  //animate(".pessoas.item_2 .img-person", true);
 
-animate(".pessoas.item_3 .email", true);
-animate(".pessoas.item_3 .btns-redes", true);
-animate(".pessoas.item_3 .titulo", true);
-animate(".pessoas.item_3 p", true);
-//animate(".pessoas.item_3 .img-person", true, "right");
+  animate(".pessoas.item_3 .email", true);
+  animate(".pessoas.item_3 .btns-redes", true);
+  animate(".pessoas.item_3 .titulo", true);
+  animate(".pessoas.item_3 p", true);
+  //animate(".pessoas.item_3 .img-person", true, "right");
 
-animate(".experiencia h2", true);
-animate(".experiencia p", true);
-animate(".btn-modal", true);
+  animate(".experiencia h2", true);
+  animate(".experiencia p", true);
+  animate(".btn-modal", true);
 
-animate(".imprensa .titulo", true);
-animate(".imprensa p", true);
-animate(".imprensa .fonte", true);
+  animate(".imprensa .titulo", true);
+  animate(".imprensa p", true);
+  animate(".imprensa .fonte", true);
 
-animate(".contato h2", true);
-animate(".contato p", true);
+  animate(".contato h2", true);
+  animate(".contato p", true);
+}
 
 export function animateEnter(anchor) {
   activeMenu(anchor);
@@ -270,7 +272,6 @@ function animate(el, start = false, origin = "left") {
 }
 
 function activeMenu(menu) {
-  console.log(".menu li[data-menu='#" + menu + "']");
   if (
     menu == "paulo-magalhaes-nasser" ||
     menu == "camila-rezende-martins" ||

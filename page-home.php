@@ -70,8 +70,8 @@ get_header();
     <div class="conceito h-100">
       <div class="container-fluid h-100">
         <div class="row h-100">
-          <div class="col-3 h-100"></div>
-          <div class="col-6 box h-100">
+          <div class="col-md-3 d-none d-lg-flex h-100"></div>
+          <div class="col-md-8 box h-100">
             <h2><?php echo get_dados('titulo_conceitos'); ?></h2>
             <?php echo get_dados('conteudo_conceitos'); ?>
           </div>
@@ -84,8 +84,8 @@ get_header();
     <div class="inspiracao h-100">
       <div class="container-fluid h-100">
         <div class="row h-100">
-          <div class="col-3 h-100"></div>
-          <div class="col-6 box h-100">
+          <div class="col-md-3 d-none d-lg-flex h-100"></div>
+          <div class="col-md-8 box h-100">
             <h2><?php echo get_dados('titulo_inpiracao'); ?></h2>
             <?php echo get_dados('conteudo_inpiracao'); ?>
           </div>
@@ -108,7 +108,7 @@ get_header();
           }
         ?>
         ">
-          <div class="col-6 h-100 box-conteudo">
+          <div class="col-md-6 h-100 box-conteudo">
             <div class="nome">
               <?php echo $value['nome']; ?>
             </div>
@@ -198,7 +198,7 @@ get_header();
               ?>
             </div>
           </div>
-          <div class="col-6 h-100 box-img">
+          <div class="col-md-6 h-100 box-img">
             <img class="lazyload img-person" src="" data-srcset="<?php echo $value['foto']; ?>"/>
           </div>
         </div>
@@ -213,8 +213,8 @@ get_header();
     <div class="experiencia h-100">
       <div class="container-fluid h-100">
         <div class="row h-100">
-          <div class="col-3 h-100"></div>
-          <div class="col-6 box h-100">
+          <div class="col-md-3 d-none d-lg-flex h-100"></div>
+          <div class="col-md-8 box h-100">
             <h2><?php echo get_dados('titulo_experiencia'); ?></h2>
             <?php echo get_dados('conteudo_experiencia'); ?>
             <div class="btn-modal">
@@ -273,8 +273,8 @@ get_header();
     <div class="imprensa h-100">
       <div class="container-fluid h-100">
         <div class="row h-100">
-          <div class="col-3 h-100"></div>
-          <div class="col-6 box h-100">
+          <div class="col-md-3 d-none d-lg-flex h-100"></div>
+          <div class="col-md-8 box h-100">
             <div class="scroll-c">
               <?php 
                 foreach(get_dados('artigos') as $key => $artigo) {
@@ -304,8 +304,8 @@ get_header();
     <div class="contato h-100">
       <div class="container-fluid h-100">
         <div class="row h-100">
-          <div class="col-3 h-100"></div>
-          <div class="col-6 box-container box h-100">
+          <div class="col-md-3 d-none d-lg-flex h-100"></div>
+          <div class="col-md-8 box-container box h-100">
             <div class="box">
               <?php echo get_dados('dados'); ?>
             </div>

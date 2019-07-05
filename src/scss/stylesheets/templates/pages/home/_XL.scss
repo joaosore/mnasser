@@ -229,7 +229,7 @@ header {
       margin-top: 50px;
       margin-bottom: 50px;
       height: calc(100% - 100px);
-      width: calc(150% - 50px);
+      width: calc(100% - 50px);
       overflow-y: auto;
       overflow-x: hidden;
       display: flex;
@@ -319,6 +319,9 @@ header {
       img {
         width: calc(100% + 30px);
         margin: 0 -15px;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
       }
     }
     .btns-redes {
