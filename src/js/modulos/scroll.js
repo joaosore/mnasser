@@ -6,7 +6,6 @@ $(window).on("load", function() {
 });
 
 $(window).resize(function() {
-  window.location.href = "/";
   Size();
 });
 
