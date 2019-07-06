@@ -6,9 +6,9 @@ init_video();
 function init_video() {
   elem = $(".play-viedo")[0];
 
-  setTimeout(function() {
+  setTimeout(() => {
     autoPlay();
-  }, 1000);
+  }, 300);
 
   $(document).on("click", ".play-viedo", function() {
     openVideo();
@@ -23,12 +23,14 @@ function init_video() {
 }
 
 function autoPlay() {
+  elem = $(".play-viedo")[0];
   elem.autoplay = true;
   elem.muted = true;
   elem.load();
 }
 
 function exitHandler() {
+  console.log(fullscreen);
   if (
     document.webkitIsFullScreen ||
     document.mozFullScreen ||
@@ -36,6 +38,8 @@ function exitHandler() {
   ) {
     if (!fullscreen) {
       fullscreen = true;
+      elem.load();
+      elem.muted = false;
     } else {
       autoPlay();
       fullscreen = false;
@@ -44,8 +48,7 @@ function exitHandler() {
 }
 
 function openVideo() {
-  elem.play();
-  elem.muted = false;
+  elem = $(".play-viedo")[0];
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
   } else if (elem.mozRequestFullScreen) {

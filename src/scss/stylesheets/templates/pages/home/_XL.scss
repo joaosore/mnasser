@@ -2,7 +2,9 @@ html,
 body {
   overflow: hidden;
 }
-
+.menu-hamburger {
+  display: none;
+}
 header {
   position: fixed;
   height: 50px;
@@ -13,6 +15,9 @@ header {
   width: 100%;
   z-index: 5;
   justify-content: space-between;
+  .close-c {
+    display: none;
+  }
   ul {
     margin: 0;
     padding: 0;
@@ -62,7 +67,7 @@ header {
       }
       a {
         font-family: "Brandon Grotesque";
-        font-size: 12px;
+        font-size: 0.75em;
         font-weight: 700;
         line-height: 30px;
         text-transform: uppercase;
@@ -186,12 +191,32 @@ header {
       object-fit: cover;
     }
   }
+  .moldura {
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 100px);
+    left: 50px;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    p {
+      font-family: Brandon Grotesque;
+      font-size: 0.75em;
+      font-weight: 700;
+      line-height: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #000;
+      text-decoration: none !important;
+    }
+  }
   .conceito,
   .inspiracao,
   .experiencia {
     h2 {
       font-family: "Brandon Grotesque";
-      font-size: 45px;
+      font-size: 2.81em;
       font-weight: 900;
       line-height: 55px;
       text-transform: uppercase;
@@ -200,7 +225,7 @@ header {
     p {
       color: #6e6e6e;
       font-family: "Josefin Sans";
-      font-size: 25px;
+      font-size: 1.56em;
       font-weight: 100;
       line-height: 30px;
     }
@@ -214,7 +239,7 @@ header {
     .btn-modal {
       color: #c2a573;
       font-family: "Brandon Grotesque";
-      font-size: 15px;
+      font-size: 0.93em;
       font-weight: 900;
       line-height: 25px;
       text-transform: uppercase;
@@ -263,7 +288,7 @@ header {
         }
         .titutlo {
           font-family: "Josefin Sans";
-          font-size: 23px;
+          font-size: 1.43em;
           font-weight: 600;
           line-height: 30px;
         }
@@ -282,6 +307,7 @@ header {
     }
     .nome {
       p {
+        font-size: 1.5em;
         span {
           b {
             color: #c2a573;
@@ -298,7 +324,7 @@ header {
     .email {
       color: #848484;
       font-family: "Brandon Grotesque";
-      font-size: 0.75m;
+      font-size: 0.75em;
       font-weight: 900;
       line-height: 1;
       text-transform: uppercase;
@@ -341,11 +367,13 @@ header {
       letter-spacing: 1px;
     }
     .item {
-      color: #626262;
-      font-family: "Josefin Sans";
-      font-size: 1.375em;
-      font-weight: 100;
-      line-height: 1;
+      p {
+        color: #626262;
+        font-family: "Josefin Sans";
+        font-size: 1.375em;
+        font-weight: 100;
+        line-height: 1;
+      }
     }
     .box-conteudo {
       padding: 50px;
@@ -363,7 +391,7 @@ header {
     .titulo {
       color: #c2a573;
       font-family: "Brandon Grotesque";
-      font-size: 18px;
+      font-size: 1.125em;
       font-weight: 900;
       line-height: 55px;
       text-transform: uppercase;
@@ -373,14 +401,14 @@ header {
     .conteudo {
       color: #626262;
       font-family: "Josefin Sans";
-      font-size: 23px;
+      font-size: 1.4375em;
       font-weight: 100;
       line-height: 30px;
     }
     .fonte {
       color: #626262;
       font-family: "Josefin Sans";
-      font-size: 15px;
+      font-size: 0.9375em;
       font-weight: 100;
       line-height: 30px;
     }
@@ -401,6 +429,9 @@ header {
       overflow-y: auto;
       overflow-x: hidden;
       height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     }
     .acordion {
       cursor: pointer;
@@ -426,16 +457,18 @@ header {
     h2 {
       color: #c2a573;
       font-family: "Brandon Grotesque";
-      font-size: 45px;
+      font-size: 2.8125em;
       font-weight: 900;
       line-height: 55px;
       text-transform: uppercase;
+    }
+    p {
+      font-size: 1.375em;
     }
     p,
     a {
       color: #626262;
       font-family: "Brandon Grotesque";
-      font-size: 22px;
       font-weight: 420;
       line-height: 35px;
       text-transform: uppercase;
@@ -444,11 +477,23 @@ header {
     .box-container {
       padding: 50px;
     }
-    .box {
+    .box-el {
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
+    }
+    .redes {
+      position: absolute;
+      bottom: 15px;
+      .rede {
+        width: 50px;
+        height: 50px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
   }
 }

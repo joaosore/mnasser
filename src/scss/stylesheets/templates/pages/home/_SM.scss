@@ -1,4 +1,129 @@
 @media only screen and (max-width: $SM) {
+  .menu-hamburger {
+    position: fixed;
+    height: 75px;
+    z-index: 6;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 15px;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  header {
+    z-index: 6;
+    position: fixed;
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: all 350ms ease-in-out;
+    &.open {
+      transform: translateX(0);
+    }
+    .close-c {
+      display: flex;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+      background-image: url("../assets/close.png");
+      transform: translateY(0);
+      transition: all 350ms ease-in-out;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      background-position: center;
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+    ul {
+      justify-content: space-evenly;
+      &.menu {
+        opacity: 1;
+        pointer-events: all;
+        flex-direction: column;
+      }
+      &.lg {
+        max-height: 20%;
+        max-width: 100%;
+        justify-content: space-evenly;
+      }
+    }
+  }
+  h2 {
+    word-break: break-all;
+    br {
+      display: none;
+    }
+  }
+
+  .section {
+    .moldura {
+      align-items: center;
+      position: absolute;
+      bottom: 0;
+      width: calc(100%);
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      height: 50px;
+      background-color: #fff;
+      padding: 0 15px;
+      p {
+        flex: 1;
+        line-height: 1rem;
+        &:nth-child(2) {
+          max-width: 5em;
+        }
+      }
+    }
+    .conceito,
+    .inspiracao,
+    .pessoas,
+    .experiencia,
+    .imprensa,
+    .contato {
+      p {
+        font-weight: 300;
+      }
+      .box,
+      .box-conteudo {
+        padding: 15px;
+      }
+    }
+  }
+
+  .section {
+    .contato {
+      .redes {
+        position: relative;
+        padding-top: 15px;
+      }
+    }
+  }
+
+  .section {
+    .pessoas {
+      .nome {
+        p {
+          font-size: 0.9em;
+        }
+      }
+      .item {
+        p {
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
   @media (orientation: landscape) {
   }
   @media (orientation: portrait) {

@@ -11,7 +11,12 @@ get_header();
 
 ?>
 
+<div class="menu-hamburger">
+<img class="lazyload img-logo" src="" data-srcset="<?php echo get_template_directory_uri(); ?>/dist/imgs/menu-button.svg">
+</div>
+
 <header>
+<div class="close-c"></div>
   <ul class="menu">
     <?php 
       foreach(get_dados('menus') as $key => $value) {
@@ -57,11 +62,13 @@ get_header();
     <video
       class="play-viedo"
       loop
-      autoPlay
-      muted
       poster="<?php echo get_dados('capa_video'); ?>"
       src="<?php echo get_dados('video_inicial'); ?>"
     ></video>
+    </div>
+    <div class="moldura">
+      <p><?php echo get_dados('rodape_moldura'); ?></p>
+      <p>SCROLL</p>
     </div>
   </div>
 
@@ -306,13 +313,23 @@ get_header();
         <div class="row h-100">
           <div class="col-md-3 d-none d-lg-flex h-100"></div>
           <div class="col-md-8 box-container box h-100">
-            <div class="box">
+            <div class="box-el">
               <?php echo get_dados('dados'); ?>
+              <div class="redes">
+                <?php foreach (get_dados('redes_sociais') as $key => $value) { ?>
+                  <div class="rede">
+                    <a href="<?php echo $value['url']; ?>" target="_blank">
+                      <img class="lazyload img-logo" src="" data-srcset="<?php echo $value['imagem']; ?>"/>
+                    </a>
+                  </div>
+                <?php } ?>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    
   </div>
 
 </div>

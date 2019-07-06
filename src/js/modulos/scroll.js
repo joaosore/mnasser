@@ -1,25 +1,15 @@
 const fullpage = require("fullpage.js");
 import { animateEnter, animateLeave, activeAnimate } from "./animation.js";
+import ScrollReveal from "scrollreveal";
 
 $(window).on("load", function() {
   Size();
 });
 
-$(window).resize(function() {
-  Size();
-});
-
 function Size() {
   if ($(window).width() <= 991) {
+    animateMobile();
     $("html, body").css("overflow-y", "auto");
-    setTimeout(() => {
-      animateEnter("conceito");
-      animateEnter("inspiracao");
-      animateEnter("pessoas");
-      animateEnter("experiencia");
-      animateEnter("imprensa");
-      animateEnter("contato");
-    }, 1500);
   } else {
     activeAnimate();
     $("html, body").css("overflow-y", "hidden");
@@ -74,4 +64,55 @@ $(document).on("click", ".acordion", function() {
       .find(".titulo")
       .addClass("open");
   }
+});
+
+function animateMobile() {
+  console.log("AQUI");
+
+  ScrollReveal().reveal(".video", {
+    delay: 375,
+    duration: 500,
+    reset: true,
+    opacity: 0
+  });
+
+  ScrollReveal().reveal(".img-person", {
+    delay: 375,
+    duration: 500,
+    opacity: 0
+  });
+
+  ScrollReveal().reveal("h2", {
+    delay: 375,
+    duration: 750,
+    opacity: 0,
+    origin: "right",
+    distance: "100px",
+    beforeReveal: removeHiddenConteudoBoxImg
+  });
+
+  ScrollReveal().reveal("p", {
+    delay: 375,
+    duration: 500,
+    opacity: 0,
+    origin: "right",
+    distance: "100px",
+    beforeReveal: removeHiddenConteudoBoxImg
+  });
+}
+
+function removeHiddenConteudoBoxImg() {
+  $(".conteudos p").css("opacity", "1");
+  $(".conteudos p").css(
+    "transform",
+    "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)"
+  );
+}
+
+$(document).on("click", ".menu-hamburger img", function() {
+  $("header").addClass("open");
+});
+
+$(document).on("click", "header .close-c", function() {
+  $("header").removeClass("open");
 });
