@@ -16,7 +16,7 @@ function Size() {
     new fullpage("#fullpage", {
       menu: "#menu",
       lockAnchors: false,
-      normalScrollElements: ".scroll-c, .conteudos",
+      normalScrollElements: ".conteudos, .enable-scroll-interno",
       anchors: [
         "",
         "conceito",
@@ -67,8 +67,6 @@ $(document).on("click", ".acordion", function() {
 });
 
 function animateMobile() {
-  console.log("AQUI");
-
   ScrollReveal().reveal(".video", {
     delay: 375,
     duration: 500,

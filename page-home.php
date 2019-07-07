@@ -62,6 +62,7 @@ get_header();
     <video
       class="play-viedo"
       loop
+      playsinline
       poster="<?php echo get_dados('capa_video'); ?>"
       src="<?php echo get_dados('video_inicial'); ?>"
     ></video>
