@@ -107,7 +107,7 @@ get_header();
     foreach(get_dados('integrante') as $key => $value) {
   ?>
   <div class="section">
-    <div class="pessoas item_<?php echo $key; ?> h-100">
+    <div class="pessoas item_<?php echo $key; ?> <?php  if($key == 0){ echo 'paulo-magalhaes-nasser'; } ?> h-100">
       <div class="container-fluid h-100">
         <div class="row h-100 
         <?php 

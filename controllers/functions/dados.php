@@ -6,8 +6,18 @@ function get_dados($field, $id = null)
   
 	if(empty($id))
 	{
-    $pt_BR = 7;
-		$id = $pt_BR;
+		switch($_COOKIE["linguagem"]){
+			case "en":
+				$linguagem = 74;
+			break;
+			case "es":
+				$linguagem = 102;
+			break;
+			default:
+				$linguagem = 7;
+			break;
+		}
+		$id = $linguagem;
 	}
 	return get_field($field, $id);
 }

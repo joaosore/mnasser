@@ -4,11 +4,59 @@ import ScrollReveal from "scrollreveal";
 
 $(window).on("load", function() {
   Size();
+  $('.lg a[data-lg="' + getCookie("linguagem") + '"]')
+    .parent()
+    .addClass("active");
 });
+
+$(document).on("click", ".lg a", function() {
+  lg($(this).data("lg"));
+});
+
+function lg(lg) {
+  switch (lg) {
+    case "en":
+      setCookie("linguagem", "en", 30);
+      break;
+
+    case "es":
+      setCookie("linguagem", "es", 30);
+      break;
+
+    default:
+      setCookie("linguagem", "pt", 30);
+      break;
+  }
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(";");
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == " ") {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+  var expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
 
 function Size() {
   if ($(window).width() <= 991) {
+    ancora(window.location.hash);
     animateMobile();
+    menuMobile();
     $("html, body").css("overflow-y", "auto");
   } else {
     activeAnimate();
@@ -107,10 +155,33 @@ function removeHiddenConteudoBoxImg() {
   );
 }
 
-$(document).on("click", ".menu-hamburger img", function() {
-  $("header").addClass("open");
-});
+function menuMobile() {
+  $(document).on("click", ".menu-hamburger img", function() {
+    $("header").addClass("open");
+  });
 
-$(document).on("click", "header .close-c", function() {
-  $("header").removeClass("open");
-});
+  $(document).on("click", "header .close-c", function() {
+    $("header").removeClass("open");
+  });
+
+  $("a").click(function() {
+    var item = $.attr(this, "href").replace("#", ".");
+    if ($("body").find(item).length > 0) {
+      ancora(item);
+      window.location.hash = $.attr(this, "href");
+      $("header").removeClass("open");
+      return false;
+    }
+  });
+}
+
+function ancora(item) {
+  var item = item.replace("#", ".");
+  var $doc = $("html, body");
+  $doc.animate(
+    {
+      scrollTop: $(item).offset().top - 75
+    },
+    500
+  );
+}
