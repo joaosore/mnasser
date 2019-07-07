@@ -4,6 +4,13 @@ import ScrollReveal from "scrollreveal";
 
 $(window).on("load", function() {
   Size();
+
+  if (getCookie("linguagem").length == 0) {
+    $('.lg a[data-lg="pt"]')
+      .parent()
+      .addClass("active");
+  }
+
   $('.lg a[data-lg="' + getCookie("linguagem") + '"]')
     .parent()
     .addClass("active");
@@ -178,10 +185,12 @@ function menuMobile() {
 function ancora(item) {
   var item = item.replace("#", ".");
   var $doc = $("html, body");
-  $doc.animate(
-    {
-      scrollTop: $(item).offset().top - 75
-    },
-    500
-  );
+  if (item.length > 0) {
+    $doc.animate(
+      {
+        scrollTop: $(item).offset().top - 75
+      },
+      500
+    );
+  }
 }
