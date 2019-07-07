@@ -102,6 +102,12 @@ function jd_widgets_init() {
 }
 add_action( 'widgets_init', 'jd_widgets_init' );
 
+function be_enable_vcard_upload( $mime_types ){
+	$mime_types['vcf'] = 'text/x-vcard';
+	return $mime_types;
+}
+add_filter('upload_mimes', 'be_enable_vcard_upload' );
+
 /**
  * Implement the Custom Header feature.
  */
@@ -128,9 +134,3 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 require get_template_directory() . '/controllers/include.php';
 require get_template_directory() . '/pages-inc/include.php';
-
-function be_enable_vcard_upload( $mime_types ){
-	$mime_types['vcf'] = 'text/x-vcard';
-	return $mime_types;
-}
-add_filter('upload_mimes', 'be_enable_vcard_upload' );
