@@ -124,7 +124,7 @@ get_header();
               <?php echo $value['email']; ?>
             </div>
             <div class="btns-redes">
-              <a href="<?php echo $value['vcard']; ?>" target="_blank">
+              <a href="<?php echo $value['vcard']; ?>" target="_blank" download="contato.vcf">
                <img class="lazyload" src="" data-srcset="<?php echo get_template_directory_uri(); ?>/dist/imgs/vcard.png">
               </a>
               <a href="<?php echo $value['linkedin'] ?>" target="_blank">
