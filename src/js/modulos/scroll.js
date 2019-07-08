@@ -106,9 +106,12 @@ $(document).on("click", ".acordion", function() {
       .find(".conteudo")
       .hasClass("open")
   ) {
+    $(".imprensa .scroll-c").removeClass("top");
     $(".acordion .conteudo").removeClass("open");
     $(".acordion .titulo").removeClass("open");
   } else {
+    $(".imprensa .scroll-c").addClass("top");
+
     $(".acordion .conteudo").removeClass("open");
     $(".acordion .titulo").removeClass("open");
     $(this)
