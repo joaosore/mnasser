@@ -308,14 +308,13 @@ header {
     }
     .nome {
       p {
-        font-size: 1.5em;
+        font-size: 4em;
+        line-height: 1;
         span {
           b {
             color: #c2a573;
             font-family: "Brandon Grotesque";
-            font-size: 4em;
             font-weight: 900;
-            line-height: 1em;
             text-transform: uppercase;
             letter-spacing: 2px;
           }
