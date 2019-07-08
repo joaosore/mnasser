@@ -437,16 +437,18 @@ header {
       align-items: center;
       flex-direction: column;
       max-width: 70%;
-      justify-content: center;
+      //justify-content: center;
       &.top {
         justify-content: flex-start;
       }
     }
     .acordion {
+      padding: 1.5em 0;
       cursor: pointer;
       border-bottom: 1px solid #eaeaea;
       .titulo {
         width: 90%;
+        font-weight: 500;
         &.open {
           &:before {
             content: " ";
@@ -470,7 +472,7 @@ header {
       color: #c2a573;
       font-family: "Brandon Grotesque";
       font-size: 1.875em;
-      font-weight: 900;
+      font-weight: 500;
       text-transform: uppercase;
     }
     p {
