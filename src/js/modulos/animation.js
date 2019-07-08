@@ -214,6 +214,12 @@ export function animateLeave(anchor, direction) {
       //$(".pessoas.item_1 .img-person").removeClass("enter");
       break;
     case "ana-carolina-bariviera-barros":
+      if (direction == "down") {
+        $(".box").addClass("size");
+        $(".logo").addClass("enter");
+        $(".img-logo").addClass("size");
+        $(".img-logo").fadeIn();
+      }
       $(".pessoas.item_2 h2").removeClass("enter");
       $(".pessoas.item_2 p").removeClass("enter");
       $(".pessoas.item_2 .email").removeClass("enter");

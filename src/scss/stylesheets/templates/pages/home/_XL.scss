@@ -219,7 +219,6 @@ header {
       font-family: "Brandon Grotesque";
       font-size: 2.81em;
       font-weight: 900;
-      line-height: 55px;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
@@ -228,7 +227,6 @@ header {
       font-family: "Josefin Sans";
       font-size: 1.56em;
       font-weight: 300;
-      line-height: 1em;
     }
     .box {
       display: flex;
@@ -247,6 +245,7 @@ header {
       letter-spacing: 0.75px;
       text-decoration: underline;
       cursor: pointer;
+      margin-top: 3em;
     }
 
     .box-itens-modal {
@@ -291,12 +290,15 @@ header {
           font-family: "Josefin Sans";
           font-size: 1.43em;
           font-weight: 600;
-          line-height: 1em;
+          margin-bottom: 1em;
         }
         .conteudos {
-          max-height: 100%;
+          max-height: 90%;
           overflow-y: auto;
           overflow-x: hidden;
+          p {
+            margin: 1em 0;
+          }
         }
       }
     }
@@ -307,9 +309,10 @@ header {
       flex-direction: row-reverse;
     }
     .nome {
+      margin-bottom: 1em;
       p {
         font-size: 4em;
-        line-height: 1;
+        line-height: 0.7;
         span {
           b {
             color: #c2a573;
@@ -354,6 +357,7 @@ header {
       display: flex;
       align-items: center;
       padding-right: 20px;
+      margin-bottom: 3em;
       img {
         padding-right: 20px;
       }
@@ -372,6 +376,7 @@ header {
         font-family: "Josefin Sans";
         font-size: 1.375em;
         font-weight: 300;
+        margin: 1em 0.5em;
       }
     }
     .box-conteudo {
@@ -402,7 +407,7 @@ header {
       font-family: "Josefin Sans";
       font-size: 1.4375em;
       font-weight: 300;
-      line-height: 30px;
+      margin: 1em 0;
     }
     .fonte {
       color: #626262;
@@ -417,8 +422,9 @@ header {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: wrap;
-        max-height: 2em;
+        max-height: 1.5em;
         transition: all 350ms ease-in-out;
+        margin-top: 0;
         &.open {
           max-height: 5000px;
         }
@@ -431,9 +437,11 @@ header {
       display: flex;
       align-items: center;
       flex-direction: column;
+      max-width: 70%;
     }
     .acordion {
       cursor: pointer;
+      border-bottom: 1px solid #eaeaea;
       .titulo {
         &.open {
           &:before {

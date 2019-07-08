@@ -79,7 +79,6 @@ function Size() {
         "paulo-magalhaes-nasser",
         "camila-rezende-martins",
         "ana-carolina-bariviera-barros",
-        "priscila-gomes",
         "experiencia",
         "imprensa",
         "contato"
