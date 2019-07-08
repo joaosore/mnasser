@@ -198,19 +198,24 @@ export function animateLeave(anchor, direction) {
         $(".img-logo").addClass("size");
         $(".img-logo").fadeIn();
       }
-      $(".pessoas.item_0 h2").removeClass("enter");
-      $(".pessoas.item_0 p").removeClass("enter");
-      $(".pessoas.item_0 .email").removeClass("enter");
-      $(".pessoas.item_0 .btns-redes").removeClass("enter");
-      $(".pessoas.item_0 .titulo").removeClass("enter");
+
+      setTimeout(() => {
+        $(".pessoas.item_0 h2").removeClass("enter");
+        $(".pessoas.item_0 p").removeClass("enter");
+        $(".pessoas.item_0 .email").removeClass("enter");
+        $(".pessoas.item_0 .btns-redes").removeClass("enter");
+        $(".pessoas.item_0 .titulo").removeClass("enter");
+      }, 750);
       //$(".pessoas.item_0 .img-person").removeClass("enter");
       break;
     case "camila-rezende-martins":
-      $(".pessoas.item_1 h2").removeClass("enter");
-      $(".pessoas.item_1 p").removeClass("enter");
-      $(".pessoas.item_1 .email").removeClass("enter");
-      $(".pessoas.item_1 .btns-redes").removeClass("enter");
-      $(".pessoas.item_1 .titulo").removeClass("enter");
+      setTimeout(() => {
+        $(".pessoas.item_1 h2").removeClass("enter");
+        $(".pessoas.item_1 p").removeClass("enter");
+        $(".pessoas.item_1 .email").removeClass("enter");
+        $(".pessoas.item_1 .btns-redes").removeClass("enter");
+        $(".pessoas.item_1 .titulo").removeClass("enter");
+      }, 750);
       //$(".pessoas.item_1 .img-person").removeClass("enter");
       break;
     case "ana-carolina-bariviera-barros":
@@ -220,11 +225,14 @@ export function animateLeave(anchor, direction) {
         $(".img-logo").addClass("size");
         $(".img-logo").fadeIn();
       }
-      $(".pessoas.item_2 h2").removeClass("enter");
-      $(".pessoas.item_2 p").removeClass("enter");
-      $(".pessoas.item_2 .email").removeClass("enter");
-      $(".pessoas.item_2 .btns-redes").removeClass("enter");
-      $(".pessoas.item_2 .titulo").removeClass("enter");
+
+      setTimeout(() => {
+        $(".pessoas.item_2 h2").removeClass("enter");
+        $(".pessoas.item_2 p").removeClass("enter");
+        $(".pessoas.item_2 .email").removeClass("enter");
+        $(".pessoas.item_2 .btns-redes").removeClass("enter");
+        $(".pessoas.item_2 .titulo").removeClass("enter");
+      }, 750);
       //$(".pessoas.item_2 .img-person").removeClass("enter");
       break;
     case "priscila-gomes":
@@ -234,11 +242,14 @@ export function animateLeave(anchor, direction) {
         $(".img-logo").addClass("size");
         $(".img-logo").fadeIn();
       }
-      $(".pessoas.item_3 h2").removeClass("enter");
-      $(".pessoas.item_3 p").removeClass("enter");
-      $(".pessoas.item_3 .email").removeClass("enter");
-      $(".pessoas.item_3 .btns-redes").removeClass("enter");
-      $(".pessoas.item_3 .titulo").removeClass("enter");
+
+      setTimeout(() => {
+        $(".pessoas.item_3 h2").removeClass("enter");
+        $(".pessoas.item_3 p").removeClass("enter");
+        $(".pessoas.item_3 .email").removeClass("enter");
+        $(".pessoas.item_3 .btns-redes").removeClass("enter");
+        $(".pessoas.item_3 .titulo").removeClass("enter");
+      }, 750);
       //$(".pessoas.item_3 .img-person").removeClass("enter");
       break;
     case "experiencia":
