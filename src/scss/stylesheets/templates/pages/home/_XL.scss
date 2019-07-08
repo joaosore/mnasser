@@ -227,8 +227,8 @@ header {
       color: #6e6e6e;
       font-family: "Josefin Sans";
       font-size: 1.56em;
-      font-weight: 100;
-      line-height: 30px;
+      font-weight: 300;
+      line-height: 1em;
     }
     .box {
       display: flex;
@@ -242,7 +242,7 @@ header {
       font-family: "Brandon Grotesque";
       font-size: 0.93em;
       font-weight: 900;
-      line-height: 25px;
+      line-height: 1em;
       text-transform: uppercase;
       letter-spacing: 0.75px;
       text-decoration: underline;
@@ -291,7 +291,7 @@ header {
           font-family: "Josefin Sans";
           font-size: 1.43em;
           font-weight: 600;
-          line-height: 30px;
+          line-height: 1em;
         }
         .conteudos {
           max-height: 100%;
@@ -315,7 +315,7 @@ header {
             font-family: "Brandon Grotesque";
             font-size: 4em;
             font-weight: 900;
-            line-height: 1;
+            line-height: 1em;
             text-transform: uppercase;
             letter-spacing: 2px;
           }
@@ -327,7 +327,7 @@ header {
       font-family: "Brandon Grotesque";
       font-size: 0.75em;
       font-weight: 900;
-      line-height: 1;
+      line-height: 1em;
       text-transform: uppercase;
       position: relative;
       display: flex;
@@ -363,7 +363,7 @@ header {
       font-family: "Brandon Grotesque";
       font-size: 0.93em;
       font-weight: 900;
-      line-height: 2;
+      line-height: 1em;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
@@ -372,8 +372,7 @@ header {
         color: #626262;
         font-family: "Josefin Sans";
         font-size: 1.375em;
-        font-weight: 100;
-        line-height: 1;
+        font-weight: 300;
       }
     }
     .box-conteudo {
@@ -403,14 +402,14 @@ header {
       color: #626262;
       font-family: "Josefin Sans";
       font-size: 1.4375em;
-      font-weight: 100;
+      font-weight: 300;
       line-height: 30px;
     }
     .fonte {
       color: #626262;
       font-family: "Josefin Sans";
       font-size: 0.9375em;
-      font-weight: 100;
+      font-weight: 300;
       line-height: 30px;
     }
     .box {

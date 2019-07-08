@@ -174,8 +174,10 @@ export function animateLeave(anchor, direction) {
         $(".img-logo").addClass("size");
         $(".img-logo").fadeIn();
       }
-      $(".conceito h2").removeClass("enter");
-      $(".conceito p").removeClass("enter");
+      setTimeout(() => {
+        $(".conceito h2").removeClass("enter");
+        $(".conceito p").removeClass("enter");
+      }, 750);
       break;
     case "inspiracao":
       if (direction == "down") {
@@ -184,8 +186,10 @@ export function animateLeave(anchor, direction) {
         $(".img-logo").removeClass("size");
         $(".img-logo").fadeOut();
       }
-      $(".inspiracao h2").removeClass("enter");
-      $(".inspiracao p").removeClass("enter");
+      setTimeout(() => {
+        $(".inspiracao h2").removeClass("enter");
+        $(".inspiracao p").removeClass("enter");
+      }, 750);
       break;
     case "paulo-magalhaes-nasser":
       if (direction == "up") {
@@ -238,18 +242,27 @@ export function animateLeave(anchor, direction) {
         $(".img-logo").removeClass("size");
         $(".img-logo").fadeOut();
       }
-      $(".experiencia h2").removeClass("enter");
-      $(".experiencia p").removeClass("enter");
-      $(".btn-modal").removeClass("enter");
+      setTimeout(() => {
+        $(".experiencia h2").removeClass("enter");
+        $(".experiencia p").removeClass("enter");
+        $(".btn-modal").removeClass("enter");
+      }, 750);
+
       break;
     case "imprensa":
-      $(".imprensa .titulo").removeClass("enter");
-      $(".imprensa p").removeClass("enter");
-      $(".imprensa .fonte").removeClass("enter");
+      setTimeout(() => {
+        $(".imprensa .titulo").removeClass("enter");
+        $(".imprensa p").removeClass("enter");
+        $(".imprensa .fonte").removeClass("enter");
+      }, 750);
+
       break;
     case "contato":
-      $(".contato h2").removeClass("enter");
-      $(".contato p").removeClass("enter");
+      setTimeout(() => {
+        $(".contato h2").removeClass("enter");
+        $(".contato p").removeClass("enter");
+      }, 750);
+
       break;
   }
 }
