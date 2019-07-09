@@ -4,22 +4,22 @@
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: transparent;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: transparent;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: transparent;
 }
 
 // Global Theme Styles

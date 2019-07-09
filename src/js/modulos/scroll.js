@@ -2,7 +2,76 @@ const fullpage = require("fullpage.js");
 import { animateEnter, animateLeave, activeAnimate } from "./animation.js";
 import ScrollReveal from "scrollreveal";
 
+$(document).on("click", ".scroll-enable-up", function() {
+  var el = $(this)
+    .parent()
+    .find(".scroll-c");
+  var scroll = $(el).scrollTop();
+  $(el).animate({ scrollTop: scroll - 100 }, 350);
+
+  $(this)
+    .parent()
+    .find(".scroll-enable-down")
+    .removeClass("disable");
+
+  setTimeout(() => {
+    var scroll = $(el).scrollTop();
+    if (scroll == 0) {
+      $(this).removeClass("active");
+    } else {
+      $(this).addClass("active");
+    }
+  }, 500);
+});
+
+$(document).on("click", ".scroll-enable-down", function() {
+  var el = $(this)
+    .parent()
+    .find(".scroll-c");
+
+  $(this)
+    .parent()
+    .find(".scroll-enable-up")
+    .addClass("active");
+
+  var maxScrollTop = el[0].scrollHeight - el.outerHeight();
+  var scroll = $(el).scrollTop();
+  $(el).animate({ scrollTop: scroll + 100 }, 350);
+
+  setTimeout(() => {
+    var scrollAtual = $(el).scrollTop();
+    if (maxScrollTop == scrollAtual) {
+      $(this).addClass("disable");
+    } else {
+      $(this).removeClass("disable");
+    }
+  }, 500);
+});
+
 $(window).on("load", function() {
+  setTimeout(() => {
+    if (hasScrollBar(".pessoas.item_0 .scroll-c") == false) {
+      $(".pessoas.item_0 .scroll-enable-down").hide();
+      $(".pessoas.item_0 .scroll-enable-up").hide();
+    }
+    if (hasScrollBar(".pessoas.item_1 .scroll-c") == false) {
+      $(".pessoas.item_1 .scroll-enable-down").hide();
+      $(".pessoas.item_1 .scroll-enable-up").hide();
+    }
+    if (hasScrollBar(".pessoas.item_2 .scroll-c") == false) {
+      $(".pessoas.item_2 .scroll-enable-down").hide();
+      $(".pessoas.item_2 .scroll-enable-up").hide();
+    }
+    if (hasScrollBar(".experiencia .box-scroll .scroll-c") == false) {
+      $(".experiencia .box-scroll .scroll-enable-down").hide();
+      $(".experiencia .box-scroll .scroll-enable-up").hide();
+    }
+    if (hasScrollBar(".imprensa .box-scroll .scroll-c") == false) {
+      $(".imprensa .box-scroll .scroll-enable-down").hide();
+      $(".imprensa .box-scroll .scroll-enable-up").hide();
+    }
+  }, 1000);
+
   Size();
 
   if (getCookie("linguagem").length == 0) {
@@ -195,4 +264,8 @@ function ancora(item) {
       500
     );
   }
+}
+
+function hasScrollBar(item) {
+  return $(item).get(0).scrollHeight > $(item).get(0).offsetHeight;
 }

@@ -145,78 +145,82 @@ get_header();
               </a>
             </div>
             
-            <div class="scroll-c">
-              <?php 
-                if(!empty($value['biografia'])) {
-              ?>
-                <div>
-                  <div class="item">
-                    <?php echo $value['biografia']; ?>
+            <div class="box-scroll">
+              <div class="scroll-enable-up"></div>
+              <div class="scroll-enable-down"></div>
+              <div class="scroll-c">
+                <?php 
+                  if(!empty($value['biografia'])) {
+                ?>
+                  <div>
+                    <div class="item">
+                      <?php echo $value['biografia']; ?>
+                    </div>
                   </div>
-                </div>
-              <?php 
-                }
-              ?>
-              
-              <?php 
-                if(!empty($value['formacao_titulo'])) {
-              ?>
-                <div>
-                  <div class="titulo">
-                    <?php echo $value['formacao_titulo']; ?>
+                <?php 
+                  }
+                ?>
+                
+                <?php 
+                  if(!empty($value['formacao_titulo'])) {
+                ?>
+                  <div>
+                    <div class="titulo">
+                      <?php echo $value['formacao_titulo']; ?>
+                    </div>
+                    <div class="item">
+                      <?php echo $value['formacao']; ?>
+                    </div>
                   </div>
-                  <div class="item">
-                    <?php echo $value['formacao']; ?>
+                <?php 
+                  }
+                ?>
+                
+                <?php 
+                  if(!empty($value['historico_profissional_no_exterior_titulo'])) {
+                ?>
+                  <div>
+                    <div class="titulo">
+                      <?php echo $value['historico_profissional_no_exterior_titulo']; ?>
+                    </div>
+                    <div class="item">
+                      <?php echo $value['historico_profissional_no_exterior']; ?>
+                    </div>
                   </div>
-                </div>
-              <?php 
-                }
-              ?>
-              
-              <?php 
-                if(!empty($value['historico_profissional_no_exterior_titulo'])) {
-              ?>
-                <div>
-                  <div class="titulo">
-                    <?php echo $value['historico_profissional_no_exterior_titulo']; ?>
-                  </div>
-                  <div class="item">
-                    <?php echo $value['historico_profissional_no_exterior']; ?>
-                  </div>
-                </div>
-              <?php 
-                }
-              ?>
+                <?php 
+                  }
+                ?>
 
-              <?php 
-                if(!empty($value['docencia_titulo'])) {
-              ?>
-                <div>
-                  <div class="titulo">
-                    <?php echo $value['docencia_titulo']; ?>
+                <?php 
+                  if(!empty($value['docencia_titulo'])) {
+                ?>
+                  <div>
+                    <div class="titulo">
+                      <?php echo $value['docencia_titulo']; ?>
+                    </div>
+                    <div class="item">
+                      <?php echo $value['docencia']; ?>
+                    </div>
                   </div>
-                  <div class="item">
-                    <?php echo $value['docencia']; ?>
-                  </div>
-                </div>
-              <?php 
-                }
-              ?>
+                <?php 
+                  }
+                ?>
 
-              <?php 
-                if(!empty($value['principais_publicacoes_titulo'])) {
-              ?>
-                <div>
-                  <div class="titulo">
-                    <?php echo $value['principais_publicacoes_titulo']; ?>
+                <?php 
+                  if(!empty($value['principais_publicacoes_titulo'])) {
+                ?>
+                  <div>
+                    <div class="titulo">
+                      <?php echo $value['principais_publicacoes_titulo']; ?>
+                    </div>
+                    <div class="item">
+                      <?php echo $value['principais_publicacoes']; ?>
+                    </div>
                   </div>
-                  <div class="item">
-                    <?php echo $value['principais_publicacoes']; ?>
-                  </div>
-                </div>
-              <?php 
-                }
-              ?>
+                <?php 
+                  }
+                ?>
+              </div>
             </div>
           </div>
           <div class="col-md-6 h-100 box-img">
@@ -249,18 +253,22 @@ get_header();
                 <div class="titutlo">
                   <?php echo get_dados('botao_experiencia'); ?>
                 </div>
-                <div class="conteudos">
-                  <?php 
-                    foreach(get_dados('contencioso_judicial') as $key => $value) {
-                  ?>
-                  <div>
-                    <?php
-                      echo $value['artigo'];
+                <div class="box-scroll">
+                  <div class="scroll-enable-up"></div>
+                  <div class="scroll-enable-down"></div>
+                  <div class="scroll-c conteudos">
+                    <?php 
+                      foreach(get_dados('contencioso_judicial') as $key => $value) {
+                    ?>
+                    <div>
+                      <?php
+                        echo $value['artigo'];
+                      ?>
+                    </div>
+                    <?php 
+                      }
                     ?>
                   </div>
-                  <?php 
-                    }
-                  ?>
                 </div>
               </div>
               
@@ -268,18 +276,22 @@ get_header();
                 <div class="titutlo">
                   <?php echo get_dados('arbitragem_titulo'); ?>
                 </div>
-                <div class="conteudos">
-                  <?php 
-                    foreach(get_dados('arbitragem') as $key => $value) {
-                  ?>
-                  <div>
-                    <?php
-                      echo $value['artigo'];
+                <div class="box-scroll">
+                  <div class="scroll-enable-up"></div>
+                  <div class="scroll-enable-down"></div>
+                  <div class="scroll-c conteudos">
+                    <?php 
+                      foreach(get_dados('arbitragem') as $key => $value) {
+                    ?>
+                    <div>
+                      <?php
+                        echo $value['artigo'];
+                      ?>
+                    </div>
+                    <?php 
+                      }
                     ?>
                   </div>
-                  <?php 
-                    }
-                  ?>
                 </div>
               </div>
 
@@ -296,24 +308,28 @@ get_header();
         <div class="row h-100">
           <div class="col-md-3 d-none d-lg-flex h-100"></div>
           <div class="col-md-8 box h-100">
-            <div class="scroll-c">
-              <?php 
-                foreach(get_dados('artigos') as $key => $artigo) {
-              ?>
-                <div class="acordion">
-                  <div class="titulo">
-                    <?php echo $artigo['titulo']; ?>
+          <div class="box-scroll">
+              <div class="scroll-enable-up"></div>
+              <div class="scroll-enable-down"></div>
+              <div class="scroll-c">
+                <?php 
+                  foreach(get_dados('artigos') as $key => $artigo) {
+                ?>
+                  <div class="acordion">
+                    <div class="titulo">
+                      <?php echo $artigo['titulo']; ?>
+                    </div>
+                    <div class="conteudo">
+                      <?php echo $artigo['conteudo']; ?>
+                    </div>
+                    <div class="fonte">
+                      Fonte: <?php echo $artigo['fonte']; ?>
+                    </div>
                   </div>
-                  <div class="conteudo">
-                    <?php echo $artigo['conteudo']; ?>
-                  </div>
-                  <div class="fonte">
-                    Fonte: <?php echo $artigo['fonte']; ?>
-                  </div>
-                </div>
-              <?php
-                }
-              ?>
+                <?php
+                  }
+                ?>
+              </div>
             </div>
           </div>
         </div>

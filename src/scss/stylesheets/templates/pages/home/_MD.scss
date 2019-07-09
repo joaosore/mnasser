@@ -23,6 +23,9 @@
 
   .section {
     position: relative;
+    .scroll-c {
+      padding-right: 0;
+    }
     .video {
       height: 100vh;
       transform: scale(1);
@@ -58,6 +61,7 @@
         overflow-y: inherit;
         overflow-x: inherit;
         height: auto;
+        max-width: 100%;
         .acordion {
           .titulo {
             line-height: 1.5em;
@@ -68,6 +72,7 @@
           .conteudo {
             p {
               line-height: 1;
+              font-size: 1em;
             }
           }
         }
