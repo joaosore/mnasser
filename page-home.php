@@ -51,7 +51,20 @@ get_header();
 
 <div class="logo">
   <div class="box">
-    <img class="lazyload img-logo" src="" data-srcset="<?php echo get_template_directory_uri(); ?>/dist/imgs/logo.svg">
+      <?php
+        switch($_COOKIE["linguagem"]){
+          case "en":
+            ?>
+            <img class="lazyload img-logo" src="" data-srcset="<?php echo get_template_directory_uri(); ?>/dist/imgs/logo-eng.svg">
+            <?php 
+          break;
+          default:
+            ?>
+            <img class="lazyload img-logo" src="" data-srcset="<?php echo get_template_directory_uri(); ?>/dist/imgs/logo.svg">
+            <?php 
+          break;
+        }
+      ?>
   </div>
 </div>
 
