@@ -137,6 +137,7 @@ header {
       height: 120px;
       &.size {
         height: 200px;
+        max-width: 100%;
       }
     }
   }
@@ -472,7 +473,7 @@ header {
       color: #c2a573;
       font-family: "Brandon Grotesque";
       font-size: 1.875em;
-      font-weight: 500;
+      font-weight: 900;
       text-transform: uppercase;
     }
     p {
@@ -482,7 +483,7 @@ header {
     a {
       color: #626262;
       font-family: "Brandon Grotesque";
-      font-weight: 420;
+      font-weight: 400;
       text-transform: uppercase;
     }
     .box-container {
