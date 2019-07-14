@@ -166,7 +166,7 @@ get_header();
             </div>
 
             <div class="owl-carousel owl-theme pessoas">
-              <?php if(!empty($value['biografia'])) { ?>
+              <?php if(!empty($value['biografia'])) { ?> 
                 <div class="item">
                   <?php echo $value['biografia']; ?>
                 </div>
