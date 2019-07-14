@@ -232,6 +232,11 @@ function removeHiddenConteudoBoxImg() {
     "transform",
     "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)"
   );
+  $(".owl-carousel p").css("opacity", "1");
+  $(".owl-carousel p").css(
+    "transform",
+    "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)"
+  );
 }
 
 function menuMobile() {

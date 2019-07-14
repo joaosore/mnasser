@@ -1,7 +1,7 @@
 import owlCarousel from "owl.carousel";
 
 export function start_carousel_pessoas() {
-  var owl = $(".owl-carousel");
+  var owl = $(".owl-carousel.pessoas");
   owl.owlCarousel({
     margin: 10,
     nav: false,
@@ -41,6 +41,30 @@ export function start_carousel_pessoas() {
   $(document).on("click", ".thumb-carousel ul li", function() {
     var index = $(this).index();
     owl.trigger("to.owl.carousel", [index, 350]);
+  });
+
+  var imprensa = $(".owl-carousel.imprensa");
+  imprensa.owlCarousel({
+    margin: 50,
+    nav: true,
+    dots: false,
+    items: 1
+    // autoplay: true,
+    // autoplayTimeout: 7500,
+    // autoplayHoverPause: true,
+    // loop: true
+  });
+
+  var experiencia = $(".owl-carousel.experiencia");
+  experiencia.owlCarousel({
+    margin: 50,
+    nav: true,
+    dots: false,
+    items: 1
+    // autoplay: true,
+    // autoplayTimeout: 7500,
+    // autoplayHoverPause: true,
+    // loop: true
   });
 }
 start_carousel_pessoas();

@@ -269,6 +269,8 @@ header {
       background-color: #fff;
       transform: translateX(-135%);
       transition: all 350ms ease-in-out;
+      flex-direction: column;
+      justify-content: center;
       &.enter {
         transform: translateX(0);
       }
@@ -288,9 +290,7 @@ header {
       }
       .box-c {
         padding: 50px;
-        &:nth-child(3) {
-          padding-left: 0;
-        }
+        width: 100%;
         .titutlo {
           font-family: "Josefin Sans";
           font-size: 1.43em;
@@ -475,7 +475,102 @@ header {
     padding-right: 50px;
   }
 
+  .experiencia {
+    .item {
+      padding: 50px;
+    }
+    .owl-carousel {
+      .owl-nav {
+        position: absolute;
+        top: calc(50% - 25px);
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        pointer-events: none;
+        .owl-prev {
+          background-image: url("../assets/right-arrow.svg");
+          width: 50px;
+          height: 50px;
+          background-position: center center;
+          background-size: cover;
+          transform: rotateZ(180deg);
+          pointer-events: all;
+          &.disabled {
+            display: block;
+            opacity: 0.2;
+          }
+          span {
+            display: none;
+          }
+        }
+        .owl-next {
+          background-image: url("../assets/right-arrow.svg");
+          width: 50px;
+          height: 50px;
+          background-position: center center;
+          background-size: cover;
+          pointer-events: all;
+          &.disabled {
+            display: block;
+            opacity: 0.2;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
   .imprensa {
+    .item {
+      padding: 50px;
+    }
+    .owl-carousel {
+      .owl-nav {
+        position: absolute;
+        top: calc(50% - 25px);
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        pointer-events: none;
+        .owl-prev {
+          background-image: url("../assets/right-arrow.svg");
+          width: 50px;
+          height: 50px;
+          background-position: center center;
+          background-size: cover;
+          transform: rotateZ(180deg);
+          pointer-events: all;
+          &.disabled {
+            display: block;
+            opacity: 0.2;
+          }
+          span {
+            display: none;
+          }
+        }
+        .owl-next {
+          background-image: url("../assets/right-arrow.svg");
+          width: 50px;
+          height: 50px;
+          background-position: center center;
+          background-size: cover;
+          pointer-events: all;
+          &.disabled {
+            display: block;
+            opacity: 0.2;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+
     .titulo {
       color: #c2a573;
       font-family: "Brandon Grotesque";
@@ -500,28 +595,33 @@ header {
       line-height: 30px;
     }
     .box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 100px 0 100px 50px;
+      .item {
+        width: 100%;
+      }
       .conteudo {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: wrap;
-        max-height: 2em;
+        //max-height: 2em;
         transition: all 350ms ease-in-out;
         margin-top: 0;
         &.open {
-          max-height: 5000px;
+          //max-height: 5000px;
         }
       }
     }
     .box-scroll {
-      max-height: fit-content;
-      height: 100%;
+      width: 100%;
     }
     .scroll-c {
       display: flex;
       align-items: center;
       flex-direction: column;
-      max-width: 70%;
+      max-width: 100%;
       //justify-content: center;
       &.top {
         justify-content: flex-start;
@@ -535,18 +635,18 @@ header {
         width: 90%;
         font-weight: 500;
         &.open {
-          &:before {
-            content: " ";
-            background-image: url("../assets/close.png");
-            width: 18px;
-            height: 18px;
-            background-size: 100%;
-            display: block;
-            margin-right: 15px;
-            position: absolute;
-            right: -3em;
-            top: 1em;
-          }
+          // &:before {
+          //   content: " ";
+          //   background-image: url("../assets/close.png");
+          //   width: 18px;
+          //   height: 18px;
+          //   background-size: 100%;
+          //   display: block;
+          //   margin-right: 15px;
+          //   position: absolute;
+          //   right: -3em;
+          //   top: 0;
+          // }
         }
       }
     }

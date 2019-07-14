@@ -303,20 +303,21 @@ get_header();
                   <?php echo get_dados('botao_experiencia'); ?>
                 </div>
                 <div class="box-scroll">
-                  <div class="scroll-enable-up"></div>
-                  <div class="scroll-enable-down"></div>
-                  <div class="scroll-c conteudos">
-                    <?php 
-                      foreach(get_dados('contencioso_judicial') as $key => $value) {
-                    ?>
-                    <div>
-                      <?php
-                        echo $value['artigo'];
+                  <div class="conteudos">
+                    <div class="owl-carousel owl-theme experiencia">
+                      <?php 
+                        foreach(get_dados('contencioso_judicial') as $key => $value) {
+                      ?>
+                      
+                        <div class="item">
+                          <?php
+                            echo $value['artigo'];
+                          ?>
+                        </div>
+                      <?php 
+                        }
                       ?>
                     </div>
-                    <?php 
-                      }
-                    ?>
                   </div>
                 </div>
               </div>
@@ -326,20 +327,20 @@ get_header();
                   <?php echo get_dados('arbitragem_titulo'); ?>
                 </div>
                 <div class="box-scroll">
-                  <div class="scroll-enable-up"></div>
-                  <div class="scroll-enable-down"></div>
-                  <div class="scroll-c conteudos">
-                    <?php 
-                      foreach(get_dados('arbitragem') as $key => $value) {
-                    ?>
-                    <div>
-                      <?php
-                        echo $value['artigo'];
+                  <div class="conteudos">
+                    <div class="owl-carousel owl-theme experiencia">
+                      <?php 
+                        foreach(get_dados('arbitragem') as $key => $value) {
+                      ?>
+                        <div class="item">
+                          <?php
+                            echo $value['artigo'];
+                          ?>
+                        </div>
+                      <?php 
+                        }
                       ?>
                     </div>
-                    <?php 
-                      }
-                    ?>
                   </div>
                 </div>
               </div>
@@ -358,26 +359,28 @@ get_header();
           <div class="col-md-3 d-none d-lg-flex h-100"></div>
           <div class="col-md-8 box h-100">
           <div class="box-scroll">
-              <div class="scroll-enable-up"></div>
-              <div class="scroll-enable-down"></div>
               <div class="scroll-c">
-                <?php 
-                  foreach(get_dados('artigos') as $key => $artigo) {
-                ?>
-                  <div class="acordion">
-                    <div class="titulo">
-                      <?php echo $artigo['titulo']; ?>
+                <div class="owl-carousel owl-theme imprensa">
+                  <?php 
+                    foreach(get_dados('artigos') as $key => $artigo) {
+                  ?>
+                    <div class="item">
+                      <div class="acordion">
+                        <div class="titulo">
+                          <?php echo $artigo['titulo']; ?>
+                        </div>
+                        <div class="conteudo">
+                          <?php echo $artigo['conteudo']; ?>
+                        </div>
+                        <div class="fonte">
+                          Fonte: <?php echo $artigo['fonte']; ?>
+                        </div>
+                      </div>
                     </div>
-                    <div class="conteudo">
-                      <?php echo $artigo['conteudo']; ?>
-                    </div>
-                    <div class="fonte">
-                      Fonte: <?php echo $artigo['fonte']; ?>
-                    </div>
-                  </div>
-                <?php
-                  }
-                ?>
+                  <?php
+                    }
+                  ?>
+                </div>
               </div>
             </div>
           </div>

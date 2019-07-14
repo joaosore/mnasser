@@ -93,6 +93,9 @@
       p {
         font-weight: 300;
       }
+      .box-itens-modal {
+        justify-content: flex-start;
+      }
       .box,
       .box-conteudo {
         padding: 15px;
@@ -121,9 +124,33 @@
           font-weight: 300;
         }
       }
+      .thumb-carousel {
+        ul {
+          display: -webkit-flex;
+          -webkit-flex-wrap: wrap;
+          display: flex;
+          flex-wrap: wrap;
+          line-height: 2em;
+        }
+      }
     }
   }
 
+  .section .imprensa .owl-carousel .owl-nav .owl-next,
+  .section .experiencia .owl-carousel .owl-nav .owl-next {
+    width: 25px;
+    height: 25px;
+  }
+  .section .imprensa .owl-carousel .owl-nav .owl-prev,
+  .section .experiencia .owl-carousel .owl-nav .owl-prev {
+    width: 25px;
+    height: 25px;
+  }
+
+  .section .imprensa .box .item,
+  .section .experiencia .item {
+    padding: 25px;
+  }
   @media (orientation: landscape) {
   }
   @media (orientation: portrait) {
