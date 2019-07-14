@@ -389,7 +389,45 @@ header {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-right: 0;
+    }
+    .thumb-carousel {
+      ul {
+        margin: 0;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 0.5em;
+        li {
+          display: block;
+          text-transform: uppercase;
+          font-size: 0.7em;
+          font-weight: 900;
+          position: relative;
+          margin-right: 1em;
+          cursor: pointer;
+          &:hover {
+            color: #c2a573;
+            &:before {
+              width: 100%;
+            }
+          }
+          &.active {
+            color: #c2a573;
+            &:before {
+              width: 100%;
+            }
+          }
+          &:before {
+            content: " ";
+            width: 0;
+            height: 1px;
+            background-color: #c2a573;
+            position: absolute;
+            bottom: 0;
+            transition: all 350ms ease-in-out;
+          }
+        }
+      }
     }
   }
 

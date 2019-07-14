@@ -145,7 +145,56 @@ get_header();
               </a>
             </div>
             
+            <div class="thumb-carousel">
+              <ul>
+                <?php if(!empty($value['biografia'])) { ?>
+                  <li>biografia</li> 
+                <?php } ?>
+                <?php if(!empty($value['formacao_titulo'])) { ?>
+                  <li>Formação</li> 
+                <?php } ?>
+                <?php if(!empty($value['historico_profissional_no_exterior_titulo'])) { ?>
+                  <li>Histórico Profissional no Exterior</li> 
+                <?php } ?>
+                <?php if(!empty($value['docencia_titulo'])) { ?>
+                  <li>Docência</li> 
+                <?php } ?>
+                <?php if(!empty($value['principais_publicacoes_titulo'])) { ?>
+                  <li>Principais publicações</li> 
+                <?php } ?>
+              </ul>
+            </div>
+
+            <div class="owl-carousel owl-theme pessoas">
+              <?php if(!empty($value['biografia'])) { ?>
+                <div class="item">
+                  <?php echo $value['biografia']; ?>
+                </div>
+              <?php } ?>
+              <?php if(!empty($value['formacao_titulo'])) { ?>
+                <div class="item">
+                  <?php echo $value['formacao']; ?>
+                </div>
+              <?php } ?>
+              <?php if(!empty($value['historico_profissional_no_exterior_titulo'])) { ?>
+                <div class="item">
+                  <?php echo $value['historico_profissional_no_exterior']; ?>
+                </div>
+              <?php } ?>
+              <?php if(!empty($value['docencia_titulo'])) { ?>
+                <div class="item">
+                  <?php echo $value['docencia']; ?>
+                </div>
+              <?php } ?>
+              <?php if(!empty($value['principais_publicacoes_titulo'])) { ?>
+                <div class="item">
+                  <?php echo $value['principais_publicacoes']; ?>
+                </div>
+              <?php } ?>
+            </div>
+<!-- 
             <div class="box-scroll">
+
               <div class="scroll-enable-up"></div>
               <div class="scroll-enable-down"></div>
               <div class="scroll-c">
@@ -153,9 +202,7 @@ get_header();
                   if(!empty($value['biografia'])) {
                 ?>
                   <div>
-                    <div class="item">
-                      <?php echo $value['biografia']; ?>
-                    </div>
+                    
                   </div>
                 <?php 
                   }
@@ -221,7 +268,9 @@ get_header();
                   }
                 ?>
               </div>
-            </div>
+            </div> -->
+            
+
           </div>
           <div class="col-md-6 h-100 box-img">
             <img class="lazyload img-person" src="" data-srcset="<?php echo $value['foto']; ?>"/>

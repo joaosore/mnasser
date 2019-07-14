@@ -27,6 +27,10 @@
 // Theme Styles
 @import "src/scss/stylesheets/theme-styles";
 
+.disabled {
+  display: none;
+}
+
 @font-face {
   font-family: "Josefin Sans";
   src: url("fonts/JosefinSans-Light.woff2") format("woff2"),

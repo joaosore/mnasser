@@ -10,18 +10,21 @@ export function activeAnimate() {
   animate(".pessoas.item_0 .titulo", true, "right");
   animate(".pessoas.item_0 p", true, "right");
   //animate(".pessoas.item_0 .img-person", true);
+  animate(".pessoas.item_0 .thumb-carousel ul li", true, "rigth");
 
   animate(".pessoas.item_1 .email", true);
   animate(".pessoas.item_1 .btns-redes", true);
   animate(".pessoas.item_1 .titulo", true);
   animate(".pessoas.item_1 p", true);
   //animate(".pessoas.item_1 .img-person", true, "right");
+  animate(".pessoas.item_1 .thumb-carousel ul li", true, "left");
 
   animate(".pessoas.item_2 .email", true, "right");
   animate(".pessoas.item_2 .btns-redes", true, "right");
   animate(".pessoas.item_2 .titulo", true, "right");
   animate(".pessoas.item_2 p", true, "right");
   //animate(".pessoas.item_2 .img-person", true);
+  animate(".pessoas.item_2 .thumb-carousel ul li", true, "rigth");
 
   animate(".pessoas.item_3 .email", true);
   animate(".pessoas.item_3 .btns-redes", true);
@@ -81,6 +84,7 @@ export function animateEnter(anchor) {
       animate(".pessoas.item_0 .btns-redes");
       animate(".pessoas.item_0 .titulo");
       //animate(".pessoas.item_0 .img-person");
+      animate(".pessoas.item_0 .thumb-carousel ul li", false, "right");
       break;
     case "camila-rezende-martins":
       $(".menu").removeClass("enter");
@@ -93,6 +97,7 @@ export function animateEnter(anchor) {
       animate(".pessoas.item_1 .btns-redes");
       animate(".pessoas.item_1 .titulo");
       //animate(".pessoas.item_1 .img-person");
+      animate(".pessoas.item_1 .thumb-carousel ul li", false, "left");
       break;
     case "ana-carolina-bariviera-barros":
       $(".menu").removeClass("enter");
@@ -105,6 +110,7 @@ export function animateEnter(anchor) {
       animate(".pessoas.item_2 .btns-redes");
       animate(".pessoas.item_2 .titulo");
       //animate(".pessoas.item_2 .img-person");
+      animate(".pessoas.item_2 .thumb-carousel ul li", false, "right");
       break;
     case "priscila-gomes":
       $(".menu").removeClass("enter");
@@ -205,6 +211,7 @@ export function animateLeave(anchor, direction) {
         $(".pessoas.item_0 .email").removeClass("enter");
         $(".pessoas.item_0 .btns-redes").removeClass("enter");
         $(".pessoas.item_0 .titulo").removeClass("enter");
+        $(".pessoas.item_0 .thumb-carousel ul li").removeClass("enter");
       }, 750);
       //$(".pessoas.item_0 .img-person").removeClass("enter");
       break;
@@ -215,6 +222,7 @@ export function animateLeave(anchor, direction) {
         $(".pessoas.item_1 .email").removeClass("enter");
         $(".pessoas.item_1 .btns-redes").removeClass("enter");
         $(".pessoas.item_1 .titulo").removeClass("enter");
+        $(".pessoas.item_1 .thumb-carousel ul li").removeClass("enter");
       }, 750);
       //$(".pessoas.item_1 .img-person").removeClass("enter");
       break;
@@ -232,6 +240,7 @@ export function animateLeave(anchor, direction) {
         $(".pessoas.item_2 .email").removeClass("enter");
         $(".pessoas.item_2 .btns-redes").removeClass("enter");
         $(".pessoas.item_2 .titulo").removeClass("enter");
+        $(".pessoas.item_2 .thumb-carousel ul li").removeClass("enter");
       }, 750);
       //$(".pessoas.item_2 .img-person").removeClass("enter");
       break;

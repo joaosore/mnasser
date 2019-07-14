@@ -154,6 +154,7 @@ function Size() {
       ],
       onLeave: function(origin, destination, direction) {
         animateLeave(origin.anchor, direction);
+        $(".owl-carousel").trigger("to.owl.carousel", [0, 350]);
       },
       afterLoad: function(origin, destination, direction) {
         animateEnter(destination.anchor);

@@ -19,3 +19,4 @@ import "./modulos/library.js";
 import "./modulos/scroll.js";
 import "./modulos/video.js";
 import "./modulos/animation.js";
+import "./modulos/carousel.js";
