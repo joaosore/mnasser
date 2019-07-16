@@ -291,18 +291,41 @@ header {
       .box-c {
         padding: 50px;
         width: 100%;
+        flex: 1;
+        &:nth-child(2) {
+          &:after {
+            content: "";
+            background-color: #6e6e6e;
+            width: 100%;
+            height: 1px;
+            position: relative;
+            display: block;
+          }
+        }
         .titutlo {
           font-family: "Josefin Sans";
           font-size: 1.43em;
           font-weight: 600;
           margin-bottom: 1em;
         }
-        .conteudos {
-          max-height: 90%;
-          overflow-y: auto;
-          overflow-x: hidden;
-          p {
-            margin: 1em 0;
+        .box-scroll {
+          height: 100%;
+          .conteudos {
+            max-height: 100%;
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+            .owl-carousel {
+              height: 100%;
+              .owl-nav {
+                bottom: 15px;
+                top: auto;
+                width: auto;
+              }
+            }
+            p {
+              margin: 1em 0;
+            }
           }
         }
       }
@@ -433,7 +456,7 @@ header {
 
   .box-scroll {
     position: relative;
-    max-height: 65%;
+
     .scroll-enable-up {
       background-image: url("../assets/seta.svg");
       width: 50px;
@@ -473,6 +496,7 @@ header {
     overflow-y: auto;
     overflow-x: hidden;
     padding-right: 50px;
+    height: 100%;
   }
 
   .experiencia {
@@ -616,12 +640,30 @@ header {
     }
     .box-scroll {
       width: 100%;
+      height: 100%;
     }
     .scroll-c {
       display: flex;
       align-items: center;
       flex-direction: column;
       max-width: 100%;
+      height: 100%;
+      .owl-carousel {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        .owl-nav {
+          top: auto;
+          position: absolute;
+          bottom: 0;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          pointer-events: none;
+          width: auto;
+        }
+      }
       //justify-content: center;
       &.top {
         justify-content: flex-start;
