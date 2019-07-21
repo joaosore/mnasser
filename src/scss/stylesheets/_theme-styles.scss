@@ -1,0 +1,44 @@
+*:focus {
+  outline: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+// Global Theme Styles
+html {
+  body {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    &.block-scroll {
+      overflow: hidden;
+    }
+    @media only screen and (max-width: 1325px) {
+      font-size: 14px;
+    }
+    @media only screen and (max-width: 1183px) {
+      font-size: 12px;
+    }
+    @media only screen and (max-width: 400px) {
+      font-size: 12px;
+    }
+  }
+}

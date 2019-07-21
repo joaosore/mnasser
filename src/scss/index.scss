@@ -1,0 +1,200 @@
+// Bootstrap
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+/*     This file is working like main.scss in structure    */
+@import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
+
+//Owl Carrossel
+@import "../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css";
+
+//Custom Selec
+@import "../../node_modules/custom-select/build/custom-select.css";
+
+// Defining Variables
+@import "src/scss/stylesheets/modules/variables";
+
+// Theme Configurations
+@import "src/scss/fonts/stylesheet";
+@import "src/scss/stylesheets/partials/buttons";
+@import "src/scss/stylesheets/partials/typography";
+@import "src/scss/stylesheets/modules/tools";
+@import "src/scss/stylesheets/partials/components";
+
+// Page Templates
+@import "src/scss/stylesheets/templates/post";
+@import "src/scss/stylesheets/templates/page";
+
+// Theme Styles
+@import "src/scss/stylesheets/theme-styles";
+
+.disabled {
+  display: none;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("fonts/JosefinSans-Light.woff2") format("woff2"),
+    url("fonts/JosefinSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("fonts/JosefinSans-ThinItalic.woff2") format("woff2"),
+    url("fonts/JosefinSans-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("fonts/JosefinSans-LightItalic.woff2") format("woff2"),
+    url("fonts/JosefinSans-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("fonts/JosefinSans-BoldItalic.woff2") format("woff2"),
+    url("fonts/JosefinSans-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("fonts/JosefinSansRegularItalic.woff2") format("woff2"),
+    url("fonts/JosefinSansRegularItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("fonts/JosefinSans-Thin.woff2") format("woff2"),
+    url("fonts/JosefinSans-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("fonts/JosefinSans-SemiBold.woff2") format("woff2"),
+    url("fonts/JosefinSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("fonts/JosefinSans-SemiBoldItalic.woff2") format("woff2"),
+    url("fonts/JosefinSans-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("fonts/JosefinSans.woff2") format("woff2"),
+    url("fonts/JosefinSans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("fonts/JosefinSans-Bold.woff2") format("woff2"),
+    url("fonts/JosefinSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("fonts/BrandonGrotesque-Regular.woff2") format("woff2"),
+    url("fonts/BrandonGrotesque-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("fonts/BrandonGrotesque-Thin.woff2") format("woff2"),
+    url("fonts/BrandonGrotesque-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("fonts/BrandonGrotesque-RegularItalic.woff2") format("woff2"),
+    url("fonts/BrandonGrotesque-RegularItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("fonts/BrandonGrotesque-Medium.woff2") format("woff2"),
+    url("fonts/BrandonGrotesque-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("fonts/BrandonGrotesque-BlackItalic.woff2") format("woff2"),
+    url("fonts/BrandonGrotesque-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("fonts/BrandonGrotesque-LightItalic.woff2") format("woff2"),
+    url("fonts/BrandonGrotesque-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("fonts/BrandonGrotesque-MediumItalic.woff2") format("woff2"),
+    url("fonts/BrandonGrotesque-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("fonts/BrandonGrotesque-Black.woff2") format("woff2"),
+    url("fonts/BrandonGrotesque-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("fonts/BrandonGrotesque-Bold.woff2") format("woff2"),
+    url("fonts/BrandonGrotesque-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("fonts/BrandonGrotesque-BoldItalic.woff2") format("woff2"),
+    url("fonts/BrandonGrotesque-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("fonts/BrandonGrotesque-Light.woff2") format("woff2"),
+    url("fonts/BrandonGrotesque-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
