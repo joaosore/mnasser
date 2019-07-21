@@ -108,6 +108,17 @@ function be_enable_vcard_upload( $mime_types ){
 }
 add_filter('upload_mimes', 'be_enable_vcard_upload' );
 
+function jd_scripts() {
+
+	wp_enqueue_style( 'main', get_template_directory_uri(). "/dist/css/main.css");
+  wp_enqueue_script( 'main', get_template_directory_uri() . '/dist/js/main.js', array(), '20180122', true );
+
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'jd_scripts' );
+
 /**
  * Implement the Custom Header feature.
  */

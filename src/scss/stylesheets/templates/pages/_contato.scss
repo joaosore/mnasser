@@ -1,0 +1,47 @@
+section.contato {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  .conteudo {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      font-family: "Brandon Grotesque";
+      color: #c2a573;
+      text-transform: uppercase;
+      font-size: 2.8125em;
+      line-height: 1.222222em;
+      font-weight: 900;
+      margin: 0;
+    }
+    p {
+      font-family: "Brandon Grotesque";
+      font-weight: 500;
+      font-size: 1.375em;
+      line-height: 1.5909em;
+      color: #626262;
+      text-transform: uppercase;
+    }
+    a {
+      color: #626262;
+      text-decoration: none;
+    }
+    .redes {
+      position: absolute;
+      bottom: 15px;
+      .rede {
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
+}

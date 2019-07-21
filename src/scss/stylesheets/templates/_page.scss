@@ -1,9 +1,9 @@
-// All styles for page template
-
-//Page EX
-
-@import "pages/home/XL";
-@import "pages/home/LG";
-@import "pages/home/MD";
-@import "pages/home/SM";
-@import "pages/home/XS";
+@import "./pages/header";
+@import "./pages/logo";
+@import "./pages/video";
+@import "./pages/conceito";
+@import "./pages/inspiracao";
+@import "./pages/experiencia";
+@import "./pages/imprensa";
+@import "./pages/contato";
+@import "./pages/pessoas";

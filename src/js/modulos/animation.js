@@ -1,326 +1,278 @@
-export function activeAnimate() {
-  animate(".conceito h2", true);
-  animate(".conceito p", true);
+import ScrollReveal from "scrollreveal";
 
-  animate(".inspiracao h2", true);
-  animate(".inspiracao p", true);
+setTimeout(function() {
+  $("header").css("opacity", "1");
+  $("header").css(
+    "transform",
+    "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)"
+  );
 
-  animate(".pessoas.item_0 .email", true, "right");
-  animate(".pessoas.item_0 .btns-redes", true, "right");
-  animate(".pessoas.item_0 .titulo", true, "right");
-  animate(".pessoas.item_0 p", true, "right");
-  //animate(".pessoas.item_0 .img-person", true);
-  animate(".pessoas.item_0 .thumb-carousel ul li", true, "rigth");
+  $("header li").css("opacity", "1");
+  $("header li").css(
+    "transform",
+    "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)"
+  );
+}, 1500);
 
-  animate(".pessoas.item_1 .email", true);
-  animate(".pessoas.item_1 .btns-redes", true);
-  animate(".pessoas.item_1 .titulo", true);
-  animate(".pessoas.item_1 p", true);
-  //animate(".pessoas.item_1 .img-person", true, "right");
-  animate(".pessoas.item_1 .thumb-carousel ul li", true, "left");
+$(window).on("load", function() {
+  // Header
+  ScrollReveal().reveal("header", {
+    delay: 875,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "top",
+    distance: "100px"
+  });
 
-  animate(".pessoas.item_2 .email", true, "right");
-  animate(".pessoas.item_2 .btns-redes", true, "right");
-  animate(".pessoas.item_2 .titulo", true, "right");
-  animate(".pessoas.item_2 p", true, "right");
-  //animate(".pessoas.item_2 .img-person", true);
-  animate(".pessoas.item_2 .thumb-carousel ul li", true, "rigth");
+  ScrollReveal().reveal("header li", {
+    delay: 1375,
+    duration: 500,
+    opacity: 0,
+    origin: "left",
+    distance: "100px",
+    interval: 50
+  });
 
-  animate(".pessoas.item_3 .email", true);
-  animate(".pessoas.item_3 .btns-redes", true);
-  animate(".pessoas.item_3 .titulo", true);
-  animate(".pessoas.item_3 p", true);
-  //animate(".pessoas.item_3 .img-person", true, "right");
+  // Secção Video
+  ScrollReveal().reveal(".video", {
+    delay: 375,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    scale: 2
+  });
 
-  animate(".experiencia h2", true);
-  animate(".experiencia p", true);
-  animate(".btn-modal", true);
+  // Secção Conceito
+  ScrollReveal().reveal(".conceito .logo", {
+    delay: 975,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "left",
+    distance: "100px"
+  });
 
-  animate(".imprensa .titulo", true);
-  animate(".imprensa p", true);
-  animate(".imprensa .fonte", true);
+  ScrollReveal().reveal(".conceito .conteudo h1", {
+    delay: 375,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "right",
+    distance: "100px"
+  });
 
-  animate(".contato h2", true);
-  animate(".contato p", true);
-}
+  ScrollReveal().reveal(".conceito .conteudo p", {
+    delay: 375,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "right",
+    distance: "100px",
+    interval: 50
+  });
 
-export function animateEnter(anchor) {
-  activeMenu(anchor);
-  switch (anchor) {
-    case "":
-      $(".menu").removeClass("enter");
-      $(".video").addClass("enter");
-      var elem = $(".play-viedo")[0];
-      elem.autoplay = true;
-      elem.muted = true;
-      elem.load();
-      break;
-    case "conceito":
-      $(".menu").addClass("enter");
-      $(".box").addClass("size");
-      $(".logo").addClass("enter");
-      $(".img-logo").addClass("size");
-      $(".img-logo").fadeIn();
-      animate(".conceito h2");
-      animate(".conceito p");
-      break;
-    case "inspiracao":
-      $(".menu").addClass("enter");
-      $(".box").addClass("size");
-      $(".logo").addClass("enter");
-      $(".img-logo").addClass("size");
-      $(".img-logo").fadeIn();
-      animate(".inspiracao h2");
-      animate(".inspiracao p");
-      break;
-    case "paulo-magalhaes-nasser":
-      $(".menu").removeClass("enter");
-      $(".box").removeClass("size");
-      $(".logo").removeClass("enter");
-      $(".img-logo").removeClass("size");
-      $(".img-logo").fadeOut();
-      animate(".pessoas.item_0 p");
-      animate(".pessoas.item_0 .email");
-      animate(".pessoas.item_0 .btns-redes");
-      animate(".pessoas.item_0 .titulo");
-      //animate(".pessoas.item_0 .img-person");
-      animate(".pessoas.item_0 .thumb-carousel ul li", false, "right");
-      break;
-    case "camila-rezende-martins":
-      $(".menu").removeClass("enter");
-      $(".box").removeClass("size");
-      $(".logo").removeClass("enter");
-      $(".img-logo").removeClass("size");
-      $(".img-logo").fadeOut();
-      animate(".pessoas.item_1 p");
-      animate(".pessoas.item_1 .email");
-      animate(".pessoas.item_1 .btns-redes");
-      animate(".pessoas.item_1 .titulo");
-      //animate(".pessoas.item_1 .img-person");
-      animate(".pessoas.item_1 .thumb-carousel ul li", false, "left");
-      break;
-    case "ana-carolina-bariviera-barros":
-      $(".menu").removeClass("enter");
-      $(".box").removeClass("size");
-      $(".logo").removeClass("enter");
-      $(".img-logo").removeClass("size");
-      $(".img-logo").fadeOut();
-      animate(".pessoas.item_2 p");
-      animate(".pessoas.item_2 .email");
-      animate(".pessoas.item_2 .btns-redes");
-      animate(".pessoas.item_2 .titulo");
-      //animate(".pessoas.item_2 .img-person");
-      animate(".pessoas.item_2 .thumb-carousel ul li", false, "right");
-      break;
-    case "priscila-gomes":
-      $(".menu").removeClass("enter");
-      $(".box").removeClass("size");
-      $(".logo").removeClass("enter");
-      $(".img-logo").removeClass("size");
-      $(".img-logo").fadeOut();
-      animate(".pessoas.item_3 p");
-      animate(".pessoas.item_3 .email");
-      animate(".pessoas.item_3 .btns-redes");
-      animate(".pessoas.item_3 .titulo");
-      //animate(".pessoas.item_3 .img-person");
-      break;
-    case "experiencia":
-      $(".menu").addClass("enter");
-      $(".box").addClass("size");
-      $(".logo").addClass("enter");
-      $(".img-logo").addClass("size");
-      $(".img-logo").fadeIn();
-      animate(".experiencia h2");
-      animate(".experiencia p");
-      animate(".btn-modal");
-      break;
-    case "imprensa":
-      $(".menu").addClass("enter");
-      $(".box").addClass("size");
-      $(".logo").addClass("enter");
-      $(".img-logo").addClass("size");
-      $(".img-logo").fadeIn();
-      animate(".imprensa .titulo");
-      animate(".imprensa p");
-      animate(".imprensa .fonte");
-      break;
-    case "contato":
-      $(".menu").addClass("enter");
-      $(".box").addClass("size");
-      $(".logo").addClass("enter");
-      $(".img-logo").addClass("size");
-      $(".img-logo").fadeIn();
-      animate(".contato h2");
-      animate(".contato p");
-      break;
-  }
-}
+  // Secção Inspiração
+  ScrollReveal().reveal(".inspiracao .logo", {
+    delay: 975,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "left",
+    distance: "100px"
+  });
 
-export function animateLeave(anchor, direction) {
-  switch (anchor) {
-    case "":
-      $(".video").removeClass("enter");
-      $(".box").addClass("size");
-      $(".logo").addClass("enter");
-      $(".img-logo").addClass("size");
-      $(".img-logo").fadeIn();
-      break;
-    case "conceito":
-      if (direction == "up") {
-        $(".video").addClass("enter");
-        $(".box").removeClass("size");
-        $(".logo").removeClass("enter");
-        $(".img-logo").removeClass("size");
-        $(".img-logo").fadeIn();
-        $(".menu").removeClass("enter");
-      }
-      if (direction == "down") {
-        $(".box").addClass("size");
-        $(".logo").addClass("enter");
-        $(".img-logo").addClass("size");
-        $(".img-logo").fadeIn();
-      }
-      setTimeout(() => {
-        $(".conceito h2").removeClass("enter");
-        $(".conceito p").removeClass("enter");
-      }, 750);
-      break;
-    case "inspiracao":
-      if (direction == "down") {
-        $(".box").removeClass("size");
-        $(".logo").removeClass("enter");
-        $(".img-logo").removeClass("size");
-        $(".img-logo").fadeOut();
-      }
-      setTimeout(() => {
-        $(".inspiracao h2").removeClass("enter");
-        $(".inspiracao p").removeClass("enter");
-      }, 750);
-      break;
-    case "paulo-magalhaes-nasser":
-      if (direction == "up") {
-        $(".box").addClass("size");
-        $(".logo").addClass("enter");
-        $(".img-logo").addClass("size");
-        $(".img-logo").fadeIn();
-      }
+  ScrollReveal().reveal(".inspiracao .conteudo h1", {
+    delay: 375,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "right",
+    distance: "100px"
+  });
 
-      setTimeout(() => {
-        $(".pessoas.item_0 h2").removeClass("enter");
-        $(".pessoas.item_0 p").removeClass("enter");
-        $(".pessoas.item_0 .email").removeClass("enter");
-        $(".pessoas.item_0 .btns-redes").removeClass("enter");
-        $(".pessoas.item_0 .titulo").removeClass("enter");
-        $(".pessoas.item_0 .thumb-carousel ul li").removeClass("enter");
-      }, 750);
-      //$(".pessoas.item_0 .img-person").removeClass("enter");
-      break;
-    case "camila-rezende-martins":
-      setTimeout(() => {
-        $(".pessoas.item_1 h2").removeClass("enter");
-        $(".pessoas.item_1 p").removeClass("enter");
-        $(".pessoas.item_1 .email").removeClass("enter");
-        $(".pessoas.item_1 .btns-redes").removeClass("enter");
-        $(".pessoas.item_1 .titulo").removeClass("enter");
-        $(".pessoas.item_1 .thumb-carousel ul li").removeClass("enter");
-      }, 750);
-      //$(".pessoas.item_1 .img-person").removeClass("enter");
-      break;
-    case "ana-carolina-bariviera-barros":
-      if (direction == "down") {
-        $(".box").addClass("size");
-        $(".logo").addClass("enter");
-        $(".img-logo").addClass("size");
-        $(".img-logo").fadeIn();
-      }
+  ScrollReveal().reveal(".inspiracao .conteudo p", {
+    delay: 375,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "right",
+    distance: "100px",
+    interval: 50
+  });
 
-      setTimeout(() => {
-        $(".pessoas.item_2 h2").removeClass("enter");
-        $(".pessoas.item_2 p").removeClass("enter");
-        $(".pessoas.item_2 .email").removeClass("enter");
-        $(".pessoas.item_2 .btns-redes").removeClass("enter");
-        $(".pessoas.item_2 .titulo").removeClass("enter");
-        $(".pessoas.item_2 .thumb-carousel ul li").removeClass("enter");
-      }, 750);
-      //$(".pessoas.item_2 .img-person").removeClass("enter");
-      break;
-    case "priscila-gomes":
-      if (direction == "down") {
-        $(".box").addClass("size");
-        $(".logo").addClass("enter");
-        $(".img-logo").addClass("size");
-        $(".img-logo").fadeIn();
-      }
+  // Secção Pessoas
+  ScrollReveal().reveal(".pessoas p", {
+    delay: 975,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "left",
+    distance: "100px",
+    interval: 50
+  });
 
-      setTimeout(() => {
-        $(".pessoas.item_3 h2").removeClass("enter");
-        $(".pessoas.item_3 p").removeClass("enter");
-        $(".pessoas.item_3 .email").removeClass("enter");
-        $(".pessoas.item_3 .btns-redes").removeClass("enter");
-        $(".pessoas.item_3 .titulo").removeClass("enter");
-      }, 750);
-      //$(".pessoas.item_3 .img-person").removeClass("enter");
-      break;
-    case "experiencia":
-      if (direction == "up") {
-        $(".box").removeClass("size");
-        $(".logo").removeClass("enter");
-        $(".img-logo").removeClass("size");
-        $(".img-logo").fadeOut();
-      }
-      setTimeout(() => {
-        $(".experiencia h2").removeClass("enter");
-        $(".experiencia p").removeClass("enter");
-        $(".btn-modal").removeClass("enter");
-      }, 750);
+  ScrollReveal().reveal(".pessoas .email", {
+    delay: 975,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "left",
+    distance: "100px",
+    interval: 50
+  });
 
-      break;
-    case "imprensa":
-      setTimeout(() => {
-        $(".imprensa .titulo").removeClass("enter");
-        $(".imprensa p").removeClass("enter");
-        $(".imprensa .fonte").removeClass("enter");
-      }, 750);
+  ScrollReveal().reveal(".pessoas .btns-redes a", {
+    delay: 975,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "left",
+    distance: "100px",
+    interval: 50
+  });
 
-      break;
-    case "contato":
-      setTimeout(() => {
-        $(".contato h2").removeClass("enter");
-        $(".contato p").removeClass("enter");
-      }, 750);
+  ScrollReveal().reveal(".pessoas .titulo", {
+    delay: 975,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "left",
+    distance: "100px",
+    interval: 50
+  });
 
-      break;
-  }
-}
+  ScrollReveal().reveal(".pessoas .foto", {
+    delay: 975,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "right",
+    distance: "100px",
+    interval: 50
+  });
 
-function animate(el, start = false, origin = "left") {
-  $(el).addClass("animete");
-  $(el).addClass(origin);
+  // Secção Experiencia
+  ScrollReveal().reveal(".experiencia .logo", {
+    delay: 975,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "left",
+    distance: "100px"
+  });
 
-  if (start == false) {
-    var i = 0;
-    const index = $(el).length;
-    const interval = setInterval(() => {
-      if (i > index) {
-        clearInterval(interval);
-      }
-      $(el + ":eq(" + i + ")").addClass("enter");
-      i = i + 1;
-    }, 25);
-  }
-}
+  ScrollReveal().reveal(".experiencia .conteudo h1", {
+    delay: 375,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "right",
+    distance: "100px"
+  });
 
-function activeMenu(menu) {
-  if (
-    menu == "paulo-magalhaes-nasser" ||
-    menu == "camila-rezende-martins" ||
-    menu == "ana-carolina-bariviera-barros" ||
-    menu == "priscila-gomes"
-  ) {
-    $(".menu li").removeClass("active");
-    $(".menu li[data-menu='#paulo-magalhaes-nasser']").addClass("active");
-  } else if (menu.length > 0) {
-    $(".menu li").removeClass("active");
-    $(".menu li[data-menu='#" + menu + "']").addClass("active");
-  }
+  ScrollReveal().reveal(".experiencia .conteudo p", {
+    delay: 375,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "right",
+    distance: "100px",
+    interval: 50
+  });
+
+  ScrollReveal().reveal(".experiencia .btn-modal", {
+    delay: 575,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "right",
+    distance: "100px"
+  });
+
+  // Secção Imprensa
+  ScrollReveal().reveal(".imprensa .logo", {
+    delay: 975,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "left",
+    distance: "100px"
+  });
+
+  ScrollReveal().reveal(".imprensa .conteudo .titulo", {
+    delay: 375,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "right",
+    distance: "100px"
+  });
+
+  ScrollReveal().reveal(".imprensa .box-conteudo p", {
+    delay: 375,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "right",
+    distance: "100px",
+    interval: 50,
+    beforeReveal: removeP
+  });
+
+  ScrollReveal().reveal(".imprensa .item", {
+    delay: 575,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "right",
+    distance: "100px"
+  });
+
+  ScrollReveal().reveal(".imprensa .fonte", {
+    delay: 575,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "right",
+    distance: "100px"
+  });
+
+  // Secção Contato
+  ScrollReveal().reveal(".contato .logo", {
+    delay: 975,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "left",
+    distance: "100px"
+  });
+
+  ScrollReveal().reveal(".contato h2", {
+    delay: 375,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "right",
+    distance: "100px",
+    interval: 50
+  });
+
+  ScrollReveal().reveal(".contato p", {
+    delay: 375,
+    duration: 500,
+    reset: true,
+    opacity: 0,
+    origin: "right",
+    distance: "100px",
+    interval: 50
+  });
+});
+
+function removeP(el) {
+  $(".imprensa .box-conteudo p").css("opacity", "1");
+  $(".imprensa .box-conteudo p").css(
+    "transform",
+    "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)"
+  );
 }

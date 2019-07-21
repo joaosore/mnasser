@@ -1,0 +1,65 @@
+header {
+  height: 50px;
+  display: flex;
+  margin: 0;
+  position: fixed;
+  height: 50px;
+  width: calc(75% - 100px);
+  padding: 0 50px 0 calc(25% + 50px);
+  z-index: 5;
+  justify-content: space-between;
+  background-color: #fff;
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 1;
+    &.menu {
+      max-width: 500px;
+    }
+    &.lg {
+      max-width: 60px;
+    }
+    li {
+      display: block;
+      position: relative;
+      &:hover {
+        a {
+          color: #c2a573;
+        }
+        &:before {
+          width: 100%;
+        }
+      }
+      &.active {
+        a {
+          color: #c2a573;
+        }
+        &:before {
+          width: 100%;
+        }
+      }
+      &:before {
+        content: " ";
+        width: 0;
+        height: 1px;
+        background-color: #c2a573;
+        position: absolute;
+        bottom: 0;
+        transition: all 350ms ease-in-out;
+      }
+      a {
+        font-family: "Brandon Grotesque";
+        font-size: 0.75em;
+        font-weight: 700;
+        line-height: 30px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #000;
+        text-decoration: none !important;
+      }
+    }
+  }
+}

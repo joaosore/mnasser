@@ -1,0 +1,85 @@
+section.pessoas {
+  min-width: 100%;
+  max-width: 100%;
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  .pessoa {
+    display: flex;
+    &:nth-child(2) {
+      flex-direction: row-reverse;
+    }
+    .dados {
+      flex: 1;
+      max-width: 50%;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      .nome {
+        p {
+          color: #c2a573;
+          font-size: 4.0625em;
+          line-height: 1em;
+          font-family: "Brandon Grotesque";
+          font-weight: 900;
+          text-transform: uppercase;
+          margin: 0;
+        }
+      }
+      .email {
+        color: #848484;
+        font-size: 0.75em;
+        line-height: 4.58333em;
+        font-family: "Brandon Grotesque";
+        font-weight: 900;
+        margin: 0;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: row;
+        &:before {
+          content: "";
+          padding-right: 15px;
+          background-image: url("../assets/shape.png");
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+      .btns-redes {
+        display: flex;
+        align-items: center;
+        a {
+          margin-right: 15px;
+        }
+      }
+      .titulo {
+        color: #000000;
+        font-size: 0.9375em;
+        line-height: 1.66666em;
+        font-family: "Brandon Grotesque";
+        font-weight: 900;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      .item {
+        p {
+          color: #626262;
+          font-size: 1.375em;
+          line-height: 1.3636em;
+          font-family: "Brandon Grotesque";
+          font-weight: normal;
+          margin: 0;
+          padding-left: 10px;
+          padding-bottom: 30px;
+          padding-top: 15px;
+        }
+      }
+    }
+    .foto {
+      flex: 1;
+      max-width: 50%;
+    }
+  }
+}
