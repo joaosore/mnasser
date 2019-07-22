@@ -13,3 +13,5 @@ import "./modulos/loader.js";
 import "./modulos/video";
 import "./modulos/animation";
 import "./modulos/acordion";
+import "./modulos/scroll";
+import "./modulos/btns";

@@ -44,7 +44,7 @@ get_header();
   </ul>
 </header>
 
-<section class="video">
+<section class="box-logo">
   <div class="logo">
     <div class="box">
         <?php
@@ -63,6 +63,9 @@ get_header();
         ?>
     </div>
   </div>
+</section>
+
+<section class="video proposito">
   <video
   class="play-viedo"
   loop
@@ -73,24 +76,6 @@ get_header();
 </section>
 
 <section class="conceito">
-  <div class="logo">
-    <div class="box">
-        <?php
-          switch($_COOKIE["linguagem"]){
-            case "en":
-              ?>
-              <img class="lazyload img-logo" src="" data-srcset="<?php echo get_template_directory_uri(); ?>/dist/imgs/logo-eng.svg">
-              <?php 
-            break;
-            default:
-              ?>
-              <img class="lazyload img-logo" src="" data-srcset="<?php echo get_template_directory_uri(); ?>/dist/imgs/logo.svg">
-              <?php 
-            break;
-          }
-        ?>
-    </div>
-  </div>
   <div class="conteudo">
     <h1><?php echo get_dados('titulo_conceitos'); ?></h1>
     <?php echo get_dados('conteudo_conceitos'); ?>
@@ -98,24 +83,6 @@ get_header();
 </section>
 
 <section class="inspiracao">
-  <div class="logo">
-    <div class="box">
-        <?php
-          switch($_COOKIE["linguagem"]){
-            case "en":
-              ?>
-              <img class="lazyload img-logo" src="" data-srcset="<?php echo get_template_directory_uri(); ?>/dist/imgs/logo-eng.svg">
-              <?php 
-            break;
-            default:
-              ?>
-              <img class="lazyload img-logo" src="" data-srcset="<?php echo get_template_directory_uri(); ?>/dist/imgs/logo.svg">
-              <?php 
-            break;
-          }
-        ?>
-    </div>
-  </div>
   <div class="conteudo">
     <h1><?php echo get_dados('titulo_inpiracao'); ?></h1>
     <?php echo get_dados('conteudo_inpiracao'); ?>
@@ -204,52 +171,43 @@ get_header();
 </section>
 
 <section class="experiencia">
-  <div class="logo">
-    <div class="box">
-        <?php
-          switch($_COOKIE["linguagem"]){
-            case "en":
-              ?>
-              <img class="lazyload img-logo" src="" data-srcset="<?php echo get_template_directory_uri(); ?>/dist/imgs/logo-eng.svg">
-              <?php 
-            break;
-            default:
-              ?>
-              <img class="lazyload img-logo" src="" data-srcset="<?php echo get_template_directory_uri(); ?>/dist/imgs/logo.svg">
-              <?php 
-            break;
-          }
-        ?>
-    </div>
-  </div>
   <div class="conteudo">
     <h1><?php echo get_dados('titulo_experiencia'); ?></h1>
     <?php echo get_dados('conteudo_experiencia'); ?>
-    <div class="btn-modal">
-      <?php echo get_dados('botao_experiencia'); ?>
+    <div class="btn-modal judicial">
+      <span><?php echo get_dados('contencioso_judicial_titulo'); ?></span>
     </div>
+
+    <div class="box judicial">
+      <div class="btn-close"></div>
+      <?php foreach(get_dados('contencioso_judicial') as $key => $value) { ?>
+        <div class="item">
+          <?php
+            echo $value['artigo'];
+          ?>
+        </div>
+      <?php } ?>
+    </div>
+
+    <div class="btn-modal arbitragem">
+      <span><?php echo get_dados('arbitragem_titulo'); ?></span>
+    </div>
+
+    <div class="box arbitragem">
+      <div class="btn-close"></div>
+      <?php foreach(get_dados('arbitragem') as $key => $value) { ?>
+        <div class="item">
+          <?php
+            echo $value['artigo'];
+          ?>
+        </div>
+      <?php } ?>
+    </div>
+
   </div>
 </section>
 
 <section class="imprensa">
-  <div class="logo">
-    <div class="box">
-        <?php
-          switch($_COOKIE["linguagem"]){
-            case "en":
-              ?>
-              <img class="lazyload img-logo" src="" data-srcset="<?php echo get_template_directory_uri(); ?>/dist/imgs/logo-eng.svg">
-              <?php 
-            break;
-            default:
-              ?>
-              <img class="lazyload img-logo" src="" data-srcset="<?php echo get_template_directory_uri(); ?>/dist/imgs/logo.svg">
-              <?php 
-            break;
-          }
-        ?>
-    </div>
-  </div>
   <div class="conteudo">
     <?php foreach(get_dados('artigos') as $key => $artigo) { ?>
       <div class="item">
@@ -270,24 +228,6 @@ get_header();
 </section>
 
 <section class="contato">
-  <div class="logo">
-    <div class="box">
-        <?php
-          switch($_COOKIE["linguagem"]){
-            case "en":
-              ?>
-              <img class="lazyload img-logo" src="" data-srcset="<?php echo get_template_directory_uri(); ?>/dist/imgs/logo-eng.svg">
-              <?php 
-            break;
-            default:
-              ?>
-              <img class="lazyload img-logo" src="" data-srcset="<?php echo get_template_directory_uri(); ?>/dist/imgs/logo.svg">
-              <?php 
-            break;
-          }
-        ?>
-    </div>
-  </div>
   <div class="conteudo">
     <?php echo get_dados('dados'); ?>
     <div class="redes">

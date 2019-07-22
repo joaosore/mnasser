@@ -17,7 +17,7 @@ header {
     justify-content: space-between;
     flex: 1 1;
     &.menu {
-      max-width: 500px;
+      max-width: 575px;
     }
     &.lg {
       max-width: 60px;
@@ -61,5 +61,11 @@ header {
         text-decoration: none !important;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
   }
 }

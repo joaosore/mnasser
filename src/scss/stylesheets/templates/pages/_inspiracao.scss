@@ -6,11 +6,13 @@ section.inspiracao {
   position: relative;
   background-color: #fff;
   display: flex;
+  overflow: hidden;
   .conteudo {
     flex: 1;
     padding: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: 25%;
   }
 }

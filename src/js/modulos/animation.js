@@ -12,6 +12,18 @@ setTimeout(function() {
     "transform",
     "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)"
   );
+
+  $(".item").css("opacity", "1");
+  $(".item").css(
+    "transform",
+    "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)"
+  );
+
+  $(".item p").css("opacity", "1");
+  $(".item p").css(
+    "transform",
+    "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)"
+  );
 }, 1500);
 
 $(window).on("load", function() {
@@ -34,14 +46,14 @@ $(window).on("load", function() {
     interval: 50
   });
 
-  // Secção Video
-  ScrollReveal().reveal(".video", {
-    delay: 375,
-    duration: 500,
-    reset: true,
-    opacity: 0,
-    scale: 2
-  });
+  // // Secção Video
+  // ScrollReveal().reveal(".video", {
+  //   delay: 375,
+  //   duration: 500,
+  //   reset: true,
+  //   opacity: 0,
+  //   scale: 2
+  // });
 
   // Secção Conceito
   ScrollReveal().reveal(".conceito .logo", {
@@ -203,7 +215,6 @@ $(window).on("load", function() {
   ScrollReveal().reveal(".imprensa .conteudo .titulo", {
     delay: 375,
     duration: 500,
-    reset: true,
     opacity: 0,
     origin: "right",
     distance: "100px"
@@ -212,7 +223,6 @@ $(window).on("load", function() {
   ScrollReveal().reveal(".imprensa .box-conteudo p", {
     delay: 375,
     duration: 500,
-    reset: true,
     opacity: 0,
     origin: "right",
     distance: "100px",
@@ -223,7 +233,6 @@ $(window).on("load", function() {
   ScrollReveal().reveal(".imprensa .item", {
     delay: 575,
     duration: 500,
-    reset: true,
     opacity: 0,
     origin: "right",
     distance: "100px"
@@ -232,7 +241,6 @@ $(window).on("load", function() {
   ScrollReveal().reveal(".imprensa .fonte", {
     delay: 575,
     duration: 500,
-    reset: true,
     opacity: 0,
     origin: "right",
     distance: "100px"

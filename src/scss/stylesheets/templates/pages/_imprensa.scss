@@ -1,19 +1,16 @@
 section.imprensa {
-  min-width: 100%;
-  min-height: 100%;
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
   position: relative;
   background-color: #fff;
   display: flex;
   .conteudo {
     flex: 1;
-    padding: 50px;
+    padding: 100px 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     max-width: 60%;
-    overflow-y: scroll;
+    margin-left: 25%;
     &.open {
       justify-content: flex-start;
     }
