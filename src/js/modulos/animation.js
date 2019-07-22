@@ -247,19 +247,9 @@ $(window).on("load", function() {
   });
 
   // Secção Contato
-  ScrollReveal().reveal(".contato .logo", {
-    delay: 975,
-    duration: 500,
-    reset: true,
-    opacity: 0,
-    origin: "left",
-    distance: "100px"
-  });
-
   ScrollReveal().reveal(".contato h2", {
     delay: 375,
     duration: 500,
-    reset: true,
     opacity: 0,
     origin: "right",
     distance: "100px",
@@ -269,7 +259,6 @@ $(window).on("load", function() {
   ScrollReveal().reveal(".contato p", {
     delay: 375,
     duration: 500,
-    reset: true,
     opacity: 0,
     origin: "right",
     distance: "100px",
