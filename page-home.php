@@ -194,15 +194,17 @@ get_header();
     </div>
     
     <div class="box judicial">
-      <div class="btn-close"></div>
-      <span class="title"><?php echo get_dados('contencioso_judicial_titulo'); ?></span>
-      <?php foreach(get_dados('contencioso_judicial') as $key => $value) { ?>
-        <div class="item">
-          <?php
-            echo $value['artigo'];
-          ?>
-        </div>
-      <?php } ?>
+      <div>
+        <div class="btn-close"></div>
+        <span class="title"><?php echo get_dados('contencioso_judicial_titulo'); ?></span>
+        <?php foreach(get_dados('contencioso_judicial') as $key => $value) { ?>
+          <div class="item">
+            <?php
+              echo $value['artigo'];
+            ?>
+          </div>
+        <?php } ?>
+      </div>
     </div>
 
     <div class="btn-modal arbitragem">
@@ -210,15 +212,17 @@ get_header();
     </div>
 
     <div class="box arbitragem">
-      <div class="btn-close"></div>
-      <span class="title"><?php echo get_dados('arbitragem_titulo'); ?></span>
-      <?php foreach(get_dados('arbitragem') as $key => $value) { ?>
-        <div class="item">
-          <?php
-            echo $value['artigo'];
-          ?>
-        </div>
-      <?php } ?>
+      <div>
+        <div class="btn-close"></div>
+        <span class="title"><?php echo get_dados('arbitragem_titulo'); ?></span>
+        <?php foreach(get_dados('arbitragem') as $key => $value) { ?>
+          <div class="item">
+            <?php
+              echo $value['artigo'];
+            ?>
+          </div>
+        <?php } ?>
+      </div>
     </div>
 
   </div>

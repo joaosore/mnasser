@@ -1,6 +1,7 @@
 $(document).on("click", ".btn-close", function() {
   $(this)
     .parent()
+    .parent()
     .removeClass("open");
   $("body").removeClass("disable-scroll");
 });
@@ -58,6 +59,17 @@ $(document).on("click", ".menu-h", function() {
 });
 
 $(window).on("load", function() {
+  var $doc = $("html, body");
+  var hash = window.location.hash;
+  var res = hash.replace("#", ".");
+  console.log(res);
+  $doc.animate(
+    {
+      scrollTop: $(res).offset().top
+    },
+    500
+  );
+
   if (getCookie("linguagem").length == 0) {
     $('.lg a[data-lg="pt"]')
       .parent()
