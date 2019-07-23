@@ -53,3 +53,28 @@ section.contato {
     padding: 50px;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  section.contato {
+    padding-bottom: 50px;
+    display: block;
+    margin: 0;
+    width: 100%;
+    overflow: initial;
+    flex-direction: column-reverse;
+    .conteudo {
+      padding: 15px;
+      margin-left: 0;
+      padding-bottom: 50px;
+      position: relative;
+      overflow: hidden;
+      .redes {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+    .maps {
+      display: none;
+    }
+  }
+}

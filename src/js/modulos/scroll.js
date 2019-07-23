@@ -9,6 +9,7 @@ $("a").click(function() {
     },
     500
   );
+  $("header").removeClass("active");
   return false;
 });
 
@@ -29,19 +30,19 @@ function scroll(scrollPosition) {
   var conceito_top = $($(".conceito")).offset().top;
   var conceito_bottom = conceito_top + $(".conceito").height();
 
-  var inspiracao_top = $($(".inspiracao")).offset().top;
+  var inspiracao_top = $($(".inspiracao")).offset().top - 5;
   var inspiracao_bottom = inspiracao_top + $(".inspiracao").height();
 
-  var pessoas_top = $($(".pessoas")).offset().top;
+  var pessoas_top = $($(".pessoas")).offset().top - 5;
   var pessoas_bottom = pessoas_top + $(".pessoas").height();
 
-  var experiencia_top = $($(".experiencia")).offset().top;
+  var experiencia_top = $($(".experiencia")).offset().top - 5;
   var experiencia_bottom = experiencia_top + $(".experiencia").height();
 
-  var imprensa_top = $($(".imprensa")).offset().top;
+  var imprensa_top = $($(".imprensa")).offset().top - 5;
   var imprensa_bottom = imprensa_top + $(".imprensa").height();
 
-  var contato_top = $($(".contato")).offset().top;
+  var contato_top = $($(".contato")).offset().top - 5;
   var contato_bottom = contato_top + $(".contato").height();
 
   if (scrollPosition >= video_top && scrollPosition < video_bottom) {
@@ -72,7 +73,10 @@ function scroll(scrollPosition) {
     window.location.hash = "#contato";
   }
 
-  if (scrollPosition >= conceito_top - $(window).height() / 2) {
+  if (
+    scrollPosition >= conceito_top - $(window).height() / 2 &&
+    scrollPosition < pessoas_top - $(window).height() / 1.5
+  ) {
     $(".box-logo").addClass("open");
     $(".box-logo").removeClass("remove");
   } else if (scrollPosition < conceito_top) {
@@ -223,8 +227,13 @@ function img_person() {
     }
     lastScrollTop2 = st;
   });
-  console.log();
-  console.log();
-  console.log($($(".pessoas .pessoa:nth-child(3)")).offset().top);
 }
-img_person();
+$(document).on("resize", function() {
+  if ($(window).width() > 600) {
+    img_person();
+  }
+});
+
+if ($(window).width() > 600) {
+  img_person();
+}

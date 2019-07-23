@@ -3,6 +3,8 @@ section.imprensa {
   position: relative;
   background-color: #fff;
   display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
   .conteudo {
     flex: 1;
     padding: 100px 50px;
@@ -11,6 +13,7 @@ section.imprensa {
     justify-content: space-evenly;
     max-width: 60%;
     margin-left: 25%;
+    overflow: hidden;
     &.open {
       justify-content: flex-start;
     }
@@ -43,6 +46,19 @@ section.imprensa {
         color: #626262;
         font-size: 0.9375em;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  section.imprensa {
+    margin: 0;
+    width: 100%;
+    overflow: initial;
+    .conteudo {
+      padding: 15px;
+      margin: 0;
+      max-width: 100%;
     }
   }
 }

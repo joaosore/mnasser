@@ -1,8 +1,6 @@
 section.inspiracao {
   min-width: 100%;
   min-height: 100%;
-  max-width: 100%;
-  max-height: 100%;
   position: relative;
   background-color: #fff;
   display: flex;
@@ -14,5 +12,20 @@ section.inspiracao {
     flex-direction: column;
     justify-content: center;
     margin-left: 25%;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  section.inspiracao {
+    min-width: auto;
+    min-height: auto;
+    overflow: initial;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .conteudo {
+      margin: 0px;
+      padding: 15px;
+    }
   }
 }

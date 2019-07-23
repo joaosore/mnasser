@@ -1,8 +1,6 @@
 section.experiencia {
   min-width: 100%;
   min-height: 100%;
-  max-width: 100%;
-  max-height: 100%;
   position: relative;
   background-color: #fff;
   display: flex;
@@ -88,6 +86,36 @@ section.experiencia {
       line-height: 1.66666666em;
       text-transform: uppercase;
       position: relative;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  section.experiencia {
+    min-width: auto;
+    min-height: auto;
+    width: 100%;
+    overflow: initial;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .conteudo {
+      margin: 0;
+      max-width: 100%;
+      padding: 15px;
+      overflow: hidden;
+      .box {
+        margin: 0;
+        transform: translateX(-100%);
+        top: 0;
+        left: 0;
+        position: fixed;
+        width: calc(100% - 30px);
+        height: calc(100% - 80px);
+        padding: 15px;
+        display: table-column;
+        box-shadow: none;
+        margin-top: 50px;
+      }
     }
   }
 }

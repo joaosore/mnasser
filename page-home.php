@@ -63,6 +63,9 @@ get_header();
         ?>
     </div>
   </div>
+  <div class="menu-h">
+    <img class="lazyload" src="" data-srcset="<?php echo get_template_directory_uri(); ?>/dist/imgs/menu-button.svg">
+  </div>
 </section>
 
 <section class="video proposito">
@@ -73,6 +76,10 @@ get_header();
   poster="<?php echo get_dados('capa_video'); ?>"
   src="<?php echo get_dados('video_inicial'); ?>"
   ></video>
+  <div class="moldura">
+    <p><?php echo get_dados('rodape_moldura'); ?></p>
+    <p>SCROLL</p>
+  </div>
 </section>
 
 <section class="conceito">
