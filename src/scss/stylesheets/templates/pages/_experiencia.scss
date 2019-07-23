@@ -92,12 +92,12 @@ section.experiencia {
 
 @media only screen and (max-width: 600px) {
   section.experiencia {
-    min-width: auto;
     min-height: auto;
     width: 100%;
     overflow: initial;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    display: block;
+    position: relative;
+    min-height: auto;
     .conteudo {
       margin: 0;
       max-width: 100%;

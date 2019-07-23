@@ -55,6 +55,9 @@ section.imprensa {
     margin: 0;
     width: 100%;
     overflow: initial;
+    display: block;
+    position: relative;
+    min-height: auto;
     .conteudo {
       padding: 15px;
       margin: 0;
