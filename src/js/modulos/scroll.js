@@ -72,14 +72,16 @@ function scroll(scrollPosition) {
     window.location.hash = "#contato";
   }
 
-  if (scrollPosition >= conceito_top - 100) {
+  console.log($(".conceito").height() / 2);
+
+  if (scrollPosition >= conceito_top - 650) {
     $(".box-logo").addClass("open");
     $(".box-logo").removeClass("remove");
   } else if (scrollPosition < conceito_top) {
     $(".box-logo").removeClass("open");
   }
 
-  if (scrollPosition >= pessoas_top - 250) {
+  if (scrollPosition >= pessoas_top - 650) {
     $(".box-logo").removeClass("open");
     $(".box-logo").addClass("remove");
   }

@@ -24,13 +24,13 @@ setTimeout(function() {
     "transform",
     "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)"
   );
-}, 1500);
+}, 1150);
 
 $(window).on("load", function() {
   // Header
   ScrollReveal().reveal("header", {
     delay: 875,
-    duration: 500,
+    duration: 150,
     reset: true,
     opacity: 0,
     origin: "top",
@@ -39,7 +39,7 @@ $(window).on("load", function() {
 
   ScrollReveal().reveal("header li", {
     delay: 1375,
-    duration: 500,
+    duration: 150,
     opacity: 0,
     origin: "left",
     distance: "100px",
@@ -49,7 +49,7 @@ $(window).on("load", function() {
   // // Secção Video
   // ScrollReveal().reveal(".video", {
   //   delay: 375,
-  //   duration: 500,
+  //   duration: 150,
   //   reset: true,
   //   opacity: 0,
   //   scale: 2
@@ -57,8 +57,8 @@ $(window).on("load", function() {
 
   // Secção Conceito
   ScrollReveal().reveal(".conceito .logo", {
-    delay: 975,
-    duration: 500,
+    delay: 350,
+    duration: 150,
     reset: true,
     opacity: 0,
     origin: "left",
@@ -67,7 +67,7 @@ $(window).on("load", function() {
 
   ScrollReveal().reveal(".conceito .conteudo h1", {
     delay: 375,
-    duration: 500,
+    duration: 150,
     reset: true,
     opacity: 0,
     origin: "right",
@@ -76,7 +76,7 @@ $(window).on("load", function() {
 
   ScrollReveal().reveal(".conceito .conteudo p", {
     delay: 375,
-    duration: 500,
+    duration: 150,
     reset: true,
     opacity: 0,
     origin: "right",
@@ -86,8 +86,8 @@ $(window).on("load", function() {
 
   // Secção Inspiração
   ScrollReveal().reveal(".inspiracao .logo", {
-    delay: 975,
-    duration: 500,
+    delay: 350,
+    duration: 150,
     reset: true,
     opacity: 0,
     origin: "left",
@@ -96,7 +96,7 @@ $(window).on("load", function() {
 
   ScrollReveal().reveal(".inspiracao .conteudo h1", {
     delay: 375,
-    duration: 500,
+    duration: 150,
     reset: true,
     opacity: 0,
     origin: "right",
@@ -105,7 +105,7 @@ $(window).on("load", function() {
 
   ScrollReveal().reveal(".inspiracao .conteudo p", {
     delay: 375,
-    duration: 500,
+    duration: 150,
     reset: true,
     opacity: 0,
     origin: "right",
@@ -115,8 +115,8 @@ $(window).on("load", function() {
 
   // Secção Pessoas
   ScrollReveal().reveal(".pessoas p", {
-    delay: 975,
-    duration: 500,
+    delay: 350,
+    duration: 150,
     reset: true,
     opacity: 0,
     origin: "left",
@@ -125,8 +125,8 @@ $(window).on("load", function() {
   });
 
   ScrollReveal().reveal(".pessoas .email", {
-    delay: 975,
-    duration: 500,
+    delay: 350,
+    duration: 150,
     reset: true,
     opacity: 0,
     origin: "left",
@@ -135,8 +135,8 @@ $(window).on("load", function() {
   });
 
   ScrollReveal().reveal(".pessoas .btns-redes a", {
-    delay: 975,
-    duration: 500,
+    delay: 350,
+    duration: 150,
     reset: true,
     opacity: 0,
     origin: "left",
@@ -145,8 +145,8 @@ $(window).on("load", function() {
   });
 
   ScrollReveal().reveal(".pessoas .titulo", {
-    delay: 975,
-    duration: 500,
+    delay: 350,
+    duration: 150,
     reset: true,
     opacity: 0,
     origin: "left",
@@ -155,8 +155,8 @@ $(window).on("load", function() {
   });
 
   ScrollReveal().reveal(".pessoas .foto", {
-    delay: 975,
-    duration: 500,
+    delay: 350,
+    duration: 150,
     reset: true,
     opacity: 0,
     origin: "right",
@@ -166,8 +166,8 @@ $(window).on("load", function() {
 
   // Secção Experiencia
   ScrollReveal().reveal(".experiencia .logo", {
-    delay: 975,
-    duration: 500,
+    delay: 350,
+    duration: 150,
     reset: true,
     opacity: 0,
     origin: "left",
@@ -176,7 +176,7 @@ $(window).on("load", function() {
 
   ScrollReveal().reveal(".experiencia .conteudo h1", {
     delay: 375,
-    duration: 500,
+    duration: 150,
     reset: true,
     opacity: 0,
     origin: "right",
@@ -185,7 +185,7 @@ $(window).on("load", function() {
 
   ScrollReveal().reveal(".experiencia .conteudo p", {
     delay: 375,
-    duration: 500,
+    duration: 150,
     reset: true,
     opacity: 0,
     origin: "right",
@@ -195,7 +195,7 @@ $(window).on("load", function() {
 
   ScrollReveal().reveal(".experiencia .btn-modal", {
     delay: 575,
-    duration: 500,
+    duration: 150,
     reset: true,
     opacity: 0,
     origin: "right",
@@ -204,8 +204,8 @@ $(window).on("load", function() {
 
   // Secção Imprensa
   ScrollReveal().reveal(".imprensa .logo", {
-    delay: 975,
-    duration: 500,
+    delay: 350,
+    duration: 150,
     reset: true,
     opacity: 0,
     origin: "left",
@@ -214,7 +214,7 @@ $(window).on("load", function() {
 
   ScrollReveal().reveal(".imprensa .conteudo .titulo", {
     delay: 375,
-    duration: 500,
+    duration: 150,
     opacity: 0,
     origin: "right",
     distance: "100px"
@@ -222,7 +222,7 @@ $(window).on("load", function() {
 
   ScrollReveal().reveal(".imprensa .box-conteudo p", {
     delay: 375,
-    duration: 500,
+    duration: 150,
     opacity: 0,
     origin: "right",
     distance: "100px",
@@ -232,7 +232,7 @@ $(window).on("load", function() {
 
   ScrollReveal().reveal(".imprensa .item", {
     delay: 575,
-    duration: 500,
+    duration: 150,
     opacity: 0,
     origin: "right",
     distance: "100px"
@@ -240,7 +240,7 @@ $(window).on("load", function() {
 
   ScrollReveal().reveal(".imprensa .fonte", {
     delay: 575,
-    duration: 500,
+    duration: 150,
     opacity: 0,
     origin: "right",
     distance: "100px"
@@ -249,7 +249,7 @@ $(window).on("load", function() {
   // Secção Contato
   ScrollReveal().reveal(".contato h2", {
     delay: 375,
-    duration: 500,
+    duration: 150,
     opacity: 0,
     origin: "right",
     distance: "100px",
@@ -258,7 +258,7 @@ $(window).on("load", function() {
 
   ScrollReveal().reveal(".contato p", {
     delay: 375,
-    duration: 500,
+    duration: 150,
     opacity: 0,
     origin: "right",
     distance: "100px",
