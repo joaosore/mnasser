@@ -38,12 +38,12 @@ $(window).on("load", function() {
   });
 
   ScrollReveal().reveal("header li", {
-    delay: 1375,
-    duration: 150,
+    delay: 500,
+    duration: 75,
     opacity: 0,
     origin: "left",
     distance: "100px",
-    interval: 50
+    interval: 25
   });
 
   // // Secção Video
@@ -150,16 +150,6 @@ $(window).on("load", function() {
     reset: true,
     opacity: 0,
     origin: "left",
-    distance: "100px",
-    interval: 50
-  });
-
-  ScrollReveal().reveal(".pessoas .foto", {
-    delay: 350,
-    duration: 150,
-    reset: true,
-    opacity: 0,
-    origin: "right",
     distance: "100px",
     interval: 50
   });

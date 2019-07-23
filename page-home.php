@@ -172,14 +172,23 @@ get_header();
 
 <section class="experiencia">
   <div class="conteudo">
+    
     <h1><?php echo get_dados('titulo_experiencia'); ?></h1>
     <?php echo get_dados('conteudo_experiencia'); ?>
-    <div class="btn-modal judicial">
-      <span><?php echo get_dados('contencioso_judicial_titulo'); ?></span>
+
+
+    <div class="conceitos">
+     <span><?php echo get_dados('botao_experiencia'); ?></span>
     </div>
 
+
+    <div class="btn-modal judicial">
+      <span><?php echo get_dados('contencioso_judicial_botao'); ?></span>
+    </div>
+    
     <div class="box judicial">
       <div class="btn-close"></div>
+      <span class="title"><?php echo get_dados('contencioso_judicial_titulo'); ?></span>
       <?php foreach(get_dados('contencioso_judicial') as $key => $value) { ?>
         <div class="item">
           <?php
@@ -190,11 +199,12 @@ get_header();
     </div>
 
     <div class="btn-modal arbitragem">
-      <span><?php echo get_dados('arbitragem_titulo'); ?></span>
+      <span><?php echo get_dados('arbitragem_botao'); ?></span>
     </div>
 
     <div class="box arbitragem">
       <div class="btn-close"></div>
+      <span class="title"><?php echo get_dados('arbitragem_titulo'); ?></span>
       <?php foreach(get_dados('arbitragem') as $key => $value) { ?>
         <div class="item">
           <?php
@@ -239,6 +249,9 @@ get_header();
         </div>
       <?php } ?>
     </div>
+  </div>
+  <div class="maps">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.574479826775!2d-46.681530884525614!3d-23.58372146830456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce575d461e4601%3A0xd77a81ccd23eb88b!2sRua+Tabapu%C3%A3%2C+888+-+13+ANDAR+-+Itaim+Bibi%2C+S%C3%A3o+Paulo+-+SP%2C+04533-000!5e0!3m2!1spt-BR!2sbr!4v1563862197909!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
 </section>
 

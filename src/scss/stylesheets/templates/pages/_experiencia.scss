@@ -50,8 +50,22 @@ section.experiencia {
       z-index: 5;
       transform: translateX(-140%);
       transition: all 350ms ease-in-out;
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      flex-direction: column;
       &.open {
         transform: translateX(0);
+      }
+      span.title {
+        font-family: "Brandon Grotesque";
+        color: #000;
+        font-weight: 900;
+        font-size: 0.9375em;
+        line-height: 1.66666666em;
+        text-transform: uppercase;
+        position: relative;
+        cursor: pointer;
       }
       .btn-close {
         background-image: url("../assets/close.png");
@@ -65,6 +79,15 @@ section.experiencia {
       .item {
         margin: 1.5em 0;
       }
+    }
+    .conceitos {
+      font-family: "Brandon Grotesque";
+      color: #000;
+      font-weight: 900;
+      font-size: 0.9375em;
+      line-height: 1.66666666em;
+      text-transform: uppercase;
+      position: relative;
     }
   }
 }
