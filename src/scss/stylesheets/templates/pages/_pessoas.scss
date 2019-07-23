@@ -109,9 +109,10 @@ section.pessoas {
 
 @media only screen and (max-width: 600px) {
   section.pessoas {
-    min-width: auto;
-    min-height: auto;
     overflow: initial;
+    display: block;
+    position: relative;
+    min-height: auto;
     .pessoa {
       overflow: hidden;
       padding: 25px 0;
