@@ -5,6 +5,7 @@ section.box-logo {
   width: 25%;
   z-index: 10;
   overflow: hidden;
+  pointer-events: none;
   &.open {
     .logo {
       display: flex;

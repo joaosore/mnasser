@@ -58,10 +58,12 @@ function openVideo() {
     $(".video").removeClass("open");
     elem.load();
     elem.muted = true;
+    elem.controls = false;
   } else {
+    elem.controls = true;
     $(".video").addClass("open");
   }
-  // elem.controls = true;
+
   // if (elem.requestFullscreen) {
   //   elem.requestFullscreen();
   // } else if (elem.mozRequestFullScreen) {
