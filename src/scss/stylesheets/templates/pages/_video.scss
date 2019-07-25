@@ -6,6 +6,7 @@ section.video {
   position: relative;
   background-color: #fff;
   overflow: hidden;
+  cursor: pointer;
   &.open {
     &:after {
       display: none;
