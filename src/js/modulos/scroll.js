@@ -34,6 +34,12 @@ $(window).on("load", function() {
 });
 
 function scroll(scrollPosition) {
+  if ($(".video").hasClass("open")) {
+    $(".video").removeClass("open");
+    elem = $(".play-viedo")[0];
+    elem.muted = true;
+  }
+
   var video_top = $($(".video")).offset().top;
   var video_bottom = video_top + $(".video").height();
 
