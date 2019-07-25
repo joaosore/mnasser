@@ -48,6 +48,22 @@ section.experiencia {
       align-items: end;
       justify-content: center;
       flex-direction: column;
+      .item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+        &:before {
+          content: "";
+          width: 5px;
+          height: 5px;
+          display: flex;
+          position: absolute;
+          left: 0;
+          background-color: #c2a573;
+          border-radius: 15px;
+        }
+      }
       &.open {
         transform: translateX(0);
       }
