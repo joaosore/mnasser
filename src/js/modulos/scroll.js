@@ -171,7 +171,7 @@ function video_scroll() {
   });
 }
 
-if ($(window).width() > 600) {
+if ($(window).width() > 750) {
   //video_scroll();
 }
 
@@ -298,11 +298,11 @@ function img_person() {
   });
 }
 $(document).on("resize", function() {
-  if ($(window).width() > 600) {
+  if ($(window).width() > 750) {
     img_person();
   }
 });
 
-if ($(window).width() > 600) {
+if ($(window).width() > 750) {
   img_person();
 }
