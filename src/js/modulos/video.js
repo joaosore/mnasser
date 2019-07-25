@@ -14,18 +14,19 @@ function init_video() {
     openVideo();
   });
 
-  if (document.addEventListener) {
-    document.addEventListener("webkitfullscreenchange", exitHandler, false);
-    document.addEventListener("mozfullscreenchange", exitHandler, false);
-    document.addEventListener("fullscreenchange", exitHandler, false);
-    document.addEventListener("MSFullscreenChange", exitHandler, false);
-  }
+  // if (document.addEventListener) {
+  //   document.addEventListener("webkitfullscreenchange", exitHandler, false);
+  //   document.addEventListener("mozfullscreenchange", exitHandler, false);
+  //   document.addEventListener("fullscreenchange", exitHandler, false);
+  //   document.addEventListener("MSFullscreenChange", exitHandler, false);
+  // }
 }
 
 function autoPlay() {
   elem = $(".play-viedo")[0];
   elem.autoplay = true;
   elem.muted = true;
+  elem.volume = 0.2;
   elem.load();
 }
 
@@ -49,16 +50,28 @@ function exitHandler() {
 
 function openVideo() {
   elem = $(".play-viedo")[0];
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.mozRequestFullScreen) {
-    /* Firefox */
-    elem.mozRequestFullScreen();
-  } else if (elem.webkitRequestFullscreen) {
-    /* Chrome, Safari and Opera */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) {
-    /* IE/Edge */
-    elem.msRequestFullscreen();
+  elem.load();
+  elem.muted = false;
+  elem.volume = 0.2;
+
+  if ($(".video").hasClass("open")) {
+    $(".video").removeClass("open");
+    elem.load();
+    elem.muted = true;
+  } else {
+    $(".video").addClass("open");
   }
+  // elem.controls = true;
+  // if (elem.requestFullscreen) {
+  //   elem.requestFullscreen();
+  // } else if (elem.mozRequestFullScreen) {
+  //   /* Firefox */
+  //   elem.mozRequestFullScreen();
+  // } else if (elem.webkitRequestFullscreen) {
+  //   /* Chrome, Safari and Opera */
+  //   elem.webkitRequestFullscreen();
+  // } else if (elem.msRequestFullscreen) {
+  //   /* IE/Edge */
+  //   elem.msRequestFullscreen();
+  // }
 }

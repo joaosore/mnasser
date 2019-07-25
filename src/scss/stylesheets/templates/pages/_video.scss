@@ -6,6 +6,11 @@ section.video {
   position: relative;
   background-color: #fff;
   overflow: hidden;
+  &.open {
+    &:after {
+      display: none;
+    }
+  }
   &:before {
     content: "";
     pointer-events: none;
