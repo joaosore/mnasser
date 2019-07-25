@@ -90,6 +90,12 @@ section.video {
       letter-spacing: 1px;
       color: #000;
       text-decoration: none !important;
+      a {
+        font-family: "Brandon Grotesque";
+        text-transform: uppercase;
+        color: #000;
+        text-decoration: none !important;
+      }
       br {
         display: none;
       }
