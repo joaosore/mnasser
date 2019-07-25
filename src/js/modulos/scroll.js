@@ -93,15 +93,19 @@ function scroll(scrollPosition) {
     $(".box-logo").removeClass("open");
   }
 
-  if (scrollPosition >= pessoas_top - $(window).height() / 1.5) {
+  if (
+    scrollPosition >= pessoas_top - $(window).height() / 1.5 &&
+    scrollPosition < experiencia_top - $(window).height() / 1.5
+  ) {
     $(".box-logo").addClass("remove");
     $(".box-logo").removeClass("open");
   }
 
-  if (scrollPosition >= experiencia_top - 100) {
+  if (scrollPosition >= experiencia_top - $(window).height() / 1.5) {
     $(".box-logo").addClass("open");
     $(".box-logo").removeClass("remove");
   }
+
   menu();
 }
 
