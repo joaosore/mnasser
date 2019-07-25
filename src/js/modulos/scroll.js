@@ -38,6 +38,7 @@ function scroll(scrollPosition) {
     $(".video").removeClass("open");
     elem = $(".play-viedo")[0];
     elem.muted = true;
+    elem.controls = false;
   }
 
   var video_top = $($(".video")).offset().top;
