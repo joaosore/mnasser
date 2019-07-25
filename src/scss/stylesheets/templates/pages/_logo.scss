@@ -68,6 +68,7 @@ section.box-logo {
   section.box-logo {
     height: 50px;
     width: 100%;
+    pointer-events: all;
     .menu-h {
       position: absolute;
       height: 30px;
