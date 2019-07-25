@@ -22,6 +22,30 @@ header {
     flex: 1 1;
     &.menu {
       max-width: 575px;
+      li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        &:nth-child(1) {
+          &:before {
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            -webkit-mask-image: url("../assets/play-button.svg");
+            mask-image: url("../assets/play-button.svg");
+            -webkit-mask-size: 50px;
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            z-index: 5;
+            width: 10px;
+            height: 10px;
+            -webkit-mask-size: cover;
+            position: relative;
+            display: block;
+            margin-right: 5px;
+          }
+        }
+      }
     }
     &.lg {
       max-width: 60px;
@@ -30,6 +54,11 @@ header {
       display: block;
       position: relative;
       &:hover {
+        &:nth-child(1) {
+          &:before {
+            background-color: #c2a573;
+          }
+        }
         a {
           color: #c2a573;
         }
@@ -38,6 +67,11 @@ header {
         }
       }
       &.active {
+        &:nth-child(1) {
+          &:before {
+            background-color: #c2a573;
+          }
+        }
         a {
           color: #c2a573;
         }

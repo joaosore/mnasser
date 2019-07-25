@@ -7,28 +7,12 @@ $("a").click(function() {
   window.location.hash = item;
   item = item.replace("#", ".");
 
-  if (item == ".conceito") {
-    $doc.animate(
-      {
-        scrollTop: $(".conceito").offset().top
-      },
-      0
-    );
-  } else if (item == ".proposito") {
-    $doc.animate(
-      {
-        scrollTop: $(".proposito").offset().top
-      },
-      0
-    );
-  } else {
-    $doc.animate(
-      {
-        scrollTop: $(item).offset().top
-      },
-      500
-    );
-  }
+  $doc.animate(
+    {
+      scrollTop: $(item).offset().top
+    },
+    500
+  );
 
   $("header").removeClass("active");
 
@@ -177,7 +161,7 @@ function video_scroll() {
 }
 
 if ($(window).width() > 600) {
-  video_scroll();
+  //video_scroll();
 }
 
 function menu_hidden() {
