@@ -119,7 +119,9 @@ get_header();
           
         <?php if(!empty($value['biografia'])) { ?>
           <div>
-            <?php echo $value['biografia']; ?>
+            <div class="item">
+              <?php echo $value['biografia']; ?>
+            </div>
           </div>
         <?php } ?>
 
@@ -230,6 +232,7 @@ get_header();
 
 <section class="imprensa">
   <div class="conteudo">
+    <h1><?php echo get_dados('titulo_imprensa'); ?></h1>
     <?php foreach(get_dados('artigos') as $key => $artigo) { ?>
       <div class="item">
         <div class="acordion">
@@ -250,6 +253,7 @@ get_header();
 
 <section class="contato">
   <div class="conteudo">
+    <h1><?php echo get_dados('titulo_contato'); ?></h1>
     <?php echo get_dados('dados'); ?>
     <div class="redes">
       <?php foreach (get_dados('redes_sociais') as $key => $value) { ?>
@@ -262,7 +266,7 @@ get_header();
     </div>
   </div>
   <div class="maps">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.574479826775!2d-46.681530884525614!3d-23.58372146830456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce575d461e4601%3A0xd77a81ccd23eb88b!2sRua+Tabapu%C3%A3%2C+888+-+13+ANDAR+-+Itaim+Bibi%2C+S%C3%A3o+Paulo+-+SP%2C+04533-000!5e0!3m2!1spt-BR!2sbr!4v1563862197909!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.574479826775!2d-46.68153088452563!3d-23.583721468304557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57d109926389%3A0xeccb3be6e1d0fdbd!2sM+Nasser+Advocacia+Estrat%C3%A9gica!5e0!3m2!1spt-BR!2sbr!4v1564024903589!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
 </section>
 

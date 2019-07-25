@@ -36,8 +36,6 @@ section.contato {
       text-decoration: none;
     }
     .redes {
-      position: absolute;
-      bottom: 15px;
       .rede {
         img {
           width: 50px;
@@ -71,10 +69,6 @@ section.contato {
       padding-bottom: 50px;
       position: relative;
       overflow: hidden;
-      .redes {
-        position: absolute;
-        bottom: 0;
-      }
     }
     .maps {
       display: none;

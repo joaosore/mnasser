@@ -14,6 +14,10 @@ section.experiencia {
     max-width: 60%;
     margin-left: 25%;
     .btn-modal {
+      margin: 0.5em 0;
+      &.judicial {
+        margin-top: 1em;
+      }
       span {
         font-family: "Brandon Grotesque";
         color: #c2a573;
@@ -22,16 +26,8 @@ section.experiencia {
         line-height: 1.66666666em;
         text-transform: uppercase;
         position: relative;
+        margin-bottom: 2em;
         cursor: pointer;
-        &:before {
-          content: " ";
-          width: 100%;
-          height: 1px;
-          background-color: #c2a573;
-          position: absolute;
-          bottom: 0;
-          transition: all 350ms ease-in-out;
-        }
       }
     }
     .box {

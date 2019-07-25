@@ -1,15 +1,41 @@
 var $doc = $("html, body");
+
+var click = false;
 $("a").click(function() {
+  click = true;
   var item = $.attr(this, "href");
   window.location.hash = item;
   item = item.replace("#", ".");
-  $doc.animate(
-    {
-      scrollTop: $(item).offset().top
-    },
-    500
-  );
+
+  if (item == ".conceito") {
+    $doc.animate(
+      {
+        scrollTop: $(".conceito").offset().top
+      },
+      0
+    );
+  } else if (item == ".proposito") {
+    $doc.animate(
+      {
+        scrollTop: $(".proposito").offset().top
+      },
+      0
+    );
+  } else {
+    $doc.animate(
+      {
+        scrollTop: $(item).offset().top
+      },
+      500
+    );
+  }
+
   $("header").removeClass("active");
+
+  setTimeout(() => {
+    click = false;
+  }, 1000);
+
   return false;
 });
 
@@ -105,6 +131,54 @@ function menu() {
 
 var lastScrollTop = 0;
 var scroll_menu = true;
+
+function video_scroll() {
+  var scroll_video = true;
+  var scroll_conceito = true;
+
+  $(window).scroll(function(event) {
+    var st = $(this).scrollTop();
+    if (st > lastScrollTop) {
+      console.log("down");
+      if (scroll_video) {
+        if (click == false) {
+          var $doc = $("html, body");
+          $doc.animate(
+            {
+              scrollTop: $(".conceito").offset().top
+            },
+            0
+          );
+          scroll_video = false;
+          scroll_conceito = true;
+        }
+      }
+    } else {
+      console.log("up");
+      if (st < 50) {
+        scroll_video = true;
+      }
+
+      if (scroll_conceito) {
+        if (st <= $(".conceito").offset().top) {
+          var $doc = $("html, body");
+          $doc.animate(
+            {
+              scrollTop: $(".proposito").offset().top
+            },
+            0
+          );
+        }
+      }
+    }
+
+    lastScrollTop = st;
+  });
+}
+
+if ($(window).width() > 600) {
+  video_scroll();
+}
 
 function menu_hidden() {
   $(window).scroll(function(event) {

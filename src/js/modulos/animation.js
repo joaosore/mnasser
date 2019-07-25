@@ -31,7 +31,7 @@ $(window).on("load", function() {
   ScrollReveal().reveal("header", {
     delay: 875,
     duration: 150,
-    reset: true,
+    reset: false,
     opacity: 0,
     origin: "top",
     distance: "100px"
@@ -50,7 +50,7 @@ $(window).on("load", function() {
   // ScrollReveal().reveal(".video", {
   //   delay: 375,
   //   duration: 150,
-  //   reset: true,
+  //   reset: false,
   //   opacity: 0,
   //   scale: 2
   // });
@@ -59,7 +59,7 @@ $(window).on("load", function() {
   ScrollReveal().reveal(".conceito .logo", {
     delay: 350,
     duration: 150,
-    reset: true,
+    reset: false,
     opacity: 0,
     origin: "left",
     distance: "100px"
@@ -68,7 +68,7 @@ $(window).on("load", function() {
   ScrollReveal().reveal(".conceito .conteudo h1", {
     delay: 375,
     duration: 150,
-    reset: true,
+    reset: false,
     opacity: 0,
     origin: "right",
     distance: "100px"
@@ -77,7 +77,7 @@ $(window).on("load", function() {
   ScrollReveal().reveal(".conceito .conteudo p", {
     delay: 375,
     duration: 150,
-    reset: true,
+    reset: false,
     opacity: 0,
     origin: "right",
     distance: "100px",
@@ -88,7 +88,7 @@ $(window).on("load", function() {
   ScrollReveal().reveal(".inspiracao .logo", {
     delay: 350,
     duration: 150,
-    reset: true,
+    reset: false,
     opacity: 0,
     origin: "left",
     distance: "100px"
@@ -97,7 +97,7 @@ $(window).on("load", function() {
   ScrollReveal().reveal(".inspiracao .conteudo h1", {
     delay: 375,
     duration: 150,
-    reset: true,
+    reset: false,
     opacity: 0,
     origin: "right",
     distance: "100px"
@@ -106,7 +106,7 @@ $(window).on("load", function() {
   ScrollReveal().reveal(".inspiracao .conteudo p", {
     delay: 375,
     duration: 150,
-    reset: true,
+    reset: false,
     opacity: 0,
     origin: "right",
     distance: "100px",
@@ -117,7 +117,7 @@ $(window).on("load", function() {
   ScrollReveal().reveal(".pessoas p", {
     delay: 350,
     duration: 150,
-    reset: true,
+    reset: false,
     opacity: 0,
     origin: "left",
     distance: "100px",
@@ -127,7 +127,7 @@ $(window).on("load", function() {
   ScrollReveal().reveal(".pessoas .email", {
     delay: 350,
     duration: 150,
-    reset: true,
+    reset: false,
     opacity: 0,
     origin: "left",
     distance: "100px",
@@ -137,7 +137,7 @@ $(window).on("load", function() {
   ScrollReveal().reveal(".pessoas .btns-redes a", {
     delay: 350,
     duration: 150,
-    reset: true,
+    reset: false,
     opacity: 0,
     origin: "left",
     distance: "100px",
@@ -147,7 +147,7 @@ $(window).on("load", function() {
   ScrollReveal().reveal(".pessoas .titulo", {
     delay: 350,
     duration: 150,
-    reset: true,
+    reset: false,
     opacity: 0,
     origin: "left",
     distance: "100px",
@@ -158,7 +158,7 @@ $(window).on("load", function() {
   ScrollReveal().reveal(".experiencia .logo", {
     delay: 350,
     duration: 150,
-    reset: true,
+    reset: false,
     opacity: 0,
     origin: "left",
     distance: "100px"
@@ -167,7 +167,7 @@ $(window).on("load", function() {
   ScrollReveal().reveal(".experiencia .conteudo h1", {
     delay: 375,
     duration: 150,
-    reset: true,
+    reset: false,
     opacity: 0,
     origin: "right",
     distance: "100px"
@@ -176,7 +176,7 @@ $(window).on("load", function() {
   ScrollReveal().reveal(".experiencia .conteudo p", {
     delay: 375,
     duration: 150,
-    reset: true,
+    reset: false,
     opacity: 0,
     origin: "right",
     distance: "100px",
@@ -186,7 +186,7 @@ $(window).on("load", function() {
   ScrollReveal().reveal(".experiencia .btn-modal", {
     delay: 575,
     duration: 150,
-    reset: true,
+    reset: false,
     opacity: 0,
     origin: "right",
     distance: "100px"
@@ -196,7 +196,7 @@ $(window).on("load", function() {
   ScrollReveal().reveal(".imprensa .logo", {
     delay: 350,
     duration: 150,
-    reset: true,
+    reset: false,
     opacity: 0,
     origin: "left",
     distance: "100px"
