@@ -1,27 +1,6 @@
 var $doc = $("html, body");
 
 var click = false;
-$("a").click(function() {
-  click = true;
-  var item = $.attr(this, "href");
-  window.location.hash = item;
-  item = item.replace("#", ".");
-
-  $doc.animate(
-    {
-      scrollTop: $(item).offset().top
-    },
-    500
-  );
-
-  $("header").removeClass("active");
-
-  setTimeout(() => {
-    click = false;
-  }, 1000);
-
-  return false;
-});
 
 $(window).on("scroll", function() {
   var scrollPosition = $(window).scrollTop();
@@ -31,6 +10,31 @@ $(window).on("scroll", function() {
 $(window).on("load", function() {
   var scrollPosition = $(window).scrollTop();
   scroll(scrollPosition);
+
+  $("a").click(function() {
+    click = true;
+
+    console.log("AQUI");
+
+    var item = $.attr(this, "href");
+    window.location.hash = item;
+    item = item.replace("#", ".");
+
+    $doc.animate(
+      {
+        scrollTop: $(item).offset().top
+      },
+      500
+    );
+
+    $("header").removeClass("active");
+
+    setTimeout(() => {
+      click = false;
+    }, 1000);
+
+    return false;
+  });
 });
 
 st = 0;

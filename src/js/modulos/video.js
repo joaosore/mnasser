@@ -58,12 +58,14 @@ function openVideo() {
     elem.load();
     elem.muted = true;
     elem.controls = false;
+    if ($(document).width() > 600) {
+      $(".box-logo").fadeIn();
+    }
   } else {
     elem.controls = true;
     $(".video").addClass("open");
-  }
-
-  if ($(document).width() <= 600) {
-    elem.webkitEnterFullScreen();
+    if ($(document).width() > 600) {
+      $(".box-logo").fadeOut();
+    }
   }
 }

@@ -13,6 +13,9 @@ header {
   &.hidden {
     transform: translateY(-100%) !important;
   }
+  .btn-close {
+    display: none;
+  }
   ul {
     margin: 0;
     padding: 0;
@@ -116,6 +119,19 @@ header {
     &.active {
       transform: translateX(0) !important;
       opacity: 1 !important;
+    }
+    .btn-close {
+      background-image: url("../assets/close.png");
+      width: 25px;
+      height: 25px;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-left: auto;
+      cursor: pointer;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      display: block;
     }
     ul {
       &.menu {

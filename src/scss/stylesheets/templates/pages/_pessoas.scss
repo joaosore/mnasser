@@ -98,6 +98,9 @@ section.pessoas_item {
       flex: 1;
       max-width: 50%;
       overflow: hidden;
+      justify-content: flex-start;
+      display: flex;
+      align-items: flex-start;
       &.bottom {
         justify-content: flex-end;
         display: flex;

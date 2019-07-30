@@ -58,6 +58,10 @@ $(document).on("click", ".menu-h", function() {
   $("header").addClass("active");
 });
 
+$(document).on("click", "header .btn-close", function() {
+  $("header").removeClass("active");
+});
+
 $(window).on("load", function() {
   var $doc = $("html, body");
   var hash = window.location.hash;
@@ -69,6 +73,7 @@ $(window).on("load", function() {
     },
     500
   );
+  $("header").removeClass("active");
 
   if (getCookie("linguagem").length == 0) {
     $('.lg a[data-lg="pt"]')

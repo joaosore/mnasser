@@ -12,6 +12,7 @@ get_header();
 ?>
 
 <header>
+  <div class="btn-close"></div>
 <ul class="menu">
     <?php 
       foreach(get_dados('menus') as $key => $value) {
