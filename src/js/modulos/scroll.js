@@ -1,5 +1,3 @@
-var $doc = $("html, body");
-
 var click = false;
 
 $(window).on("scroll", function() {
@@ -11,11 +9,10 @@ $(window).on("load", function() {
   var scrollPosition = $(window).scrollTop();
   scroll(scrollPosition);
 
-  $("a").click(function() {
+  $(document).on("click", "a", function() {
     click = true;
 
-    console.log("AQUI");
-
+    var $doc = $("html, body");
     var item = $.attr(this, "href");
     window.location.hash = item;
     item = item.replace("#", ".");
