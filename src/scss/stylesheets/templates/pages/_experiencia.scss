@@ -14,20 +14,18 @@ section.experiencia {
     max-width: 60%;
     margin-left: 25%;
     .btn-modal {
-      margin: 0.5em 0;
-      &.judicial {
-        margin-top: 1em;
-      }
+      margin: 0.5em;
       span {
+        cursor: pointer;
         font-family: "Brandon Grotesque";
         color: #c2a573;
         font-weight: 900;
-        font-size: 0.9375em;
+        font-size: 1.2em;
+        line-height: 1.2em;
         line-height: 1.66666666em;
         text-transform: uppercase;
         position: relative;
         margin-bottom: 2em;
-        cursor: pointer;
       }
     }
     .box {
@@ -53,13 +51,17 @@ section.experiencia {
         display: flex;
         align-items: center;
         padding-left: 15px;
+        p {
+          margin: 0;
+        }
         &:before {
           content: "";
           width: 5px;
           height: 5px;
           display: flex;
           position: absolute;
-          left: 0;
+          left: 0.2em;
+          top: 0.6em;
           background-color: #c2a573;
           border-radius: 15px;
         }
@@ -68,14 +70,16 @@ section.experiencia {
         transform: translateX(0);
       }
       span.title {
+        cursor: pointer;
         font-family: "Brandon Grotesque";
-        color: #000;
+        color: #6e6e6e;
         font-weight: 900;
-        font-size: 0.9375em;
+        font-size: 1.2em;
+        line-height: 1.2em;
         line-height: 1.66666666em;
         text-transform: uppercase;
         position: relative;
-        cursor: pointer;
+        margin-bottom: 2em;
       }
       .btn-close {
         background-image: url("../assets/close.png");
@@ -92,12 +96,14 @@ section.experiencia {
     }
     .conceitos {
       font-family: "Brandon Grotesque";
-      color: #000;
+      color: #6e6e6e;
       font-weight: 900;
-      font-size: 0.9375em;
+      font-size: 1.2em;
+      line-height: 1.2em;
       line-height: 1.66666666em;
       text-transform: uppercase;
       position: relative;
+      margin: 0.5em;
     }
   }
 }
@@ -122,11 +128,11 @@ section.experiencia {
         left: 0;
         position: fixed;
         width: calc(100% - 30px);
-        height: calc(100% - 80px);
+        height: calc(100% - 105px);
         padding: 15px;
         display: table-column;
         box-shadow: none;
-        margin-top: 50px;
+        margin: 75px 0 0;
       }
     }
   }

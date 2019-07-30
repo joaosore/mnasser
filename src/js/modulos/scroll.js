@@ -33,16 +33,25 @@ $(window).on("load", function() {
   scroll(scrollPosition);
 });
 
+st = 0;
+
 function scroll(scrollPosition) {
   if ($(".video").hasClass("open")) {
     $(".video").removeClass("open");
     elem = $(".play-viedo")[0];
     elem.muted = true;
     elem.controls = false;
+    $(".box-logo").fadeIn();
   }
 
   var video_top = $($(".video")).offset().top;
   var video_bottom = video_top + $(".video").height();
+
+  if (scrollPosition >= video_bottom / 2) {
+    $(".video").addClass("hidden");
+  } else {
+    $(".video").removeClass("hidden");
+  }
 
   var conceito_top = $($(".conceito")).offset().top;
   var conceito_bottom = conceito_top + $(".conceito").height();
@@ -52,6 +61,9 @@ function scroll(scrollPosition) {
 
   var pessoas_top = $($(".pessoas")).offset().top - 5;
   var pessoas_bottom = pessoas_top + $(".pessoas").height();
+
+  var pessoas_item_top = $($(".pessoas_item")).offset().top - 5;
+  var pessoas_item_bottom = pessoas_item_top + $(".pessoas_item").height();
 
   var experiencia_top = $($(".experiencia")).offset().top - 5;
   var experiencia_bottom = experiencia_top + $(".experiencia").height();
@@ -74,7 +86,10 @@ function scroll(scrollPosition) {
     scrollPosition < inspiracao_bottom
   ) {
     window.location.hash = "#inspiracao";
-  } else if (scrollPosition >= pessoas_top && scrollPosition < pessoas_bottom) {
+  } else if (
+    scrollPosition >= pessoas_top &&
+    scrollPosition < pessoas_item_bottom
+  ) {
     window.location.hash = "#pessoas";
   } else if (
     scrollPosition >= experiencia_top &&
@@ -92,7 +107,7 @@ function scroll(scrollPosition) {
 
   if (
     scrollPosition >= conceito_top - $(window).height() / 2 &&
-    scrollPosition < pessoas_top - $(window).height() / 1.5
+    scrollPosition < pessoas_item_top - $(window).height() / 1.5
   ) {
     $(".box-logo").addClass("open");
     $(".box-logo").removeClass("remove");
@@ -101,7 +116,7 @@ function scroll(scrollPosition) {
   }
 
   if (
-    scrollPosition >= pessoas_top - $(window).height() / 1.5 &&
+    scrollPosition >= pessoas_item_top - $(window).height() / 1.5 &&
     scrollPosition < experiencia_top - $(window).height() / 1.5
   ) {
     $(".box-logo").addClass("remove");
@@ -202,93 +217,93 @@ function img_person() {
   $(window).scroll(function(event) {
     var st = $(this).scrollTop();
     if (st > lastScrollTop2) {
-      if (st >= $(".pessoas .pessoa:nth-child(1)").offset().top + 100) {
+      if (st >= $(".pessoas_item .pessoa:nth-child(1)").offset().top) {
         if (
           st + $(window).height() <=
-          $(".pessoas .pessoa:nth-child(2)").offset().top - 100
+          $(".pessoas_item .pessoa:nth-child(2)").offset().top - 100
         ) {
-          $(".pessoas .pessoa:nth-child(1) .foto .img-person").addClass(
+          $(".pessoas_item .pessoa:nth-child(1) .foto .img-person").addClass(
             "fixed"
           );
         } else {
-          $(".pessoas .pessoa:nth-child(1) .foto .img-person").removeClass(
+          $(".pessoas_item .pessoa:nth-child(1) .foto .img-person").removeClass(
             "fixed"
           );
-          $(".pessoas .pessoa:nth-child(1) .foto").addClass("bottom");
+          $(".pessoas_item .pessoa:nth-child(1) .foto").addClass("bottom");
         }
       }
-      if (st >= $(".pessoas .pessoa:nth-child(2)").offset().top + 100) {
+      if (st >= $(".pessoas_item .pessoa:nth-child(2)").offset().top + 100) {
         if (
           st + $(window).height() <=
-          $(".pessoas .pessoa:nth-child(3)").offset().top - 100
+          $(".pessoas_item .pessoa:nth-child(3)").offset().top - 100
         ) {
-          $(".pessoas .pessoa:nth-child(2) .foto .img-person").addClass(
+          $(".pessoas_item .pessoa:nth-child(2) .foto .img-person").addClass(
             "fixed"
           );
         } else {
-          $(".pessoas .pessoa:nth-child(2) .foto .img-person").removeClass(
+          $(".pessoas_item .pessoa:nth-child(2) .foto .img-person").removeClass(
             "fixed"
           );
-          $(".pessoas .pessoa:nth-child(2) .foto").addClass("bottom");
+          $(".pessoas_item .pessoa:nth-child(2) .foto").addClass("bottom");
         }
       }
 
-      if (st >= $(".pessoas .pessoa:nth-child(3)").offset().top + 100) {
+      if (st >= $(".pessoas_item .pessoa:nth-child(3)").offset().top + 100) {
         if (st + $(window).height() <= $(".experiencia").offset().top - 100) {
-          $(".pessoas .pessoa:nth-child(3) .foto .img-person").addClass(
+          $(".pessoas_item .pessoa:nth-child(3) .foto .img-person").addClass(
             "fixed"
           );
         } else {
-          $(".pessoas .pessoa:nth-child(3) .foto .img-person").removeClass(
+          $(".pessoas_item .pessoa:nth-child(3) .foto .img-person").removeClass(
             "fixed"
           );
-          $(".pessoas .pessoa:nth-child(3) .foto").addClass("bottom");
+          $(".pessoas_item .pessoa:nth-child(3) .foto").addClass("bottom");
         }
       }
     } else {
       if (
         st <=
-        $(".pessoas .pessoa:nth-child(2)").offset().top -
+        $(".pessoas_item .pessoa:nth-child(2)").offset().top -
           $(window).height() -
           100
       ) {
-        if (st >= $(".pessoas .pessoa:nth-child(1)").offset().top + 100) {
-          $(".pessoas .pessoa:nth-child(1) .foto .img-person").addClass(
+        if (st >= $(".pessoas_item .pessoa:nth-child(1)").offset().top) {
+          $(".pessoas_item .pessoa:nth-child(1) .foto .img-person").addClass(
             "fixed"
           );
-          $(".pessoas .pessoa:nth-child(1) .foto").removeClass("bottom");
+          $(".pessoas_item .pessoa:nth-child(1) .foto").removeClass("bottom");
         } else {
-          $(".pessoas .pessoa:nth-child(1) .foto .img-person").removeClass(
+          $(".pessoas_item .pessoa:nth-child(1) .foto .img-person").removeClass(
             "fixed"
           );
         }
       }
       if (
         st <=
-        $(".pessoas .pessoa:nth-child(3)").offset().top -
+        $(".pessoas_item .pessoa:nth-child(3)").offset().top -
           $(window).height() -
           100
       ) {
-        if (st >= $(".pessoas .pessoa:nth-child(2)").offset().top + 100) {
-          $(".pessoas .pessoa:nth-child(2) .foto .img-person").addClass(
+        if (st >= $(".pessoas_item .pessoa:nth-child(2)").offset().top + 100) {
+          $(".pessoas_item .pessoa:nth-child(2) .foto .img-person").addClass(
             "fixed"
           );
-          $(".pessoas .pessoa:nth-child(2) .foto").removeClass("bottom");
+          $(".pessoas_item .pessoa:nth-child(2) .foto").removeClass("bottom");
         } else {
-          $(".pessoas .pessoa:nth-child(2) .foto .img-person").removeClass(
+          $(".pessoas_item .pessoa:nth-child(2) .foto .img-person").removeClass(
             "fixed"
           );
         }
       }
 
       if (st <= $(".experiencia").offset().top - $(window).height() - 100) {
-        if (st >= $(".pessoas .pessoa:nth-child(3)").offset().top + 100) {
-          $(".pessoas .pessoa:nth-child(3) .foto .img-person").addClass(
+        if (st >= $(".pessoas_item .pessoa:nth-child(3)").offset().top + 100) {
+          $(".pessoas_item .pessoa:nth-child(3) .foto .img-person").addClass(
             "fixed"
           );
-          $(".pessoas .pessoa:nth-child(3) .foto").removeClass("bottom");
+          $(".pessoas_item .pessoa:nth-child(3) .foto").removeClass("bottom");
         } else {
-          $(".pessoas .pessoa:nth-child(3) .foto .img-person").removeClass(
+          $(".pessoas_item .pessoa:nth-child(3) .foto .img-person").removeClass(
             "fixed"
           );
         }

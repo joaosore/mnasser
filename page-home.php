@@ -69,6 +69,10 @@ get_header();
 </section>
 
 <section class="video proposito">
+  <div class="btn-play">
+    <div class="img-play"></div>
+    <div class="play">PLAY</div>
+  </div>
   <video
   class="play-viedo"
   loop
@@ -97,6 +101,13 @@ get_header();
 </section>
 
 <section class="pessoas">
+  <div class="conteudo">
+    <h1><?php echo get_dados('titulo_pessoas'); ?></h1>
+    <?php echo get_dados('conteudo_pessoas'); ?>
+  </div>
+</section>
+
+<section class="pessoas_item">
   <?php foreach(get_dados('integrante') as $key => $value) { ?>
     <div class="pessoa">
 
@@ -106,7 +117,7 @@ get_header();
           <?php echo $value['nome']; ?>
         </div>
         <div class="email">
-          <?php echo $value['email']; ?>
+          <a href="mailto:<?php echo $value['email']; ?>"><?php echo $value['email']; ?></a>
         </div>
         <div class="btns-redes">
           <a href="<?php echo $value['vcard']; ?>" target="_blank" download="contato.vcf">
@@ -266,8 +277,8 @@ get_header();
     </div>
   </div>
   <div class="maps">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.574479826775!2d-46.68153088452563!3d-23.583721468304557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57d109926389%3A0xeccb3be6e1d0fdbd!2sM+Nasser+Advocacia+Estrat%C3%A9gica!5e0!3m2!1spt-BR!2sbr!4v1564024903589!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-  </div>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14626.435486841317!2d-46.677626!3d-23.582487!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeccb3be6e1d0fdbd!2sM+Nasser+Advocacia+Estrat%C3%A9gica!5e0!3m2!1spt-BR!2sbr!4v1564456781552!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>  
+</div>
 </section>
 
 <?php

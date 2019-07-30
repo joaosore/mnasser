@@ -1,4 +1,5 @@
-section.inspiracao {
+section.inspiracao,
+section.pessoas {
   min-width: 100%;
   min-height: 100%;
   position: relative;
@@ -17,7 +18,8 @@ section.inspiracao {
 }
 
 @media only screen and (max-width: 750px) {
-  section.inspiracao {
+  section.inspiracao,
+  section.pessoas {
     overflow: initial;
     display: block;
     position: relative;

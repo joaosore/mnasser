@@ -7,8 +7,15 @@ section.video {
   background-color: #fff;
   overflow: hidden;
   cursor: pointer;
+  transition: all 350ms ease-in-out;
+  &.hidden {
+    opacity: 0;
+  }
   &.open {
-    &:after {
+    &:before {
+      display: none;
+    }
+    .btn-play {
       display: none;
     }
   }
@@ -44,23 +51,35 @@ section.video {
     z-index: 2;
     transition: all 350ms ease-in-out;
   }
-  &:after {
-    content: "";
+  .btn-play {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    content: "";
-    background-color: white;
-    -webkit-mask-image: url("../assets/play-button.svg");
-    mask-image: url("../assets/play-button.svg");
-    content: "";
-    -webkit-mask-size: 50px;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    z-index: 5;
     pointer-events: none;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .img-play {
+      width: 50px;
+      height: 50px;
+      padding: 15px;
+      background-color: white;
+      -webkit-mask-image: url("../assets/play-button.svg");
+      mask-image: url("../assets/play-button.svg");
+      -webkit-mask-size: 50px;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+    }
+    .play {
+      font-family: "Brandon Grotesque";
+      color: #fff;
+      font-size: 1em;
+      font-weight: 900;
+    }
   }
   .play-viedo {
     cursor: pointer;

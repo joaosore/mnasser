@@ -24,19 +24,25 @@ section.imprensa {
       color: #626262;
       cursor: pointer;
       .titulo {
+        max-width: 90%;
+        cursor: pointer;
         font-family: "Brandon Grotesque";
         color: #c2a573;
         font-weight: 900;
-        font-size: 0.9375em;
+        font-size: 1.2em;
         line-height: 1.66666666em;
         text-transform: uppercase;
         position: relative;
-        max-width: 90%;
       }
       .box-conteudo {
         overflow: hidden;
-        max-height: 3em;
+        max-height: 2em;
         transition: all 350ms ease-in-out;
+        p {
+          &:nth-child(1) {
+            margin-top: 0;
+          }
+        }
         &.open {
           max-height: 5000px;
         }

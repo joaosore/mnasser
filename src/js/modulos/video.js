@@ -53,27 +53,20 @@ function openVideo() {
   elem.load();
   elem.muted = false;
   elem.volume = 0.2;
-
   if ($(".video").hasClass("open")) {
     $(".video").removeClass("open");
+    $(".box-logo").fadeIn();
+
     elem.load();
     elem.muted = true;
     elem.controls = false;
   } else {
     elem.controls = true;
+    $(".box-logo").fadeOut();
     $(".video").addClass("open");
   }
 
-  // if (elem.requestFullscreen) {
-  //   elem.requestFullscreen();
-  // } else if (elem.mozRequestFullScreen) {
-  //   /* Firefox */
-  //   elem.mozRequestFullScreen();
-  // } else if (elem.webkitRequestFullscreen) {
-  //   /* Chrome, Safari and Opera */
-  //   elem.webkitRequestFullscreen();
-  // } else if (elem.msRequestFullscreen) {
-  //   /* IE/Edge */
-  //   elem.msRequestFullscreen();
-  // }
+  if ($(document).width() <= 600) {
+    elem.webkitEnterFullScreen();
+  }
 }
