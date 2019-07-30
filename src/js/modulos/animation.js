@@ -28,23 +28,23 @@ setTimeout(function() {
 
 $(window).on("load", function() {
   // Header
-  ScrollReveal().reveal("header", {
-    delay: 875,
-    duration: 150,
-    reset: false,
-    opacity: 0,
-    origin: "top",
-    distance: "100px"
-  });
+  // ScrollReveal().reveal("header", {
+  //   delay: 875,
+  //   duration: 150,
+  //   reset: false,
+  //   opacity: 0,
+  //   origin: "top",
+  //   distance: "100px"
+  // });
 
-  ScrollReveal().reveal("header li", {
-    delay: 500,
-    duration: 75,
-    opacity: 0,
-    origin: "left",
-    distance: "100px",
-    interval: 25
-  });
+  // ScrollReveal().reveal("header li", {
+  //   delay: 500,
+  //   duration: 75,
+  //   opacity: 0,
+  //   origin: "left",
+  //   distance: "100px",
+  //   interval: 25
+  // });
 
   // // Secção Video
   // ScrollReveal().reveal(".video", {

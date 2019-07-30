@@ -42,6 +42,9 @@ function scroll(scrollPosition) {
     elem = $(".play-viedo")[0];
     elem.muted = true;
     elem.controls = false;
+    if ($(document).width() > 600) {
+      $(".box-logo").fadeIn();
+    }
   }
 
   var video = $(".video").height();
