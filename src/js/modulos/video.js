@@ -55,14 +55,11 @@ function openVideo() {
   elem.volume = 0.2;
   if ($(".video").hasClass("open")) {
     $(".video").removeClass("open");
-    $(".box-logo").fadeIn();
-
     elem.load();
     elem.muted = true;
     elem.controls = false;
   } else {
     elem.controls = true;
-    $(".box-logo").fadeOut();
     $(".video").addClass("open");
   }
 

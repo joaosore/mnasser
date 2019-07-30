@@ -41,17 +41,51 @@ function scroll(scrollPosition) {
     elem = $(".play-viedo")[0];
     elem.muted = true;
     elem.controls = false;
-    $(".box-logo").fadeIn();
+  }
+
+  var video = $(".video").height();
+
+  if (scrollPosition <= video) {
+    var y = (scrollPosition * 1) / video;
+    switch (parseFloat(y).toFixed(1)) {
+      case "0.0":
+        $(".video").css("opacity", "1");
+        break;
+      case "0.1":
+        $(".video").css("opacity", "1");
+        break;
+      case "0.2":
+        $(".video").css("opacity", "1");
+        break;
+      case "0.3":
+        $(".video").css("opacity", "1");
+        break;
+      case "0.4":
+        $(".video").css("opacity", "0.8");
+        break;
+      case "0.5":
+        $(".video").css("opacity", "0.6");
+        break;
+      case "0.6":
+        $(".video").css("opacity", "0.4");
+        break;
+      case "0.7":
+        $(".video").css("opacity", "0.2");
+        break;
+      case "0.8":
+        $(".video").css("opacity", "0.1");
+        break;
+      case "0.9":
+        $(".video").css("opacity", "0.0");
+        break;
+      case "1.0":
+        $(".video").css("opacity", "0.0");
+        break;
+    }
   }
 
   var video_top = $($(".video")).offset().top;
   var video_bottom = video_top + $(".video").height();
-
-  if (scrollPosition >= video_bottom / 2) {
-    $(".video").addClass("hidden");
-  } else {
-    $(".video").removeClass("hidden");
-  }
 
   var conceito_top = $($(".conceito")).offset().top;
   var conceito_bottom = conceito_top + $(".conceito").height();
@@ -321,3 +355,15 @@ $(document).on("resize", function() {
 if ($(window).width() > 750) {
   img_person();
 }
+
+// if ($(window).width() <= 750) {
+//   var video = $(".video").height();
+//   var play = $(".play-viedo").height();
+
+//   $(".btn-play").css("height", play);
+
+//   var x = play + 54;
+//   var y = video - x;
+
+//   $(".box-logo").css("height", y);
+// }

@@ -15,6 +15,7 @@ section.experiencia {
     margin-left: 25%;
     .btn-modal {
       margin: 0.5em;
+      margin-left: 0;
       span {
         cursor: pointer;
         font-family: "Brandon Grotesque";
@@ -51,6 +52,7 @@ section.experiencia {
         display: flex;
         align-items: center;
         padding-left: 15px;
+        max-width: 825px;
         p {
           margin: 0;
         }
@@ -72,7 +74,7 @@ section.experiencia {
       span.title {
         cursor: pointer;
         font-family: "Brandon Grotesque";
-        color: #6e6e6e;
+        color: #c2a573;
         font-weight: 900;
         font-size: 1.2em;
         line-height: 1.2em;
@@ -104,6 +106,8 @@ section.experiencia {
       text-transform: uppercase;
       position: relative;
       margin: 0.5em;
+      margin-top: 2em;
+      margin-left: 0;
     }
   }
 }
