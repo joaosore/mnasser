@@ -56,22 +56,22 @@ function scroll(scrollPosition) {
         $(".video").css("opacity", "1");
         break;
       case "0.1":
-        $(".video").css("opacity", "1");
-        break;
-      case "0.2":
-        $(".video").css("opacity", "1");
-        break;
-      case "0.3":
-        $(".video").css("opacity", "1");
-        break;
-      case "0.4":
         $(".video").css("opacity", "0.8");
         break;
-      case "0.5":
+      case "0.2":
+        $(".video").css("opacity", "0.7");
+        break;
+      case "0.3":
         $(".video").css("opacity", "0.6");
         break;
-      case "0.6":
+      case "0.4":
+        $(".video").css("opacity", "0.5");
+        break;
+      case "0.5":
         $(".video").css("opacity", "0.4");
+        break;
+      case "0.6":
+        $(".video").css("opacity", "0.3");
         break;
       case "0.7":
         $(".video").css("opacity", "0.2");
