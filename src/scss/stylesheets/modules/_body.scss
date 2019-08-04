@@ -38,3 +38,44 @@ body {
     font-size: 11px;
   }
 }
+
+.block-tela {
+  display: none;
+}
+@media screen and (min-width: 320px) and (max-width: 850px) and (orientation: landscape) {
+  header,
+  .box-logo,
+  .conceito,
+  .inspiracao,
+  .pessoas,
+  .pessoas_item,
+  .experiencia,
+  .imprensa,
+  .contato {
+    display: none !important;
+  }
+  .moldura {
+    display: none !important;
+  }
+  .proposito {
+    //position: absolute;
+    display: flex !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: #545454 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    video {
+      height: 100% !important;
+    }
+  }
+  // .block-tela {
+  //   display: flex;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: #545454;
+  //   align-items: center;
+  //   justify-content: center;
+  // }
+}

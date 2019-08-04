@@ -57,12 +57,13 @@ section.video {
     position: absolute;
     top: 0;
     left: 0;
-    pointer-events: none;
+    pointer-events: all;
     z-index: 5;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    cursor: pointer;
     .img-play {
       width: 50px;
       height: 50px;
@@ -77,8 +78,10 @@ section.video {
     .play {
       font-family: "Brandon Grotesque";
       color: #fff;
-      font-size: 1em;
       font-weight: 900;
+      font-size: 1.5em;
+      text-transform: uppercase;
+      display: none;
     }
   }
   .play-viedo {
@@ -125,11 +128,15 @@ section.video {
 @media only screen and (max-width: 750px) {
   section.video {
     opacity: 1;
-    height: auto;
     position: relative;
+    display: inline-table;
+    padding-top: calc(40% + 80px);
+    background-color: #fff;
+    padding-bottom: 54px;
     display: flex;
+    min-height: -webkit-fill-available;
     align-items: center;
-    background-color: #545454;
+    justify-content: center;
     &:before {
       margin: 0;
       width: 100%;
@@ -137,6 +144,16 @@ section.video {
     }
     .btn-play {
       top: auto;
+      height: calc(50% - 56px);
+      .img-play {
+        -webkit-mask-size: 30px;
+      }
+      .play {
+        font-size: 1em;
+        position: absolute;
+        margin-top: 40px;
+        display: none;
+      }
     }
 
     video {
@@ -149,6 +166,7 @@ section.video {
       padding: 15px;
       width: calc(100% - 30px);
       margin: 0;
+      bottom: 0;
       p {
         margin: 0;
         line-height: 1.5;

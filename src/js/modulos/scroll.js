@@ -233,8 +233,15 @@ function menu_hidden() {
     var st = $(this).scrollTop();
     if (st > lastScrollTop) {
       $("header").addClass("hidden");
+
+      if (st >= 10) {
+        $(".box-logo").addClass("scroll-mb");
+      }
       scroll_menu = false;
     } else {
+      if (st <= 125) {
+        $(".box-logo").removeClass("scroll-mb");
+      }
       $("header").removeClass("hidden");
       scroll_menu = true;
     }
@@ -270,6 +277,7 @@ function img_person() {
           $(".pessoas_item .pessoa:nth-child(1) .foto").addClass("bottom");
         }
       }
+
       if (st >= $(".pessoas_item .pessoa:nth-child(2)").offset().top + 100) {
         if (
           st + $(window).height() <=
@@ -360,14 +368,13 @@ if ($(window).width() > 750) {
   img_person();
 }
 
-// if ($(window).width() <= 750) {
-//   var video = $(".video").height();
-//   var play = $(".play-viedo").height();
+$(window).on("load", function() {
+  var foto_1 = $(".pessoas_item .pessoa:nth-child(1) .foto").height();
+  $(".pessoas_item .pessoa:nth-child(1) .dados").css("min-height", foto_1);
 
-//   $(".btn-play").css("height", play);
+  var foto_2 = $(".pessoas_item .pessoa:nth-child(2) .foto").height();
+  $(".pessoas_item .pessoa:nth-child(2) .dados").css("min-height", foto_2);
 
-//   var x = play + 54;
-//   var y = video - x;
-
-//   $(".box-logo").css("height", y);
-// }
+  var foto_3 = $(".pessoas_item .pessoa:nth-child(3) .foto").height();
+  $(".pessoas_item .pessoa:nth-child(3) .dados").css("min-height", foto_3);
+});

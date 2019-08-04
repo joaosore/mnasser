@@ -10,7 +10,7 @@ function init_video() {
     autoPlay();
   }, 300);
 
-  $(document).on("click", ".play-viedo", function() {
+  $(document).on("click", ".btn-play", function() {
     openVideo();
   });
 

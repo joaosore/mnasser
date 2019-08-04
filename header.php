@@ -18,10 +18,46 @@
 <!-- Google Tag Manager -->
 
 <!-- End Google Tag Manager -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144905934-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-144905934-1');
+</script>
+
 <?php wp_head(); ?>
+<script>
+
+var isIE = /*@cc_on!@*/ false || !!document.documentMode;
+if (isIE == true) {
+  document.getElementsByTagName("html")[0].style.display = "none";
+  alert("Navegador não compatível !!!");
+}
+</script>
+
 </head>
 
-<body <?php body_class(); ?>>
+<body id="page" <?php body_class(); ?>>
+<div class='block-tela'>
+  <?php
+    switch($_COOKIE["linguagem"]){
+      case "en":
+        ?>
+        <img class="lazyload img-logo" src="" data-srcset="<?php echo get_template_directory_uri(); ?>/dist/imgs/logo-eng.svg">
+        <?php 
+      break;
+      default:
+        ?>
+        <img class="lazyload img-logo" src="" data-srcset="<?php echo get_template_directory_uri(); ?>/dist/imgs/logo.svg">
+        <?php 
+      break;
+    }
+  ?>
+</div>
 <!-- Google Tag Manager (noscript) -->
 
 <!-- End Google Tag Manager (noscript) -->

@@ -18,7 +18,7 @@ section.contato {
       font-family: "Brandon Grotesque";
       color: #c2a573;
       text-transform: uppercase;
-      font-size: 2.8125em;
+      font-size: 1.5625em;
       line-height: 1.66666666em;
       font-weight: 900;
       margin: 0;
@@ -34,6 +34,9 @@ section.contato {
     a {
       color: #626262;
       text-decoration: none;
+    }
+    .maps_link {
+      display: none;
     }
     .redes {
       .rede {
@@ -70,6 +73,9 @@ section.contato {
       padding-bottom: 50px;
       position: relative;
       overflow: hidden;
+      .maps_link {
+        display: block;
+      }
     }
     .maps {
       display: none;

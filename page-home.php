@@ -72,12 +72,14 @@ get_header();
 <section class="video proposito">
   <div class="btn-play">
     <div class="img-play"></div>
-    <div class="play">PLAY</div>
+    <div class="play"><?php echo get_dados('btn_play'); ?></div>
   </div>
   <video
+  id="video-el"
   class="play-viedo"
   loop
   playsinline
+  allowfullscreen
   poster="<?php echo get_dados('capa_video'); ?>"
   src="<?php echo get_dados('video_inicial'); ?>"
   ></video>
@@ -181,6 +183,28 @@ get_header();
           </div>
         <?php } ?>
         
+        <?php if(!empty($value['reconhecimentos_titulo'])) { ?>
+          <div>
+            <div class="titulo">
+              <?php echo $value['reconhecimentos_titulo']; ?>
+            </div>
+            <div class="item">
+              <?php echo $value['reconhecimentos']; ?>
+            </div>
+          </div>
+        <?php } ?>
+        
+        <?php if(!empty($value['linguas_titulo'])) { ?>
+          <div>
+            <div class="titulo">
+              <?php echo $value['linguas_titulo']; ?>
+            </div>
+            <div class="item">
+              <?php echo $value['linguas']; ?>
+            </div>
+          </div>
+        <?php } ?>
+
       </div>
 
       <div class="foto">

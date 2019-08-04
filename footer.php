@@ -15,7 +15,11 @@
 <footer>
 
 </footer>
-
+<script>
+  if (/Edge/.test(navigator.userAgent)) {
+    document.getElementById("video-el").style.height = "auto";
+  }
+</script>
 <?php wp_footer(); ?>
 </body>
 </html>

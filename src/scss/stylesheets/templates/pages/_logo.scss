@@ -12,6 +12,10 @@ section.box-logo {
       padding-right: 0;
       &:after {
         transform: translateX(0);
+        -ms-transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -o-transform: translateX(0);
       }
       .box {
         padding: 0;
@@ -38,7 +42,7 @@ section.box-logo {
     height: calc(100% - 100px);
     padding: 50px;
     position: relative;
-    transition: transform 350ms ease-in-out;
+    -webkit-transition: all 350ms ease-in-out;
     &:after {
       content: "";
       background-color: #545454;
@@ -48,7 +52,11 @@ section.box-logo {
       height: 100%;
       position: absolute;
       transform: translateX(-100%);
-      transition: all 350ms ease-in-out;
+      -webkit-transition: all 350ms ease-in-out;
+      -ms-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
     }
     .box {
       display: flex;
@@ -66,16 +74,29 @@ section.box-logo {
 
 @media only screen and (max-width: 750px) {
   section.box-logo {
-    height: 50px;
+    height: calc(40% - 30px);
     pointer-events: all;
     padding: 15px;
     width: calc(100% - 30px);
     background-color: #545454;
+    transition: all 350ms ease-in-out;
     &.open {
       .logo {
         .box {
           img {
-            width: 40%;
+            height: 100%;
+            max-height: 100px;
+          }
+        }
+      }
+    }
+    &.scroll-mb {
+      height: 50px;
+      .logo {
+        .box {
+          img {
+            height: 100%;
+            max-height: 100px;
           }
         }
       }
@@ -107,9 +128,12 @@ section.box-logo {
         align-items: center;
         justify-content: center;
         img {
-          width: 40%;
+          width: auto;
+          height: 100%;
+          max-height: 100px;
           opacity: 1 !important;
           padding: 0;
+          transition: all 350ms ease-in-out;
         }
       }
     }

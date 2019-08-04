@@ -110,8 +110,8 @@ add_filter('upload_mimes', 'be_enable_vcard_upload' );
 
 function jd_scripts() {
 
-	wp_enqueue_style( 'main', get_template_directory_uri(). "/dist/css/main.css?v=220");
-  wp_enqueue_script( 'main', get_template_directory_uri() . '/dist/js/main.js?v=220');
+	wp_enqueue_style( 'main', get_template_directory_uri(). "/dist/css/main.css", [], '2.1.7');
+  wp_enqueue_script( 'main', get_template_directory_uri() . '/dist/js/main.js', [], '2.1.7');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
