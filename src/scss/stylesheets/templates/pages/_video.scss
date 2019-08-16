@@ -137,6 +137,11 @@ section.video {
     min-height: -webkit-fill-available;
     align-items: center;
     justify-content: center;
+    padding: 0;
+    height: auto;
+    min-height: fit-content;
+    padding-top: 80px;
+    overflow: unset;
     &:before {
       margin: 0;
       width: 100%;
@@ -167,6 +172,8 @@ section.video {
       width: calc(100% - 30px);
       margin: 0;
       bottom: 0;
+      bottom: -42px;
+      display: none;
       p {
         margin: 0;
         line-height: 1.5;

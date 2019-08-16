@@ -74,12 +74,11 @@ section.box-logo {
 
 @media only screen and (max-width: 750px) {
   section.box-logo {
-    height: calc(40% - 30px);
+    height: 50px;
     pointer-events: all;
     padding: 15px;
     width: calc(100% - 30px);
     background-color: #545454;
-    transition: all 350ms ease-in-out;
     &.open {
       .logo {
         .box {
@@ -133,7 +132,6 @@ section.box-logo {
           max-height: 100px;
           opacity: 1 !important;
           padding: 0;
-          transition: all 350ms ease-in-out;
         }
       }
     }
