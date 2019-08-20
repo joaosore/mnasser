@@ -44,7 +44,7 @@ if (isIE == true) {
 <body id="page" <?php body_class(); ?>>
 <div class='block-tela'>
   <?php
-    switch($_COOKIE["linguagem"]){
+    switch($_COOKIE["pll_language"]){
       case "en":
         ?>
         <img class="lazyload img-logo" src="" data-srcset="<?php echo get_template_directory_uri(); ?>/dist/imgs/logo-eng.svg">

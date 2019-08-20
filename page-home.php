@@ -49,7 +49,7 @@ get_header();
   <div class="logo">
     <div class="box">
         <?php
-          switch($_COOKIE["linguagem"]){
+          switch($_COOKIE["language"]){
             case "en":
               ?>
               <img class="lazyload img-logo" src="" data-srcset="<?php echo get_template_directory_uri(); ?>/dist/imgs/logo-eng.svg">

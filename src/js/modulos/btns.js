@@ -75,13 +75,13 @@ $(window).on("load", function() {
   );
   $("header").removeClass("active");
 
-  if (getCookie("linguagem").length == 0) {
+  if (getCookie("language").length == 0) {
     $('.lg a[data-lg="pt"]')
       .parent()
       .addClass("active");
   }
 
-  $('.lg a[data-lg="' + getCookie("linguagem") + '"]')
+  $('.lg a[data-lg="' + getCookie("language") + '"]')
     .parent()
     .addClass("active");
 });
@@ -93,15 +93,15 @@ $(document).on("click", ".lg a", function() {
 function lg(lg) {
   switch (lg) {
     case "en":
-      setCookie("linguagem", "en", 30);
+      setCookie("language", "en", 30);
       break;
 
     case "es":
-      setCookie("linguagem", "es", 30);
+      setCookie("language", "es", 30);
       break;
 
     default:
-      setCookie("linguagem", "pt", 30);
+      setCookie("language", "pt", 30);
       break;
   }
 }
@@ -128,3 +128,5 @@ function setCookie(cname, cvalue, exdays) {
   var expires = "expires=" + d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
+
+$(window).on("load", function() {});
