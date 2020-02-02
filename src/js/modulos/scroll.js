@@ -97,16 +97,12 @@ function scroll(scrollPosition) {
   if ($(window).width() <= 750) {
     i = 81;
   }
-
-  console.log(scrollPosition);
-
+  
   var video_top = $($(".video")).offset().top;
   var video_bottom = video_top + $(".video").height() - i;
 
   var conceito_top = $($(".conceito")).offset().top - i;
   var conceito_bottom = conceito_top + $(".conceito").height();
-
-  console.log(conceito_top);
 
   var inspiracao_top = $($(".inspiracao")).offset().top - i;
   var inspiracao_bottom = inspiracao_top + $(".inspiracao").height();
@@ -116,6 +112,9 @@ function scroll(scrollPosition) {
 
   var pessoas_item_top = $($(".pessoas_item")).offset().top - i;
   var pessoas_item_bottom = pessoas_item_top + $(".pessoas_item").height();
+
+  var pessoas_list_top = $($(".pessoas_list")).offset().top - i;
+  var pessoas_list_bottom = pessoas_list_top + $(".pessoas_list").height();
 
   var experiencia_top = $($(".experiencia")).offset().top - i;
   var experiencia_bottom = experiencia_top + $(".experiencia").height();
@@ -313,10 +312,7 @@ function img_person() {
       }
 
       if (st >= $(".pessoas_item .pessoa:nth-child(2)").offset().top + 100) {
-        if (
-          st + $(window).height() <=
-          $(".pessoas_item .pessoa:nth-child(3)").offset().top - 100
-        ) {
+        if (st + $(window).height() <= $(".pessoas_list").offset().top - 100) {
           $(".pessoas_item .pessoa:nth-child(2) .foto .img-person").addClass(
             "fixed"
           );
@@ -327,23 +323,10 @@ function img_person() {
           $(".pessoas_item .pessoa:nth-child(2) .foto").addClass("bottom");
         }
       }
-
-      if (st >= $(".pessoas_item .pessoa:nth-child(3)").offset().top + 100) {
-        if (st + $(window).height() <= $(".experiencia").offset().top - 100) {
-          $(".pessoas_item .pessoa:nth-child(3) .foto .img-person").addClass(
-            "fixed"
-          );
-        } else {
-          $(".pessoas_item .pessoa:nth-child(3) .foto .img-person").removeClass(
-            "fixed"
-          );
-          $(".pessoas_item .pessoa:nth-child(3) .foto").addClass("bottom");
-        }
-      }
     } else {
       if (
         st <=
-        $(".pessoas_item .pessoa:nth-child(2)").offset().top -
+        $(".pessoas_item .pessoa:nth-child(1)").offset().top -
           $(window).height() -
           100
       ) {
@@ -360,10 +343,23 @@ function img_person() {
       }
       if (
         st <=
-        $(".pessoas_item .pessoa:nth-child(3)").offset().top -
+        $(".pessoas_item .pessoa:nth-child(2)").offset().top -
           $(window).height() -
           100
       ) {
+        if (st >= $(".pessoas_item .pessoa:nth-child(1)").offset().top + 100) {
+          $(".pessoas_item .pessoa:nth-child(1) .foto .img-person").addClass(
+            "fixed"
+          );
+          $(".pessoas_item .pessoa:nth-child(1) .foto").removeClass("bottom");
+        } else {
+          $(".pessoas_item .pessoa:nth-child(1) .foto .img-person").removeClass(
+            "fixed"
+          );
+        }
+      }
+      
+      if (st <= $(".pessoas_list").offset().top - $(window).height() - 100) {
         if (st >= $(".pessoas_item .pessoa:nth-child(2)").offset().top + 100) {
           $(".pessoas_item .pessoa:nth-child(2) .foto .img-person").addClass(
             "fixed"
@@ -377,13 +373,13 @@ function img_person() {
       }
 
       if (st <= $(".experiencia").offset().top - $(window).height() - 100) {
-        if (st >= $(".pessoas_item .pessoa:nth-child(3)").offset().top + 100) {
-          $(".pessoas_item .pessoa:nth-child(3) .foto .img-person").addClass(
+        if (st >= $(".pessoas_list").offset().top + 100) {
+          $(".pessoas_list").addClass(
             "fixed"
           );
-          $(".pessoas_item .pessoa:nth-child(3) .foto").removeClass("bottom");
+          $(".pessoas_list").removeClass("bottom");
         } else {
-          $(".pessoas_item .pessoa:nth-child(3) .foto .img-person").removeClass(
+          $(".pessoas_list").removeClass(
             "fixed"
           );
         }
@@ -408,7 +404,15 @@ $(window).on("load", function() {
 
   var foto_2 = $(".pessoas_item .pessoa:nth-child(2) .foto").height();
   $(".pessoas_item .pessoa:nth-child(2) .dados").css("min-height", foto_2);
+});
 
-  var foto_3 = $(".pessoas_item .pessoa:nth-child(3) .foto").height();
-  $(".pessoas_item .pessoa:nth-child(3) .dados").css("min-height", foto_3);
+
+$(document).on('click', '.pessoas_list .pessoa', function() {
+  var key = $(this).data('key');
+  $('.dados-pessoa-key-'+key).css("display", "flex").hide().fadeIn();
+});
+
+$(document).on('click', '.pessoas_list .exit', function() {
+  var key = $(this).data('key');
+  $('.dados-pessoa-key-'+key).css("display", "flex").hide().fadeOut();
 });
