@@ -32,7 +32,7 @@
     "jquery": "^3.3.1",
     "jquery-lazy": "^1.7.10",
     "jquery-mask-plugin": "^1.14.12",
-    "jquery-validation": "^1.18.0",
+    "jquery-validation": "^1.19.3",
     "lazyload": "^2.0.0-rc.2",
     "lazysizes": "^5.1.0",
     "modernizr": "^3.5.0",
